@@ -34,6 +34,16 @@ In the `.env` file, locate the line that starts with `NEXT_PUBLIC_ADMIN_URL=` an
 
      ![env-file](../../static/img/web/admin_url.png)
 
+:::tip
+To find the admin URL, follow these steps:
+
+1. Go to **Admin Panel**.
+2. Navigate to **System Settings**.
+3. Select **API Key Settings**.
+4. Under **Client API Keys**, you'll find the **API link for Customer App**.
+
+This will give you the Admin URL you need.
+:::
 ### - Update the Website URL
 
 In the `.env` file, locate the line that starts with `NEXT_PUBLIC_WEBSITE_URL=` and replace `https://edemandweb.wrteam.me/` with your desired website URL. For example:
@@ -60,9 +70,18 @@ In the `.env` file, locate the line that starts with `NEXT_PUBLIC_FIREBASE_VAPID
 
       <pre>NEXT_PUBLIC_FIREBASE_VAPID_KEY=AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxx</pre>
 
-     Make sure to keep the `NEXT_PUBLIC_FIREBASE_VAPID_KEY=` part unchanged and only update the value after the equals sign.
+Make sure to keep the `NEXT_PUBLIC_FIREBASE_VAPID_KEY=` part unchanged and only update the value after the equals sign.
 
-     ![env-file](../../static/img/web/vapid_api_key.png)
+To get the **Firebase Vapid Key**:
+
+1. Go to your **Firebase project**.
+2. Navigate to **Project Settings**.
+3. In the **Cloud Messaging** section, go to **Web Configuration**.
+4. Under **Web Push Certificates**, generate a key pair.
+5. Copy the **Vapid Key** and paste it into your `.env` file.
+
+![env-file](../../static/img/web/vapid_api_key.png)
+
 
 ### - Update the Default Country Code
 
