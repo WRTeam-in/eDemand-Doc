@@ -67,6 +67,30 @@ const config = {
             label: "App Documentation",
           },
           {
+            type: "docSidebar",
+            sidebarId: "adminSidebar",
+            position: "left",
+            label: "Admin Documentation",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "featuresSidebar",
+            position: "left",
+            label: "Features",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "changelogSidebar",
+            position: "left",
+            label: "Changelog",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "supportSidebar",
+            position: "left",
+            label: "Community",
+          },
+          {
             type: 'search',
             position: 'right',
           },

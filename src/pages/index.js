@@ -91,7 +91,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/changelog/intro"
+                href="/docs/changelog"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -110,7 +110,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/features/intro"
+                href="/docs/features"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -129,7 +129,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/support/intro"
+                href="/docs/support"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
