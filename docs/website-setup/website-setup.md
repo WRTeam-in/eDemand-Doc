@@ -68,7 +68,7 @@ In the `.env` file, locate the line that starts with `NEXT_PUBLIC_FIREBASE_VAPID
 
 :::tip
 
-here you get default country list (https://developers.google.com/hotels/hotel-prices/dev-guide/country-codes)
+here you can find → [Default Country List](https://developers.google.com/hotels/hotel-prices/dev-guide/country-codes)
 
 :::
 

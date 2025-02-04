@@ -12,6 +12,19 @@ function HomepageHeader() {
   
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
+       {/* Add the circle animation HTML here */}
+       <ul className="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="container">
         <Heading as="h1" className="hero__title primary_text">
           {siteConfig.title}
@@ -22,7 +35,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/intro"
+                href="/docs/website-setup/web-intro"
               >
                 <h2 class="text--truncate cardTitle_rnsV" title="Website Documentation">
                   📄️ Website Documentation
@@ -39,7 +52,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/tutorial-basics/create-a-document"
+                href="/docs/admin-setup/admin-intro"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -58,7 +71,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/tutorial-basics/create-a-blog-post"
+                href="/docs/app-setup/app-intro"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -78,7 +91,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/tutorial-basics/markdown-features"
+                href="/docs/changelog/intro"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -97,7 +110,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/tutorial-basics/deploy-your-site"
+                href="/docs/features/intro"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
@@ -116,7 +129,7 @@ function HomepageHeader() {
             <article class="col col--6 margin-bottom--lg">
               <a
                 class="card padding--lg cardContainer_fWXF"
-                href="/docs/tutorial-basics/congratulations"
+                href="/docs/support/intro"
               >
                 <h2
                   class="text--truncate cardTitle_rnsV"
