@@ -6,9 +6,10 @@ import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import "../css/custom.css";
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  console.log(siteConfig);
+  
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -143,8 +144,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`${siteConfig.title} -Your On-Demand Service Booking Platform`}
+      description={`${siteConfig.title} connects you with trusted local service providers for home services, repairs, maintenance, and professional services. Book verified experts, track appointments, and get instant quotes. Your one-stop platform for all service needs.`}
     >
       <main>
         <HomepageHeader />
