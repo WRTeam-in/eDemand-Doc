@@ -66,6 +66,8 @@ To modify the app label for **iOS**, follow these steps:
 <string>eDemand</string>
 ```
 
+![app-name](../../static/img/app/appname3.webp)
+
 4. Replace **"eDemand"** with your desired app name.
 5. Save the changes.
 6. **Rebuild the iOS** app by running the following commands:
@@ -75,6 +77,9 @@ To modify the app label for **iOS**, follow these steps:
     flutter pub get
     flutter build ios
     ```
+
+
+
 <!-- chane app version -->
 
 ## 📱 How to Change App Version
@@ -166,13 +171,12 @@ Updating your app's logo is crucial for branding and a professional look. Follow
 
   2. Replace the existing icons with your **app logo**.  
   3. Make sure to include the **logo in multiple sizes** to meet iOS requirements. 
-
      ![logo](../../static/img/app/logo_2.webp)
 
----
 
 ✅ **Your new app icon is now set!** 🚀  
 
+---
 
 <!-- Change App Color -->
 
@@ -206,9 +210,10 @@ Customizing your app's colors enhances branding and improves the user experience
 
     ![appcolor](../../static/img/app/appcolor.webp)
 
----
 
 ✅ **Your app's colors are now updated!** 🎉  
+
+---
 
 <!-- How to change package name -->
 
@@ -263,8 +268,9 @@ Changing the package name in Flutter is crucial when rebranding your app or prep
           ```
           wrteam/eDemand/customer/
           ```
-
-  -   📌 **Important:** Sometimes you may face issues due to incorrect folder renaming. Double-check the structure!  
+:::note
+  -   📌  Sometimes you may face issues due to incorrect folder renaming. Double-check the structure!  
+:::
 
 ---
 
@@ -298,10 +304,9 @@ Make sure to update the package name in these files:
   ![packagename](../../static/img/app/packagename_6.webp)
   
 
----
-
 ✅ **Your package name has now been successfully updated!** 🚀  
 
+---
 
 <!-- How to Change Images in app -->
 
@@ -344,10 +349,10 @@ Updating images in your Flutter app is simple. Follow these steps to replace exi
 
   2. Restart the app to see the updated images.  
 
----
 
 ✅ **Your images are now successfully updated!** 🎉 
 
+---
 <!-- How to Change language String value -->
 
 ## 🌍 How to Change Language String Values  
@@ -439,9 +444,9 @@ Managing languages in your Flutter app allows users to switch between different 
 ![language](../../static/img/app/language_3.webp)
 
 
----
-
 ✅ **✅ Your language settings are now updated!** 🌎🚀 
+
+---
 
 
 ## 🌍 How to Change the Default Language of the App  
@@ -478,10 +483,9 @@ By default, the app loads a specific language when it starts. You can change thi
   ![applang](../../static/img/app/applang.webp)
   
 
----
-
 ✅ **Your default language is now updated!** 🌎🚀
 
+---
 
 <!-- How to Change App Font  -->
 
@@ -549,9 +553,9 @@ Customizing the font in your Flutter app enhances the user experience. Follow th
   
   ![font](../../static/img/app/font.webp)
 
----
-
 ✅ **Your app now has a new font!** 🎨🚀 
+
+---
 
 <!-- How to Change Server URL   -->
 
@@ -574,8 +578,9 @@ If you need to update the server URL in your Flutter app, follow these steps to 
 
   ![server_baseurl](../../static/img/app/server_baseurl.webp)
 
-  **⚠️ Important:** Ensure you copy the **correct base URL**.  
-
+:::note
+   Ensure you copy the **correct base URL**.  
+:::
 ---
 
 #### 📝 Step 2: Update the URL in Your App  
@@ -592,9 +597,9 @@ If you need to update the server URL in your Flutter app, follow these steps to 
      const String baseURL = "https://your-server.com/api/";
      ```
     ![serverurl](../../static/img/app/serverurl.webp)
-
+:::note
   **⚠️ Don't forget:** Add a **slash (`/`) after `api`** to avoid errors.  
-
+:::
 ---
 
 #### ⚡ Step 3: Apply Changes  

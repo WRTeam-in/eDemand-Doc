@@ -5,24 +5,6 @@ sidebar_position: 1
 
 # App Prerequisites
 
-<!-- :::note
-
-We recommend deploying the web application on the main domain and the admin panel on a subdomain. -->
-
-<!-- For **With SEO Support**:
-- **VPS Hosting**: A Virtual Private Server (VPS) is mandatory to ensure reliable performance and security. Shared hosting environments are not supported for this web application.
-- **Node.js Support**: The server must support Node.js, as it is essential for running the application.
-- **Memory Requirements**: The server should have at least 3-4 GB of free RAM to handle the application's processes effectively.
-- **SSH Root Access**: The server must provide SSH root access to execute Node.js commands and manage the application. -->
-
-<!-- ::: -->
-
-<!-- :::caution
-
-A VPS server is only required if you plan to use the web application with **SEO**. However, if you are only using the web application without SEO, the app, and the admin panel, you can opt for a shared hosting server as it is sufficient for these components.
-
-::: -->
-
 :::info
 Whenever you seek support for WRTeam products via Skype or WhatsApp, please share your **[Purchase Code](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code)** and Codecanyon username. This information is required for verification in our system. Without it, we are unable to provide support in accordance with Codecanyon policy.
 
@@ -32,7 +14,7 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 
 1. Kindly suggest using **Flutter** with the latest stable version. Follow the official guide to install it from [Flutter Installation Guide](https://docs.flutter.dev/get-started/install).
 
-2. Kindly suggest using **Java JDK 17** or above. Download it from the official source: [Java JDK Download](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
+2. Kindly suggest using **Java JDK 17**, **Java JDK 18** or **Java JDK 19**. Download it from the official source: [Java JDK Download](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
 
 
 3. Install a code editor like: [VSCode](https://code.visualstudio.com/download).

@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# generate release apks
+# Generate Release APKs
 
 # 📦 How to Generate Release APKs in Flutter
 
@@ -117,12 +117,13 @@ flutter build appbundle
 ```
 ![release](../../static/img/app/release8.webp)
 
-:::caution
-## ✅ Final Steps: Test & Publish
+:::note
+#### ✅ Final Steps: Test & Publish
  - Test the APK on a real device before publishing.
  - If you're uploading to the Google Play Store, use the App Bundle (AAB) instead of an APK.
  - Ensure your app follows Google Play policies before publishing.
 :::
+
 ---
 
 🎉 **Your release APK is ready!** 🚀

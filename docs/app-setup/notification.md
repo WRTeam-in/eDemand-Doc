@@ -57,6 +57,7 @@ Apple Push Notification service (APNs) supports two authentication methods:
 
 
 🔹 **Upload .p8 File to Firebase**  
+
 1️⃣ Open **Firebase Console**.  
 2️⃣ Navigate to **Project Settings > Cloud Messaging**.  
 3️⃣ Upload the **.p8 file** along with:  
@@ -82,6 +83,7 @@ Apple Push Notification service (APNs) supports two authentication methods:
 8️⃣ Click **Download** to download the `.cer` file.  
 
 🔹 **Convert .cer File to .p12 File**  
+
 1️⃣ Open the `.cer` file in **Keychain Access** on your Mac.  
 2️⃣ Go to **Category > Certificates**.  
 3️⃣ Select your **Push Notification Certificate**.  
@@ -89,6 +91,7 @@ Apple Push Notification service (APNs) supports two authentication methods:
 5️⃣ Save the file as **.p12 format**.  
 
 🔹 **Upload .p12 File to Firebase**  
+
 1️⃣ Open **Firebase Console**.  
 2️⃣ Navigate to **Project Settings > Cloud Messaging**.  
 3️⃣ Upload the **.p12 file** and enter the password if prompted. 
@@ -99,6 +102,6 @@ Apple Push Notification service (APNs) supports two authentication methods:
 
 ---
 
-## ✅ **Push Notifications Setup Completed! 🎉**  
+✅ **Push Notifications Setup Completed! 🎉**  
 
 Your iOS app is now configured to receive **Push Notifications** via **Firebase and APNs**. 🚀  

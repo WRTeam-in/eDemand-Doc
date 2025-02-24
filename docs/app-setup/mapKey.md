@@ -87,8 +87,10 @@ GMSServices.provideAPIKey("YOUR KEY HERE")
 ```
  ![mapAPI](../../static/img/app/mapAPI8.webp)
 
-    🔹 Note: Replace "YOUR_IOS_API_KEY_HERE" with your actual Google Maps API Key.
+:::note
 
+ Replace "YOUR_IOS_API_KEY_HERE" with your actual Google Maps API Key.
+:::
 
 
 :::caution
