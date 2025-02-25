@@ -46,4 +46,3 @@ After installation, verify the setup by running:
 flutter doctor
 ```
 
-This provides a clear setup guide for **Flutter in Android Studio and VS Code** with **official links** and **Flutter Doctor verification**. Let me know if you need any refinements! 🚀
