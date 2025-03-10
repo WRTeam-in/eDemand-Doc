@@ -108,10 +108,3 @@ Step 4:** **Resubmit the app** for review.
 
 📌 **[App Store Guidelines](https://developer.apple.com/app-store/review/guidelines/)**  
 
----
-
-💡 **If further clarification is needed, we are happy to schedule a 30-minute online meeting with the App Review team.**  
-
-**Best regards,**  
-[Your Name]  
-[Your Contact Information]  
