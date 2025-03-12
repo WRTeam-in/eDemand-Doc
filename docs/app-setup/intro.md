@@ -16,8 +16,9 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 
 2. Kindly suggest using **Java JDK 17**, **Java JDK 18** or **Java JDK 19**. Download it from the official source: [Java JDK Download](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
 
+3. Setup your Java [java](https://www.geeksforgeeks.org/download-install-java-windows-linux-macos/).
 
-3. Install a code editor like: [VSCode](https://code.visualstudio.com/download).
+4. Install a code editor like: [VSCode](https://code.visualstudio.com/download). and android studio like: [Android Studio](https://developer.android.com/studio)
 
 
 ## Flutter Setup Guide
@@ -45,4 +46,6 @@ After installation, verify the setup by running:
 ```sh
 flutter doctor
 ```
+---
 
+🚀 You're all set for Flutter! Happy coding! 🎉

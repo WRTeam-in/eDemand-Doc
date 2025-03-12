@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# 🚀 App Store Rejection - Q&A  
+# App Store Rejection - Q&A  
 
 ## ❓ **Guideline 2.1 - Information Needed**  
 
