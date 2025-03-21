@@ -1,4 +1,8 @@
 ---
 sidebar_position: 5
 ---
-# Favorites
+# Bookmark
+
+Include frequently using providers in your bookmark.
+
+![Bookmark](../../static/img/adminPanel/app_bookmark.webp)
