@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
 ---
+
 # Service Providers
 
 Here you'll find all service providers nearby you with ratings and basic visiting charges and with their services.
