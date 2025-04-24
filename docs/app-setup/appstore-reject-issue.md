@@ -66,6 +66,22 @@ sidebar_position: 11
 
 ---
 
+### 🔹 **Q: Are the enterprise services in your app sold to single users, consumers, or for family use?**  
+**A:** The services offered through **Owner Driver Agency Provider** are available to **anyone**, including **individual users, consumers, families, or businesses**.  
+
+- The platform connects service providers with a **wide range of customers** who require **physical services at specific locations**.  
+- There are **no restrictions** on who can book services, making the app **flexible and accessible** for personal, family, or business-related needs.  
+
+---
+
+### 🔹 **Q: How do users obtain an account? Do users have to pay a fee to create an account?**  
+**A:** Users can **create an account for free** through the **Owner Driver Agency Provider app** or **Provider Panel**.  
+
+- However, a **paid subscription is required** for **service providers** to **list and showcase their services** on the platform.  
+- This approach ensures that **only verified and committed providers** are displayed on the **customer-facing app**.  
+
+---
+
 ## 🛠 **Test Credentials for App Review - Guideline 2.1 **  
 
 To facilitate the review process, below are the **dummy test accounts** for different scenarios:  
