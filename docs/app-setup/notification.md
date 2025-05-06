@@ -13,7 +13,8 @@ To enable and configure push notifications in your project, please follow the de
  - ***[Click here to view the Notification Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/notifications)***
 
 
-:::Note
+
+:::note
 Be sure to go through the guide thoroughly to ensure proper integration and functionality.
 :::
 
