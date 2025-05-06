@@ -6,7 +6,19 @@ sidebar_position: 3
 
 <!-- How to set Notification -->
 
-## 📢 Setting Up Push Notifications for iOS  
+To enable and configure push notifications in your project, please follow the detailed instructions provided in the guide below:
+
+### 📘 Notification Setup Guide
+
+ - ***[Click here to view the Notification Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/notifications)***
+
+
+:::Note
+Be sure to go through the guide thoroughly to ensure proper integration and functionality.
+:::
+
+Once done, you're all set to deliver engaging notifications to your users. Enjoy your development journey! 🚀
+<!-- ## 📢 Setting Up Push Notifications for iOS  
 
 This guide explains how to enable **Push Notifications** in your iOS app using **Firebase and Apple Push Notification Service (APNs).**  
 
@@ -104,4 +116,4 @@ Apple Push Notification service (APNs) supports two authentication methods:
 
 ✅ **Push Notifications Setup Completed! 🎉**  
 
-Your iOS app is now configured to receive **Push Notifications** via **Firebase and APNs**. 🚀  
+Your iOS app is now configured to receive **Push Notifications** via **Firebase and APNs**. 🚀   -->

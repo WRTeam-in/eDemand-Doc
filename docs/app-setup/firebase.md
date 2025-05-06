@@ -4,7 +4,20 @@ sidebar_position: 4
 
 # Firebase Setup
 
-# 🔥 How to Set Up Firebase in Your Flutter App  
+To set up Firebase for your project, please follow the step-by-step instructions provided in the guide below:
+
+### 📘 Firebase Setup Guide
+
+ - ***[Click here to view the Firebase Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/firebase)***
+
+:::note
+Please read through the guide carefully to ensure a successful setup.
+:::
+
+Please review this carefully and enjoy your work.
+
+
+<!-- # 🔥 How to Set Up Firebase in Your Flutter App  
 
 :::caution
 
@@ -14,7 +27,7 @@ You must use the **same Firebase project** for the **app, web, and panels** to e
 If you have already created a Firebase project, **skip steps 1-5** and start from **Step 6**.   -->
 
 
-:::
+<!-- :::
 
 ---
 
@@ -109,7 +122,7 @@ Before creating a Firebase app from Flutter, you must install **Firebase CLI**.
 
 <!-- How to enable Firebase Authentications. -->
 
-# 🔥 Firebase Authentication 
+<!-- # 🔥 Firebase Authentication 
 
 This document provides step-by-step instructions to enable **Firebase Authentication** in your Flutter app.  
 
@@ -199,4 +212,4 @@ This document provides step-by-step instructions to enable **Firebase Authentica
 
 ----
 ✅ **Firebase Authentication**🎉
-
+ --> 

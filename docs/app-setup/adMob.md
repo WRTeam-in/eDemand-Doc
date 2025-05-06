@@ -3,7 +3,22 @@ sidebar_position: 8
 ---
 # Google Ad Mob
 
-# 📢 How to Set Up Google AdMob  
+
+To monetize your app using Google AdMob, follow the official setup instructions carefully. This will enable you to display banner, interstitial, and rewarded ads within your app.
+
+### 📘 AdMob Setup Guide  
+**[Click here to view the AdMob Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/advertisement/google-admob)**
+
+---
+
+> ⚠️ **Important:**  
+Make sure your AdMob account is fully verified and not under review to start receiving ads.
+
+---
+
+Start monetizing your app effectively with AdMob! 💰📱
+
+<!-- # 📢 How to Set Up Google AdMob  
 
 This guide explains how to **integrate Google AdMob** for displaying ads in your application.  
 
@@ -92,4 +107,4 @@ ios/Runner/Info.plist
 
 ---
 
-🎉 **AdMob Setup is Now Complete!** 🚀
+🎉 **AdMob Setup is Now Complete!** 🚀 -->

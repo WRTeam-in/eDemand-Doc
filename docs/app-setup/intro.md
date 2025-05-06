@@ -10,18 +10,38 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 
 :::
 
-## Setup Essentials
+## 🚀 Setup Essentials
 
-1. Kindly suggest using **Flutter** with the latest stable version. Follow the official guide to install it from [Flutter Installation Guide](https://docs.flutter.dev/get-started/install).
+Follow the basic setup guide to configure your environment properly:
 
-2. Kindly suggest using **Java JDK 17**, **Java JDK 18** or **Java JDK 19**. Download it from the official source: [Java JDK Download](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html).
+### 📘 Flutter Setup Guide  
+**[Click here to view the Flutter Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup)**
 
-3. Setup your Java [java](https://www.geeksforgeeks.org/download-install-java-windows-linux-macos/).
+---
 
-4. Install a code editor like: [VSCode](https://code.visualstudio.com/download). and android studio like: [Android Studio](https://developer.android.com/studio)
+### 🧰 Required Software
+
+- **Android Studio Meerkat** – Version **2024.3.1**
+- **Flutter** – Version **3.29.1** *(Latest)*
+- **Java** – Version **17**, **18**, or **19**
+
+---
+
+### 🍏 Additional Requirements for macOS
+
+- **Homebrew**
+- **Cocoapods** – Version **1.16.2**
+- **Xcode** – Version **16**
+
+> ⚠️ **Note:**  
+Ensure all versions match the above list for smooth project setup and compatibility.
+
+---
+
+Happy coding! ✨
 
 
-## Flutter Setup Guide
+<!-- ## Flutter Setup Guide
 
 ### 1. Install Flutter
 Ensure you have the latest stable version of Flutter installed.  
@@ -46,6 +66,6 @@ After installation, verify the setup by running:
 ```sh
 flutter doctor
 ```
----
+--- -->
 
 🚀 You're all set for Flutter! Happy coding! 🎉
