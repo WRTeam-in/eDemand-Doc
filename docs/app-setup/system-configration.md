@@ -24,9 +24,11 @@ This guide explains how to **set up, enable, or disable** payment gateways by ad
 2️⃣ Enter the required credentials:  
    - **Key ID**  
    - **Secret Key**  
+
 3️⃣ Click **Save** to apply changes.  
 
-🔹 **Note:** These credentials are provided by the payment provider when you register your app.  
+ :::note These credentials are provided by the payment provider when you register your app.  
+ :::
 
 ---
 

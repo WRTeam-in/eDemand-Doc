@@ -30,6 +30,10 @@ Updating images in your Flutter app is simple. Follow these steps to replace exi
 
 - ***[Image Change Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/assets)*** 
 
+> ⚠️ **Important:**  
+Please follow all platform-specific instructions carefully to ensure proper functionality across both Android and iOS.
+
+
 ---
 
 ## ⚡ Step 3: Apply Changes  

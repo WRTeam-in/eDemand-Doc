@@ -34,7 +34,8 @@ This guide explains how to **generate and add a Google Maps API Key** for both *
    - **Maps SDK for iOS**  
    - **Places API** (for autocomplete & location search)  
    - **Geocoding API** (for converting addresses to coordinates)  
-   - **Directions API** (for route mapping) 
+   - **Geolocation API** 
+   - **Maps Embed API** 
 
  ![mapAPI](../../static/img/app/mapAPI5.webp)
 ---
@@ -60,10 +61,13 @@ This guide explains how to **generate and add a Google Maps API Key** for both *
 ```xml
 <meta-data
     android:name="com.google.android.geo.API_KEY"
-    android:value="YOUR_API_KEY_HERE" />
+    android:value="YOUR_ANDROID_API_KEY_HERE" />
 ```
  ![mapAPI](../../static/img/app/mapAPI7.webp)
-    🔹 Note: Replace "YOUR_ANDROID_API_KEY_HERE" with your actual Google Maps API Key.
+
+    :::note
+     Replace "YOUR_ANDROID_API_KEY_HERE" with your actual Google Maps API Key.
+     :::
 
 
 ## 🍏 Step 4: Setup API Key for iOS
@@ -74,7 +78,7 @@ This guide explains how to **generate and add a Google Maps API Key** for both *
 ```swift
 ios/Runner/AppDelegate.swift
 ```         
-3️⃣ Inside AppDelegate.swift, import Google Maps at the top:
+3️⃣ In `AppDelegate.swift`, ensure that `GoogleMaps` is imported at the top of the file, but only if it's not already present
 
 ```swift
 import GoogleMaps
@@ -83,7 +87,7 @@ import GoogleMaps
 4️⃣ Add the following line inside `didFinishLaunchingWithOptions`:
 
 ```swift
-GMSServices.provideAPIKey("YOUR KEY HERE")
+GMSServices.provideAPIKey("YOUR_IOS_API_KEY_HERE")
 ```
  ![mapAPI](../../static/img/app/mapAPI8.webp)
 

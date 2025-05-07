@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# How to Change AppName
+# How to Change App Name
 
 ## 📌 App Label Customization Guide (Android & iOS)
 
