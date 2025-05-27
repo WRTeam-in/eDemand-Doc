@@ -39,4 +39,4 @@ Contact us at support@wrteam.in to share your story.
 - Check the [Changelog](/docs/changelog) for recent improvements
 - Subscribe to [our newsletter](https://wrteam.in/) for any news about the new update, upcoming sales
 
-Your feedback helps us make Elite Quiz better for everyone. Thank you for being part of our community!
+Your feedback helps us make eDemand better for everyone. Thank you for being part of our community!

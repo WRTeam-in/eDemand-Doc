@@ -21,7 +21,7 @@ To ensure everything runs smoothly, it's important to use matching versions:
 
 ## Getting Started
 
-To set up your Elite Quiz platform, follow these steps in order:
+To set up your eDemand platform, follow these steps in order:
 
 1. **Admin Panel Setup** - Configure your backend management system
 2. **Firebase Configuration** - Set up the required Firebase services
@@ -43,10 +43,10 @@ To find your purchase code, refer to this [guide](https://help.market.envato.com
 
 ## What's Next?
 
-Explore the following sections to learn more about Elite Quiz:
+Explore the following sections to learn more about eDemand:
 
-- [Overview](/overview) - Detailed explanation of Elite Quiz features and capabilities
-- [Features](/features) - Comprehensive guide to all available features
-- [FAQ](/faq) - Answers to common questions and troubleshooting tips
+<!-- - [Overview](/docs/category/features-overview-5) - Detailed explanation of eDemand features and capabilities -->
+- [Features](/docs/category/features-overview-5) - Comprehensive guide to all available features
+<!-- - [FAQ](/faq) - Answers to common questions and troubleshooting tips -->
 
 Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.
