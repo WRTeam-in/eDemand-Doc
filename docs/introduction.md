@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+# Welcome to eDemand
+
+Welcome to eDemand – your all-in-one solution for managing and operating a powerful service-based application platform.
+
+This documentation will help you set up, customize, and launch your eDemand platform, whether you are working with the mobile app, the web admin panel, or both.
+
+## About This Documentation
+
+This guide covers both the ***eDemand Mobile App*** and the Admin Panel. While they are distinct products, they are designed to work seamlessly together. If you’ve purchased only one (e.g., just the mobile app), you can skip the sections related to the other product.
+
+## Version Compatibility
+
+To ensure everything runs smoothly, it's important to use matching versions:
+
+- Your Admin Panel version must match your App/Web version
+- For example, if you're using App/Web version 1.0.0, your Admin Panel must also be version 1.0.0
+
+## Getting Started
+
+To set up your Elite Quiz platform, follow these steps in order:
+
+1. **Admin Panel Setup** - Configure your backend management system
+2. **Firebase Configuration** - Set up the required Firebase services
+3. **App/Web Setup** - Deploy your frontend application
+4. **Rebranding** - Customize the platform to match your brand
+5. **Deployment** - Launch your service platform to production
+
+## Support
+
+We're committed to providing excellent support for our customers. If you need assistance:
+
+1. Visit our [Support](/support) page for contact information
+2. When contacting support, please include:
+   - Your purchase code
+   - A detailed description of your issue or question
+   - Any relevant screenshots or error messages
+
+To find your purchase code, refer to this [guide](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code).
+
+## What's Next?
+
+Explore the following sections to learn more about Elite Quiz:
+
+- [Overview](/overview) - Detailed explanation of Elite Quiz features and capabilities
+- [Features](/features) - Comprehensive guide to all available features
+- [FAQ](/faq) - Answers to common questions and troubleshooting tips
+
+Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.
