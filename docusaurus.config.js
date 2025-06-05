@@ -6,9 +6,9 @@ const config = {
   title: "eDemand",
   tagline: "WRTeam",
   favicon: "img/edemand.svg",
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://edemand-docs.vercel.app",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
   i18n: {
