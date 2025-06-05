@@ -10,7 +10,7 @@ This documentation will help you set up, customize, and launch your eDemand plat
 
 ## About This Documentation
 
-This guide covers both the ***eDemand Mobile App*** and the Admin Panel. While they are distinct products, they are designed to work seamlessly together. If you’ve purchased only one (e.g., just the mobile app), you can skip the sections related to the other product.
+This guide covers both the ***eDemand Mobile App, web*** and the Admin Panel. While they are distinct products, they are designed to work seamlessly together.
 
 ## Version Compatibility
 

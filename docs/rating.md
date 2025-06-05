@@ -4,18 +4,18 @@ sidebar_position: 9
 
 
 
-<!-- # Feedback & Suggestions
+# Feedback & Suggestions
 
-Your feedback is the driving force behind Elite Quiz's continuous improvement. We value your input and actively use it to shape the future of our platform.
+Your feedback is the driving force behind eDemand's continuous improvement. We value your input and actively use it to shape the future of our platform.
 
 ## Share Your Feedback
 
-We use [Canny.io](https://elitequiz.canny.io/) as our official feedback platform. Here you can:
+We use [Canny.io](https://edemand.canny.io/) as our official feedback platform. Here you can:
 
 - Submit new feature requests
 - Vote on existing suggestions
 - Track feature development status
-- See what's planned for future updates -->
+- See what's planned for future updates
 
 ## Rate & Review
 
