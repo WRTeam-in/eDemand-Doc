@@ -63,18 +63,18 @@ const config = {
             type: "docSidebar",
             sidebarId: "adminSidebar",
             position: "left",
-            label: "Admin Documentation",
+            label: "Admin",
           },
           {
             to: "/docs/website-setup/web-intro",
-            label: "Website Documentation",
+            label: "Website",
             position: "left",
           },
           {
             type: "docSidebar",
             sidebarId: "appSidebar",
             position: "left",
-            label: "App Documentation",
+            label: "App",
           },
           {
             type: "docSidebar",
