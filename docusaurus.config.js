@@ -52,44 +52,46 @@ const config = {
     ({
       image: "img/edemand.svg",
       navbar: {
-        title: "eDemand",
+        // title: "eDemand",
+        logo: {
+          alt: "eDemand Logo",
+          src: "img/edemand.svg",
+          srcDark: "img/edemand-white.png",
+        },
         items: [
           {
             type: "docSidebar",
-            sidebarId: "webSidebar",
+            sidebarId: "adminSidebar",
             position: "left",
-            label: "Documentation",
+            label: "Admin Documentation",
           },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "appSidebar",
-          //   position: "left",
-          //   label: "App Documentation",
-          // },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "adminSidebar",
-          //   position: "left",
-          //   label: "Admin Documentation",
-          // },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "featuresSidebar",
-          //   position: "left",
-          //   label: "Features",
-          // },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "changelogSidebar",
-          //   position: "left",
-          //   label: "Changelog",
-          // },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "supportSidebar",
-          //   position: "left",
-          //   label: "Community",
-          // },
+          {
+            to: "/docs/website-setup/web-intro",
+            label: "Website Documentation",
+            position: "left",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "appSidebar",
+            position: "left",
+            label: "App Documentation",
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "featuresSidebar",
+            position: "left",
+            label: "Features",
+          },
+          {
+            to: "/docs/changelog",
+            label: "Changelog",
+            position: "left",
+          },
+          {
+            to: "/docs/support",
+            label: "Community Support",
+            position: "left",
+          },
           {
             type: 'search',
             position: 'right',

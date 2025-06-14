@@ -1,6 +1,8 @@
 ---
-id: community-support
-title: Community Support
+id: support
+title: Support
+sidebar_position: 1
+sidebar: null
 ---
 
 

@@ -1,8 +1,8 @@
 ---
-id: changelog-overview
+id: changelog
 title: Changelog Overview
+sidebar: null
 ---
-# Changelog
 
 See what's new added, changed, fixed, improved, or updated in the latest versions.
 
@@ -104,13 +104,13 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ## Version 2.3.0 (18 March, 2024)
 
-- **Added** Provide the URLs for both the customer and provider apps in the panel’s App Settings.
+- **Added** Provide the URLs for both the customer and provider apps in the panel's App Settings.
 - **Added** Allow admin approval for services. Admin can manage this when adding or editing a provider.
 - **Added** Enable subscription management from the add or edit provider section in the admin panel.
 - **Added** Enable cash collection and settlement for each order in the Booking Payment Management section.
 - **Added** Remove the Promo code option from the customer app.
 - **Added** Include a share app option in the provider app.
-- **Improved** Modify the subscription purchase flow. In the provider app and panel, don’t prompt immediate plan purchase after registering a new provider.
+- **Improved** Modify the subscription purchase flow. In the provider app and panel, don't prompt immediate plan purchase after registering a new provider.
 - **Improved** Add notes to each field in the admin panel to clarify its purpose.
 - **Improved** Improvements and issues fixed.
 - **Compatible** Flutter v3.19.3 - Seamlessly utilize the latest Flutter features.
