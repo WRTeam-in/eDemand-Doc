@@ -93,6 +93,11 @@ const config = {
             position: "left",
           },
           {
+            to: "/docs/faqs",
+            label: "FAQs",
+            position: "left",
+          },
+          {
             type: 'search',
             position: 'right',
           },

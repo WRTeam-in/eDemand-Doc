@@ -1,5 +1,7 @@
 ---
+id: introduction
 sidebar_position: 1
+
 ---
 
 # Welcome to eDemand
@@ -50,3 +52,13 @@ Explore the following sections to learn more about eDemand:
 <!-- - [FAQ](/faq) - Answers to common questions and troubleshooting tips -->
 
 Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.
+
+
+<div class="custom-next-box-wrapper">
+  <div class="custom-next-box">
+    <p class="custom-next-label">Next</p>
+    <a class="custom-next-link" href="/docs/admin-setup/admin-intro">
+      Admin Installation
+    </a>
+  </div>
+</div>
