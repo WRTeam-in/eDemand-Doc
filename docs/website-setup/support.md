@@ -1,14 +1,14 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Support
 
 Its our pleasure to serve our service and support. please contact our support team.
 
-Customer Support : Jignesh Majethiya
+Customer Support : Yash Rajput
 
-Skype : [Jignesh Majethiya](https://join.skype.com/invite/wpO6RYDhElUY)
+Teams : [Yash Rajput](https://teams.live.com/l/invite/FEArTaTzDWK4rEmhAE)
 
 To help our customers, we constantly be in touch with every customer if they need any assistance regarding our product. We offer our customers a support from **Mon – Fri 9.00am to 6.00pm IST (GMT +5.30)** – We are a Team located in India – Asia.
 
