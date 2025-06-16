@@ -5,7 +5,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "eDemand",
   tagline: "WRTeam",
-  favicon: "img/edemand.svg",
+  favicon: "img/favicon.ico",
   url: "https://edemand-docs.vercel.app",
   baseUrl: "/",
   onBrokenLinks: "warn",
