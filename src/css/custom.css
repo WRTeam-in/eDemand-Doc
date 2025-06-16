@@ -155,27 +155,27 @@
 .custom-next-box {
   text-align: right;
   margin-top: 2rem;
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray;
   border-radius: 6px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem; */
   width: 50%;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
-
+/* 
 .custom-next-box:hover {
  border: 1px solid var(--ifm-color-primary);
-}
+} */
 
 .custom-next-label {
   margin-bottom: 0.2rem;
   color: var(--ifm-font-color-base); /* Optional: adjusts based on theme */
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .custom-next-link {
   color: var(--ifm-color-primary);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
 }

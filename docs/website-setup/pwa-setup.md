@@ -1,6 +1,4 @@
 ---
-title: PWA Setup
-description: How to enable and configure Progressive Web App (PWA) features in your eDemand application.
 sidebar_position: 6
 ---
 
