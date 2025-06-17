@@ -3,13 +3,15 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "eDemand",
-  tagline: "WRTeam",
+  title: "eDemand Documentation",
+  tagline: "Documentation for eDemand",
   favicon: "img/favicon.ico",
-  url: "https://edemand-docs.vercel.app",
-  baseUrl: "/",
+  url: 'https://wrteam-in.github.io',
+  baseUrl: '/edemand_doc',
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
+  organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
+  projectName: 'eDemand-Doc', // Usually your repo name.
 
   i18n: {
     defaultLocale: "en",

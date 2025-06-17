@@ -1,7 +1,6 @@
 ---
 id: introduction
 sidebar_position: 1
-
 ---
 
 # Welcome to eDemand
@@ -35,7 +34,7 @@ To set up your eDemand platform, follow these steps in order:
 
 We're committed to providing excellent support for our customers. If you need assistance:
 
-1. Visit our [Support](/support) page for contact information
+1. Visit our [Support](support.md) page for contact information
 2. When contacting support, please include:
    - Your purchase code
    - A detailed description of your issue or question
@@ -47,11 +46,9 @@ To find your purchase code, refer to this [guide](https://help.market.envato.com
 
 Explore the following sections to learn more about eDemand:
 
-<!-- - [Overview](/docs/category/features-overview-5) - Detailed explanation of eDemand features and capabilities -->
-- [Features](/docs/category/features-overview-5) - Comprehensive guide to all available features
-<!-- - [FAQ](/faq) - Answers to common questions and troubleshooting tips -->
+- [Features](features/elegant-home-page.md) - Comprehensive guide to all available features
 
-Need help? Our support team is always ready to assist you. Contact us through the [Support](/support) page.
+Need help? Our support team is always ready to assist you. Contact us through the [Support](support.md) page.
 
 
 <div class="custom-next-box-wrapper">

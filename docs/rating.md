@@ -1,9 +1,6 @@
 ---
 sidebar_position: 9
 ---
-
-
-
 # Feedback & Suggestions
 
 Your feedback is the driving force behind eDemand's continuous improvement. We value your input and actively use it to shape the future of our platform.
