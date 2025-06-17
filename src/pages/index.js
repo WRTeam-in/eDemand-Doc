@@ -109,7 +109,7 @@ function HomepageHeader() {
   return (
     <header ref={heroRef} className={styles.heroBanner}>
       <div className={styles.heroContent}>
-        <img src="/img/edemand-white.png" alt="eDemand Logo" className={styles.heroLogo} />
+        <img src="/eDemand-Doc/img/edemand-white.png" alt="eDemand Logo" className={styles.heroLogo} />
         <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
         <p className={styles.heroSubtitle}>
           Comprehensive documentation for eDemand covering installation, setup, features, and support.

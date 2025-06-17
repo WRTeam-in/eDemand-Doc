@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-## Deployment
+# Deployment
 
 Once your app is fully developed and tested, follow the steps below to deploy it to the Play Store and App Store.
 
