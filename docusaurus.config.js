@@ -7,7 +7,7 @@ const config = {
   tagline: "Documentation for eDemand",
   favicon: "img/favicon.ico",
   url: 'https://wrteam-in.github.io',
-  baseUrl: '/edemand_doc',
+  baseUrl: '/eDemand-Doc',
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   organizationName: 'WRTeam-in', // Usually your GitHub org/user name.
