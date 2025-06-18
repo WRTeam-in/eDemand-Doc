@@ -11,6 +11,38 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
+## Version 4.0.0 (27 March, 2025)
+
+- **Added** Become a Provider page for service provider registration [Website]
+- **Added** New UI for web & app for better user experience [Website and Applications]
+- **Added** More filters for earnings in charts [Provider Application]
+- **Added** More filters in chat [Customer Application]
+- **Added** More filters in payment transactions [Customer Application]
+- **Added** More filters in withdraw requests [Provider Application]
+- **Added** Maintenance mode [Website]
+- **Added** Description for Feature section [Website and Panel]
+- **Compatible** Converted project from React.js to Next.js for better performance [Website]
+- **Compatible** Website supports PWA
+- **Compatible** Integrated Tailwind CSS for improved styling [Website]
+- **Compatible** Flutter v3.29.1 - Seamlessly utilize the latest Flutter features [Applications]
+- **Improved** Overall performance with optimized rendering and loading speeds [Website]
+- **Improved** Deep link workflow for better app-web connection [Customer App and Website]
+- **Improved** General improvements and bug fixes [Apps, Web & Panels].
+
+---
+
+## Version 3.1.0 (05 February, 2025)
+
+- **Note** Important: Read the instructions before updating to version 3.1.0.
+- **Added** Amazon S3 for external storage. [Admin Panel]
+- **Compatible** CodeIgniter version update to: 4.5.7. [Panels]
+- **Compatible** HP version update to: 8.2. [Panels]
+- **Compatible** Flutter v3.27.X - Seamlessly utilize the latest Flutter features [Apps].
+- **Compatible** With Android studio latest version — Ladybug [Apps].
+- **Improved** General improvements and bug fixes [Apps, Web & Panels].
+
+---
+
 ## Version 3.0.0 (02 December, 2024)
 
 - **Added** Custom Job Request option for customer.
