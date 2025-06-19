@@ -11,6 +11,20 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
+## Version 4.1.0 (19 June, 2025)
+
+- **Compatible** Flutter v3.32.0 – Fully compatible with the latest Flutter version for optimal performance and feature support [Applications]
+- **Added** Notification redirection from the notification list to corresponding provider or type-specific screens [Customer Application]
+- **Added** FAQ link integrated in the website footer for easier access to help resources [Website]
+- **Added** Customer-to-provider and provider-to-customer block/unblock functionality for enhanced user management [Apps, Web & Panels]
+- **Added** Cookie consent message configuration from the admin panel for compliance and customization [Website]
+- **Added** Default country code settings configurable from the panel to streamline localization [Website and Apps]
+- **Added** Maintenance mode with custom date and time scheduling for the website [Website]
+- **Improved** Localized display of the current date based on provider's app language settings, including updates to subscription model [Provider Application]
+- **Improved** General UI enhancements and critical bug fixes for smoother user experience [Apps, Web & Panels]
+
+---
+
 ## Version 4.0.0 (27 March, 2025)
 
 - **Added** Become a Provider page for service provider registration [Website]
