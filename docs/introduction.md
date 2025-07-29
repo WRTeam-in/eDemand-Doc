@@ -54,7 +54,7 @@ Need help? Our support team is always ready to assist you. Contact us through th
 <div class="custom-next-box-wrapper">
   <div class="custom-next-box">
     <p class="custom-next-label">Next</p>
-    <a class="custom-next-link" href="/docs/admin-setup/admin-intro">
+    <a class="custom-next-link" href="/eDemand-Doc/docs/admin-setup/admin-intro">
       Admin Installation 
     </a>
   </div>
