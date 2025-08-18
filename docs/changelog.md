@@ -11,6 +11,59 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
+
+## Compatibility Table
+
+| Product Version | Flutter version |
+| --------------- | --------------- |
+| v4.2.0          | v3.32.x         |
+| v4.1.0          | v3.32.x         |
+| v4.0.0          | v3.29.1         |
+| v3.1.0          | v3.27.x         |
+| v3.0.0          | v3.24.5         |
+| v2.9.0          | v3.24.3         |
+| v2.8.0          | v3.24.1         |
+| v2.7.0          | v3.22.2         |
+| v2.6.0          | v3.22.2         |
+| v2.5.0          | v3.19.6         |
+| v2.4.0          | v3.19.5         |
+
+---
+
+## Version 4.1.1 (14 August, 2025)
+
+- ***Compatible*** Updated Android Gradle plugin, Kotlin versions, Gradle wrapper (8.9), and target SDK 35 for improved compatibility and performance [Applications]  
+- ***Compatible*** Updated Flutter compatibility to v3.32.x [Applications]  
+- ***Added*** Order notification redirection to booking and provider details screens for better navigation [Customer & Provider Applications]  
+- ***Added*** Image editing option in the rating bottom sheet [Customer Application]  
+- ***Added*** Delete images and files option in edit service [Provider Application]  
+- ***Added*** Previous image deletion option during provider registration [Provider Application]  
+- ***Added*** Map Providers with search functionality and debounce search for improved provider location experience [Applications]  
+- ***Added*** SEO configuration support [Website]  
+- ***Added*** Xendit payment gateway integration for secure online transactions [Applications]  
+- ***Added*** Required image validation for passport, national ID, and address ID in provider registration from the panel [Panel]  
+- ***Added*** Country code management from the panel [Panel]  
+- ***Added*** Blogs in the customer app and website [Customer Application & Website]  
+- ***Fixed*** Text translation issues across multiple languages [Applications & Website]  
+- ***Fixed*** Booking screen unnecessary scroll when no data is present [Provider Application]  
+- ***Improved*** General UI responsiveness, layout consistency, Google Map integration, and overall code maintainability [Applications]  
+
+---
+
+## Version 4.1.0 (19 June, 2025)
+
+- ***Compatible*** Flutter v3.32.0 – Fully compatible with the latest Flutter version for optimal performance and feature support [Applications]  
+- ***Added*** Notification redirection from the notification list to corresponding provider or type-specific screens [Customer Application]  
+- ***Added*** FAQ link integrated in the website footer for easier access to help resources [Website]  
+- ***Added*** Customer-to-provider and provider-to-customer block/unblock functionality for enhanced user management [Applications, Website & Panels]  
+- ***Added*** Cookie consent message configuration from the admin panel for compliance and customization [Website]  
+- ***Added*** Default country code settings configurable from the panel to streamline localization [Website & Applications]  
+- ***Added*** Maintenance mode with custom date and time scheduling [Website]  
+- ***Improved*** Localized display of the current date based on provider app language settings, including updates to subscription model [Provider Application]  
+- ***Improved*** General UI enhancements and critical bug fixes for smoother user experience [Applications, Website & Panels]  
+
+---
+
 ## Version 4.0.0 (27 March, 2025)
 
 - **Added** Become a Provider page for service provider registration [Website]
