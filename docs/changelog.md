@@ -30,7 +30,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
-## Version 4.1.1 (14 August, 2025)
+## Version 4.2.0 (14 August, 2025)
 
 - ***Compatible*** Updated Android Gradle plugin, Kotlin versions, Gradle wrapper (8.9), and target SDK 35 for improved compatibility and performance [Applications]  
 - ***Compatible*** Updated Flutter compatibility to v3.32.x [Applications]  
