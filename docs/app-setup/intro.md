@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 # App Prerequisites
-
+[![env-file](../../static/img/installation.webp)](https://www.wrteam.in/services/installation)
 :::info
 Whenever you seek support for WRTeam products via Skype or WhatsApp, please share your **[Purchase Code](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code)** and Codecanyon username. This information is required for verification in our system. Without it, we are unable to provide support in accordance with Codecanyon policy.
 

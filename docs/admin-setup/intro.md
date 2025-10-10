@@ -3,7 +3,9 @@ id: admin-intro
 sidebar_position: 1
 ---
 
+
 # Admin Panel Prerequisites
+[![env-file](../../static/img/installation.webp)](https://www.wrteam.in/services/installation)
 
 :::note
 

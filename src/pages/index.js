@@ -183,6 +183,25 @@ function SupportSection() {
   );
 }
 
+function BannerSection() {
+  return (
+    <section className={styles.bannerSection}>
+      <a
+        href="https://www.wrteam.in/services/installation"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.bannerLink}
+      >
+        <img
+          src="/eDemand-Doc/img/installation.webp"
+          alt="Installation Service"
+          className={styles.bannerImage}
+        />
+      </a>
+    </section>
+  );
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -191,6 +210,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <SupportSection />
+        <BannerSection />
       </main>
     </Layout>
   );

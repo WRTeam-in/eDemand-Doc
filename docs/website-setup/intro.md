@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 # Web Prerequisites
-
+[![env-file](../../static/img/installation.webp)](https://www.wrteam.in/services/installation)
 :::note
 
 We recommend deploying the web application on the main domain and the admin panel on a subdomain.

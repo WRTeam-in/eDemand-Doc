@@ -222,3 +222,34 @@
 }
 
 
+
+
+
+.bannerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background: #181a20;
+}
+
+.bannerLink {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+}
+
+.bannerLink:hover {
+  transform: scale(1.02);
+}
+
+.bannerImage {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
