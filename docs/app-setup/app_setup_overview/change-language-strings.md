@@ -84,4 +84,4 @@ When updating translations, **only change the text on the right side (the value)
 
 :::
 
-![get-language-codes](../../../static/img/web/add_lang.png) 
+![get-language-codes](../../../static/img/app/add_lang.png) 
