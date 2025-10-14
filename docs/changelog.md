@@ -30,6 +30,19 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
+## Version 4.3.0 (14 October, 2025)
+
+- ***Added*** Multilingual feature for data entry [Admin Panel, Apps & Web]
+- ***Added*** “Register as Provider” functionality on website [Web]
+- ***Improved*** App and Web languages can now be managed from the Admin Panel [Admin Panel]
+- ***Improved*** Landing page now manageable with enable/disable toggle [Web & Admin Panel]
+- ***Improved*** General performance enhancements and bug fixes [Apps, Web & Panels]
+- ***Compatible*** Website compatible with Next.js v14.2.33 [Web]
+- ***Compatible*** Applications compatible with 16KB size optimisation and Android 15 [Apps]
+- ***Compatible*** Flutter v3.35.5 - Seamlessly utilize the latest Flutter features [Apps]
+
+---
+
 ## Version 4.2.0 (14 August, 2025)
 
 - ***Compatible*** Updated Android Gradle plugin, Kotlin versions, Gradle wrapper (8.9), and target SDK 35 for improved compatibility and performance [Applications]  
