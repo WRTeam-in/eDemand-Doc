@@ -54,8 +54,8 @@ If you already created firebase project at that time then you can skip below fir
 
     ![admin-web-firebase](../../static/img/firebase/admin-web-firebase.png)
 
-12. Also update firebase config value in web **.env** file and **public/firebase-messaging-sw.js** file
+12. Also update firebase config value in web **.env** file.
 
     ![firebase-web](../../static/img/web/firebase_config.png)
 
-    ![firebase-env](../../static/img/web/firebase_messaging.png)
+    <!-- ![firebase-env](../../static/img/web/firebase_messaging.png) -->

@@ -4,101 +4,100 @@ sidebar_position: 9
 
 # Sitemap Setup
 
-A sitemap helps search engines discover and index all the pages on your website efficiently. This guide explains how to set up a sitemap for your eDemand web application.
+A sitemap helps search engines discover and index all the pages on your website. This guide explains how to set up a sitemap for your eDemand web application.
 
-## Configuring Your Domain for Sitemap
+## Step 1: Configure Your Domain
 
 1. Open the `.env` file in your project's root directory
-2. Add your web domain or subdomain URL to the appropriate variable
 
-![Add Web URL](../../static/img/web/web_url.png)
+2. Add your website URL:
 
-## Generating the Sitemap
+```env
+NEXT_PUBLIC_WEB_URL=https://yourdomain.com
+```
 
-Choose one of the following options based on your hosting setup.
+3. (Optional) If you're using VPS hosting with Node.js, enable SEO mode:
 
-### 1) Shared hosting without SEO (static export)
+```env
+NEXT_PUBLIC_ENABLE_SEO=true
+```
 
-- Build your site (this creates the `out` folder):
+If you're using shared hosting or static export, leave this unset or set to `false`.
+
+## Step 2: Generate the Sitemap
+
+The sitemap is automatically generated when you build or run your project. Choose the method that matches your hosting:
+
+### Option 1: Shared Hosting (Static Export)
+
+Build your site for static hosting:
 
 ```bash
 npm run export
 ```
 
-- During the build, the sitemap will be generated and saved to the `public` directory.
-- Deploy the contents of the `out` folder to your hosting. Ensure the generated sitemap is included.
+This creates the sitemap file at `public/sitemap.xml` which you can deploy with your site.
 
-### 2) VPS (build on server; auto-generate sitemap)
+### Option 2: VPS Hosting (Server-Side)
 
-- Build the project on your VPS. During the build, the sitemap is generated automatically and added to the `public` folder.
-
-Example:
+Build your project on your VPS:
 
 ```bash
 npm run build
 ```
 
-- After the build, verify the file exists at `public/sitemap.xml`.
+The sitemap will be generated automatically and served at `/sitemap.xml` when your site is running.
 
-### 3) Generate manually (only sitemap)
+### Option 3: Manual Generation
 
-- Run the sitemap generation script:
+If you only need to generate the sitemap without building:
 
 ```bash
-npm run generat-sitemap
+npm run generate-sitemap
 ```
 
-- This will generate/update `public/sitemap.xml` without starting the app.
+This creates `public/sitemap.xml` file.
 
-## Customizing the Sitemap
+## How It Works
 
-If you want to customize the sitemap manually:
+The sitemap system works in two ways depending on your configuration:
 
-1. Navigate to the `public` directory
-2. Open the `sitemap.xml` file
-3. Modify the file according to your needs
+**When SEO is enabled** (`NEXT_PUBLIC_ENABLE_SEO="true"`):
+- Sitemap is generated dynamically on each request
+- Always includes the latest content from your API
+- Best for VPS hosting with Node.js
 
-<!-- ![Sitemap](/images/web/sitemap.png) -->
+**When SEO is disabled** (default or `NEXT_PUBLIC_ENABLE_SEO="false"`):
+- Sitemap is generated as a static XML file
+- Saved to `public/sitemap.xml`
+- Best for shared hosting or static exports
 
-## Sitemap Structure
+The sitemap automatically includes:
+- All static pages (home, about, contact, etc.)
+- Dynamic pages from your API (services, providers, blogs)
+- Multi-language versions of all pages
 
-A typical sitemap follows this XML structure:
+## Step 3: Verify Your Sitemap
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://yourdomain.com/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://yourdomain.com/properties</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Additional URLs -->
-</urlset>
+After deploying your site, visit:
+
+```
+https://yourdomain.com/sitemap.xml
 ```
 
-## Submitting Your Sitemap to Search Engines
+You should see an XML file with all your website URLs.
 
-After creating your sitemap:
+## Step 4: Submit to Search Engines
 
-1. Deploy your website with the sitemap.xml file
-2. Submit your sitemap URL to search engines through their webmaster tools:
-   - Google Search Console: https://search.google.com/search-console
-   - Bing Webmaster Tools: https://www.bing.com/webmasters
-   - Yandex Webmaster: https://webmaster.yandex.com
+Submit your sitemap to search engines:
 
-## Best Practices
+1. **Google Search Console**: https://search.google.com/search-console
+   - Add your property
+   - Go to Sitemaps section
+   - Submit: `https://yourdomain.com/sitemap.xml`
 
-For an effective sitemap:
+2. **Bing Webmaster Tools**: https://www.bing.com/webmasters
+   - Add your site
+   - Submit sitemap: `https://yourdomain.com/sitemap.xml`
 
-- Keep it up to date with your latest content
-- Include all important pages you want indexed
-- Set appropriate priority and change frequency values
-- Keep the file size under 50MB and fewer than 50,000 URLs (create multiple sitemaps if needed)
-- Make sure the URLs in your sitemap actually exist and return 200 status codes
+That's it! Your sitemap is now set up and submitted to search engines.
