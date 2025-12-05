@@ -16,6 +16,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 | Product Version | Flutter version |
 | --------------- | --------------- |
+| v4.3.0          | v3.35.5         |
 | v4.2.0          | v3.32.x         |
 | v4.1.0          | v3.32.x         |
 | v4.0.0          | v3.29.1         |
@@ -27,6 +28,21 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 | v2.6.0          | v3.22.2         |
 | v2.5.0          | v3.19.6         |
 | v2.4.0          | v3.19.5         |
+
+---
+
+## Version 4.4.0
+
+- ***Added*** Google Analytics for improved user behavior insights [Apps, Web & Provider Panel]
+- ***Added*** Microsoft Clarity for advanced heatmap and session tracking analytics [Apps, Web & Provider Panel]
+- ***Added*** Google AdSense support for monetization [Web]
+- ***Added*** Multi-language SEO configuration to enhance global search visibility [Web]
+- ***Added*** New Notification, Email & SMS templates with dynamic payload support [Apps, Web & Panels]
+- ***Added*** Notification redirect & queue-based notification delivery for faster and more reliable messaging [Apps, Web & Panels]
+- ***Added*** Tablet-optimized UI layouts for enhanced user experience [Apps]
+- ***Improved*** Middleware security to prevent XSS attacks and removed known vulnerabilities [Panels]
+- ***Compatible*** Flutter SDK upgrade to version 3.38.3 ensuring latest feature support [Apps]
+- ***Improved*** General performance improvements and stability enhancements [Apps, Web & Panels]
 
 ---
 
