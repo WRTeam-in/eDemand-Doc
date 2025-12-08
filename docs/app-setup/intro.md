@@ -21,7 +21,7 @@ Follow the basic setup guide to configure your environment properly:
 
 ### 🧰 Required Software
 
-- **Android Studio Meerkat** – Version **2024.3.1**
+- **Android Studio Meerkat** – Version **2025.2.2**
 - **Flutter** – Version **3.38.3**
 - **Java** – Version **17**, **18**, **19**, or **21**
 
