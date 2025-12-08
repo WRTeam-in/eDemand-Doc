@@ -14,36 +14,19 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ## Compatibility Table
 
-| Product Version | Flutter version | Gradle Wrapper | Android Gradle Plugin |
-| --------------- | --------------- | -------------- | --------------------- |
-| v4.4.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
-| v4.3.0          | v3.35.5         | 8.9            | 8.7.0                 |
-| v4.2.0          | v3.32.x         | 8.9            | 8.7.0                 |
-| v4.1.0          | v3.32.x         | 8.7            | 8.6.0                 |
-| v4.0.0          | v3.29.1         | 8.7            | 8.5.0                 |
-| v3.1.0          | v3.27.x         | 8.7            | 8.5.0                 |
-| v3.0.0          | v3.24.5         | 8.7            | 8.5.0                 |
-| v2.9.0          | v3.24.3         | 7.6            | 7.3.0                 |
-| v2.8.0          | v3.24.1         | 7.6            | 7.3.0                 |
-| v2.7.0          | v3.22.2         | 7.6            | 7.3.0                 |
-| v2.6.0          | v3.22.2         | 7.6            | 7.3.0                 |
-| v2.5.0          | v3.19.6         | 7.6            | 7.3.0                 |
-| v2.4.0          | v3.19.5         | 7.6            | 7.3.0                 |
-
----
-
-## Version 4.4.0 (08 December, 2025)
-
-- ***Added*** Google Analytics for improved user behavior insights [Apps & Web & Provider Panel]
-- ***Added*** Microsoft Clarity for advanced heatmap and session tracking analytics [Apps & Web & Provider Panel]
-- ***Added*** Google AdSense support for monetization [Web]
-- ***Added*** Multi-language SEO configuration to enhance global search visibility [Web]
-- ***Added*** New Notification, Email & SMS templates with dynamic payload support [Apps, Web & Panels]
-- ***Added*** Notification redirect & queue-based notification delivery for faster and more reliable messaging [Apps, Web & Panels]
-- ***Added*** Tablet-optimized UI layouts for enhanced user experience [Apps]
-- ***Improved*** Middleware security to prevent XSS attacks and removed known vulnerabilities [Panels]
-- ***Compatible*** Flutter SDK upgrade to version 3.38.3 ensuring latest feature support [Apps]
-- ***Improved*** General performance improvements and stability enhancements [Apps, Web & Panels]
+| Product Version | Flutter version |
+| --------------- | --------------- |
+| v4.2.0          | v3.32.x         |
+| v4.1.0          | v3.32.x         |
+| v4.0.0          | v3.29.1         |
+| v3.1.0          | v3.27.x         |
+| v3.0.0          | v3.24.5         |
+| v2.9.0          | v3.24.3         |
+| v2.8.0          | v3.24.1         |
+| v2.7.0          | v3.22.2         |
+| v2.6.0          | v3.22.2         |
+| v2.5.0          | v3.19.6         |
+| v2.4.0          | v3.19.5         |
 
 ---
 
