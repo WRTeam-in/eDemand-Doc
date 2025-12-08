@@ -31,7 +31,7 @@ Follow the basic setup guide to configure your environment properly:
 
 - **Homebrew**
 - **Cocoapods** – Version **1.16.2**
-- **Xcode** – Version **16**
+- **Xcode** – Version **26**
 
 > ⚠️ **Note:**  
 Ensure all versions match the above list for smooth project setup and compatibility.
