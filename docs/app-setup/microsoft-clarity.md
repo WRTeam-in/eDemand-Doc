@@ -25,13 +25,13 @@ Microsoft Clarity is already integrated in the app. You only need to replace you
 1️⃣ Open the following file in your Flutter project:
 
 ```
-/lib/analytics/analytics_ids.dart
+/lib/utils/constant.dart
 ```
 
 2️⃣ Find this variable:
 
 ```dart
-static const String microsoftClarityProjectId = "YOUR_PROJECT_ID";
+const String microsoftClarityProjectId = "YOUR_PROJECT_ID";
 ```
 
 3️⃣ Replace it with your real Clarity Project ID:
