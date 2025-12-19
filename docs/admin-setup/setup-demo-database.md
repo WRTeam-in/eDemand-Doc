@@ -19,7 +19,7 @@ Follow these main steps to set up the eDemand demo database:
 2. **Empty Your Database**
    - Remove all existing tables and data from your target database.
 3. **Import the Demo SQL File**
-   - Download: [demo-database-v-4.1.0.sql](../../static/demo-database-v-4.1.0.sql)
+   - Download: [demo-database-v-4.5.0.sql](../../static/demo-database-v-4.5.0.sql)
    - Import this file into your empty database using phpMyAdmin.
 4. **Default Admin Credentials**
    - **Mobile:** `9876543210`

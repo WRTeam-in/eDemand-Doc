@@ -22,14 +22,13 @@ Sending notifications like email, and sms takes time. Also sending FCM notificat
    Set the timing to run the queue every minute. You may need to set each time manually to "*" for hour, minute, day, month, etc.
 
 5. **Step 5: Add the Command:**
-   In the "Command" field, enter the full URL of the script or file you want to run as the cron job. This is the URL of the task you want to automate. **(Ex: /usr/bin/php path_to_your_project/spark queue:work notifications)**
+   In the "Command" field, enter the full URL of the script or file you want to run as the cron job. This is the URL of the task you want to automate. **(Ex: /usr/bin/php path_to_your_project/spark queue:work notifications -max-jobs 20 --stop-when-empty)**
 
 6. **Step 6: Save the Cron Job:**
    Click the "Add New Cron Job" button to save your settings.
 
 7. **Step 7: Confirm Cron Job:**
-   You'll see a confirmation message that your cron job has been added. Double-check the details to make sure everything is correct.
-sure the cron job is working as expected, you can test it. You might need to wait until the scheduled time for the test.
+   You'll see a confirmation message that your cron job has been added. Double-check the details to make sure everything is correct. Ensure the cron job is working as expected, you can test it. You might need to wait until the scheduled time for the test.
 
 8. **Step 9: Edit or Delete Cron Jobs:**
    If you need to change or remove a cron job, you can do so from the same "Cron Jobs" section in cPanel.

@@ -11,17 +11,12 @@ sidebar_position: 6
 
    ![Twilio API Keys](../../static/img/adminPanel/twilio_2.png)
 
-3. After create key you can see here Account sid and auth token
+3. After you create key you can see here Account sid and auth token
 
    ![Twilio Account SID](../../static/img/adminPanel/twilio_1.png)
 
-4. For Base url Messaging -> Send an SMS
-
-   ![Twilio Messaging](../../static/img/adminPanel/twilio_3.png)
-
-5. Check this for admin panel settings
-   - ![Twilio Admin Settings](../../static/img/adminPanel/twilio_7.png)
+4. Check this for admin panel settings
    - ![Twilio Admin Config 1](../../static/img/adminPanel/twilio_6.png)
-   - ![Twilio Admin Config 2](../../static/img/adminPanel/twilio_4.png)
+   - ![Twilio Admin Settings](../../static/img/adminPanel/twilio_7.png)
 
-6. Make sure you entered valid data as per instructions before proceed
+5. Make sure you entered valid data as per instructions before proceeding

@@ -22,3 +22,6 @@ yarn-error.log*
 
 # Ignore zip files
 *.zip
+
+# Snyk Security Extension - AI Rules (auto-generated)
+.cursor/rules/snyk_rules.mdc

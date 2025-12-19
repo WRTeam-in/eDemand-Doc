@@ -15,57 +15,53 @@ sidebar_position: 3
 
  ![env-file](../../static/img/adminPanel/fb-2.webp)
  ![env-file](../../static/img/adminPanel/fb-3.webp)
+ ![env-file](../../static/img/adminPanel/fb-3-1.webp)
+ ![env-file](../../static/img/adminPanel/fb-3-2.webp)
 
 4. Once the project has been created, it will automatically redirect to Firebase dashboard screen.
 
  ![env-file](../../static/img/adminPanel/fb-4.webp)
 
-5. Now you need to add web project/application to the firebase project.
+5. Now you need to add web project/application to the firebase project. Follow the step given there
 
  ![env-file](../../static/img/adminPanel/fb-5.webp)
 
-6. Goto Authentication and open " Sign-in method " Tab
+6. Now go to Authentication menu located under build menu. Then click on "Get started" and open "Sign-in method" Tab. Then select phone and Google sign-in providers.
  ![env-file](../../static/img/adminPanel/fb-6.webp)
 
-7. Now go to Authentication , -> In Authentication go to settings -> In "Authorized domains", localhost and a Firebase domain are automatically added. -> Here we've to add domain name without http:// and https://
+7. Now go to Settings tab -> In "Authorized domains", add localhost, a Firebase domain, and web app are automatically added. -> Here you need to add your domain name without http:// and https://
 
  ![env-file](../../static/img/adminPanel/fb-7.webp)
 
 
- 8.Goto Project settings in firebase dashboard option.
+ 8.Go to Project settings by clicking the gear icon near "Project overview" on the sidebar.
 
 
  ![env-file](../../static/img/adminPanel/fb-8.webp)
 
 
-8. Goto Project settings and scroll down you will find created web App there you find config option that will have firebase settings for front end.
+8. On general tab scroll down and you will find created web App in the "Your apps" section. There you shall find the config options that will have firebase settings.
 
-
-9. here you have to set all details
  ![env-file](../../static/img/adminPanel/fb-12.webp)
 
-10. You need to set this details in eDemand admin panel -> Firebase Settings Page from Settings page
+9. Go to the Web configuration tab and scroll down to Web Push certificates section, and click Generate Key Pair. The key pair shown in the table after generating is the Vapid key.
+
+![env-file](../../static/img/adminPanel/fb-13.webp)
+
+10. Go to the Service accounts tab and on the Firebase Admin SDK section, click on Generate new private key. This shall create and download the file that you shall need to upload in firebase settings of admin panel firebase settings.
+
+![env-file](../../static/img/adminPanel/fb-14.webp)
+
+11. You need to set this details in eDemand admin panel -> Firebase Settings Page from Settings page
+
+:::note
+Upload json file In firebase configuration
+:::
 
 ![env-file](../../static/img/adminPanel/firebase_setting.webp)
 
-## Where to find Vapid key
 
-1. Open the Cloud Messaging tab of the Firebase console Settings pane and scroll to the Web configuration section.
-2. In the Web Push certificates tab, click Generate Key Pair. The console displays a notice that the key pair was generated, and displays the public key string and date added
-
-Or look at steps by steps images below
-
-1. Open Project settings
-
-![env-file](../../static/img/adminPanel/vapidKey1.png)
-
-2. Choose Cloud Messaging, scroll down to Web configuration. In Web Push certificates you can find Vapid key ( If it doesn't exists, click Generate Key Pair to create )
-
-![env-file](../../static/img/adminPanel/VapidKey2.png)
-![env-file](../../static/img/adminPanel/vapidKey3.png)
-
-
-11.  You need to set this details in firebase-messaging-sw.js file
+<!-- 11.  You need to set this details in firebase-messaging-sw.js file
 
 
 :::note
@@ -125,17 +121,10 @@ fcm.onBackgroundMessage((data)=>{
 
 ```
 
-:::note
-Upload json file In firebase configuration
-:::
+
 
 ![env-file](../../static/img/adminPanel/generate-key.png)
 ![env-file](../../static/img/adminPanel/Firebase-Settings-Admin-Panel-—-eDemand-On-Demand-Services.png)
 
 
-
-
-
-
-
-
+ -->
