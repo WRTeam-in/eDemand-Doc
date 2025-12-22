@@ -34,25 +34,25 @@ sidebar_position: 3
  ![env-file](../../static/img/adminPanel/fb-7.webp)
 
 
- 8.Go to Project settings by clicking the gear icon near "Project overview" on the sidebar.
+8. Go to Project settings by clicking the gear icon near "Project overview" on the sidebar.
 
 
  ![env-file](../../static/img/adminPanel/fb-8.webp)
 
 
-8. On general tab scroll down and you will find created web App in the "Your apps" section. There you shall find the config options that will have firebase settings.
+9. On general tab scroll down and you will find created web App in the "Your apps" section. There you shall find the config options that will have firebase settings.
 
  ![env-file](../../static/img/adminPanel/fb-12.webp)
 
-9. Go to the Web configuration tab and scroll down to Web Push certificates section, and click Generate Key Pair. The key pair shown in the table after generating is the Vapid key.
+10. Go to the Web configuration tab and scroll down to Web Push certificates section, and click Generate Key Pair. The key pair shown in the table after generating is the Vapid key.
 
 ![env-file](../../static/img/adminPanel/fb-13.webp)
 
-10. Go to the Service accounts tab and on the Firebase Admin SDK section, click on Generate new private key. This shall create and download the file that you shall need to upload in firebase settings of admin panel firebase settings.
+11. Go to the Service accounts tab and on the Firebase Admin SDK section, click on Generate new private key. This shall create and download the file that you shall need to upload in firebase settings of admin panel firebase settings.
 
 ![env-file](../../static/img/adminPanel/fb-14.webp)
 
-11. You need to set this details in eDemand admin panel -> Firebase Settings Page from Settings page
+12. You need to set this details in eDemand admin panel -> Firebase Settings Page from Settings page
 
 :::note
 Upload json file In firebase configuration
