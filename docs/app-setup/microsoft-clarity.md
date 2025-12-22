@@ -14,7 +14,7 @@ Microsoft Clarity is already integrated in the app. You only need to replace you
 
 2️⃣ Sign in using your Microsoft, Google, or Facebook account.
 
-3️⃣ Create a new project.
+3️⃣ Create 2 new projects for both Mobile app - customer app and provider app.
 
 4️⃣ After project creation, copy your **Project ID**.
 
