@@ -74,3 +74,23 @@ sidebar: null
     <li>Services pending approval will not be displayed until they are explicitly approved.</li>
   </ul>
 </details>
+
+<details>
+  <summary><strong>Why aren't notifications working?</strong></summary>
+  <p>If notifications (FCM, SMS, Email) are not working, please check the following:</p>
+  <p><strong>Credentials in admin panel:</strong></p>
+  <ul>
+    <li>Ensure that the notification settings are properly configured in the admin panel.</li>
+    <li>For the FCM, ensure proper firebase settings.</li>
+    <li>For email ensure SMTP is properly configured. You can test your email settings <a href="https://www.zoho.com/zeptomail/smtp-test-tool.html"><strong>here</strong></a>.</li>
+    <li>For SMS, ensure that Twilio is properly configured.</li>
+  </ul>
+  <p><strong>Queue setup:</strong></p>
+  <ul>
+    <li>Please ensure that queue cron is properly configured as per instructions <strong>[here](admin-setup/notification-queue-setup.md)</strong>.</li>
+  </ul>
+  <p><strong>Notification Preferences:</strong></p>
+  <ul>
+    <li>Ensure that the appropriate notification settings have been configured in admin panel. You can find these in "System settings -> Notification Settings".</li>
+  </ul>
+</details>

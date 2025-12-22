@@ -21,3 +21,8 @@ sidebar_position: 8
 5. Click on that Update Button.
 
 6. That's all. You have successfully updated your system from older version to newer one.
+
+
+<hr/>
+
+> <p>Old update files can be found <a href="https://drive.google.com/drive/folders/1S85AHNmlDBR3dvI_6fBqxuCfujrgiOt0?usp=sharing" target="_blank"><strong>here</strong></a>.</p>
