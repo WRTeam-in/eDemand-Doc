@@ -16,6 +16,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 | Product Version | Flutter version | Gradle Wrapper | Android Gradle Plugin |
 | --------------- | --------------- | -------------- | --------------------- |
+| v4.5.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
 | v4.4.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
 | v4.3.0          | v3.35.5         | 8.9            | 8.7.0                 |
 | v4.2.0          | v3.32.x         | 8.9            | 8.7.0                 |
@@ -29,6 +30,17 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 | v2.6.0          | v3.22.2         | 7.6            | 7.3.0                 |
 | v2.5.0          | v3.19.6         | 7.6            | 7.3.0                 |
 | v2.4.0          | v3.19.5         | 7.6            | 7.3.0                 |
+
+---
+
+## Version 4.5.0 (23 December, 2025)
+
+- ***Added*** Separate API for fetching about us, and other related pages data [Web]
+- ***Compatible*** CodeIgniter upgrade to version 4.6.4 ensuring latest feature support [Panels]
+- ***Compatible*** Packages and libraries to use the latest stable versions [Panels]
+- ***Compatible*** Flutter SDK upgrade to version 3.38.3 ensuring latest feature support [Apps]
+- ***Fix*** Security fixes on the panels
+
 
 ---
 
