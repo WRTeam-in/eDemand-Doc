@@ -28,12 +28,12 @@ All the General Settings like Company Title, Support Name, Support Email, favico
 
 ![env-file](../../static/img/adminPanel/general_setting.webp)
 
-## Google Map Api Keys
+## API key settings
 
 ![env-file](../../static/img/adminPanel/api_key_setting_new.png)
 
 :::note
-You need to enable the billing to make work of map on admin panel. If its not dispalying the map thn you had miss some step on google console so please do proper setup for key.
+You need to enable the billing to make work of map on admin panel. If its not dispalying the map then you had miss some step on google console so please do proper setup for key.
 :::
 
 :::note
@@ -44,25 +44,48 @@ If map is not dispalying then it is your responsibiliy to do proper things.
 Installation and map setup is out of the scope.Please note it down.
 :::
 
-1. First step is to go to google developer console and follow this offical documentation of google.
+1. First step is to go to google developer console and go to API and services.
 
-2. While following this Offical Documentation there you need to enable API You need to enable [Javascript API](https://developers.google.com/maps/documentation/javascript/cloud-setup)
+![env-file](../../static/img/adminPanel/gcp-1.png)
 
-these API : [Offical Documentation for creating API key](https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key)
+2. In the Enabled APIs & Services section click on the Enable APIs and services button and enable the following:
+   <ul>
+      <li>Maps Javascript API</li>
+      <li>Places API</li>
+      <li>Geocoding API</li>
+      <li>Geolocation API</li>
+   </ul>
 
-3. Usage of Google Map API Key:
+ ![env-file](../../static/img/adminPanel/gcp-2.png)
 
-   1. While adding or registering the partner we need to add location from map.
+3. In the side bar go to Credentials page to get the list of API keys:
 
-4. Now, we need to restrict the APIs key for security purpose.For that you need to folow this official documentation from google [Restrict Key](https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key)
+   ![env-file](../../static/img/adminPanel/gcp-3.png)
 
-:::note
+4. There is already browser key, edit it to add restrictions.
 
-After creating the GOOGLE API KEY for map and other work.Please do Restriction on that APi key by following the documentation provided by google.
+   ![env-file](../../static/img/adminPanel/gcp-4.png) 
 
-:::
+5. Add Application restrictions by following the following pattern (https://domain/*). You must add the following domains:
+   <ul>
+      <li>Web</li>
+      <li>Admin panel</li>
+      <li>Firebase auth domain</li>
+   </ul>
 
-1. Visit this documentation for enable or disable the APIs [Enable or Disable APIs](https://support.google.com/googleapi/answer/6158841?hl=en) 2. Visit this documentation for API Restricting for security. [Restrict Key](https://developers.google.com/maps/documentation/maps-static/get-api-key#restrict_key) 3. Then, Set created API KEY on System -> General Settings -> Google Map API KEY
+   Please ensure that the Maps Javascript, and Geocoding APIs are added in the API restrictions.
+
+   ![env-file](../../static/img/adminPanel/gcp-5.png)
+
+6. Now in credentials page where we list the API keys click on Create new credentials and select API key.
+   ![env-file](../../static/img/adminPanel/gcp-6.png)
+
+7. Give a meaningful name and add IP based restrictions this time for the Application restrictions. Add the IP of the server on which admin panel code is added and in API restrictions add the Places, GeoCoding, Geolocation, and optionally Maps Javascript APIs.
+    ![env-file](../../static/img/adminPanel/gcp-7.png)
+
+
+> **Note**: Please also add IPv6 of server to the IP restrictions as sometimes Google requires IPv6.
+
 
 ## Email Settings
 
