@@ -13,10 +13,13 @@ This guide explains how to set up Microsoft Clarity, Google Analytics, and Googl
 ### Step 1: Get Your Clarity Project ID
 
 1. **Sign up for Microsoft Clarity:**
+
    - Visit: https://clarity.microsoft.com/
    - Sign in with your Microsoft account (or create one)
+     ![Microsoft Clarity project ID preview](/img/adminPanel/microsoft-clarity-new-project.png)
 
 2. **Create a new project:**
+
    - Click "Add New Project"
    - Enter your website name
    - Enter your website URL
@@ -27,17 +30,22 @@ This guide explains how to set up Microsoft Clarity, Google Analytics, and Googl
    - After creating the project, you'll see a tracking code snippet
    - Your Project ID is the string at the end of the script URL
    - Example: `u5frguc1k8` (from `https://www.clarity.ms/tag/u5frguc1k8`)
+     ![Microsoft Clarity project ID preview](/img/adminPanel/microsoft-clarity-project-id.png)
 
 ### Step 2: Add Clarity to Your Code
 
 1. **Open `src/pages/_document.js`**
+
+![Microsoft Clarity project ID preview](/img/web/microsoft_clarity_id.png)
 
 2. **Find the Microsoft Clarity section** (around line 89-99)
 
 3. **Replace the Project ID** with your own:
 
 ```jsx
-{/* Microsoft Clarity */}
+{
+  /* Microsoft Clarity */
+}
 <script
   type="text/javascript"
   dangerouslySetInnerHTML={{
@@ -47,7 +55,7 @@ This guide explains how to set up Microsoft Clarity, Google Analytics, and Googl
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "YOUR_PROJECT_ID_HERE");`,
   }}
-/>
+/>;
 ```
 
 Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
@@ -56,13 +64,16 @@ Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
 
 ## Google Analytics Setup
 
+
 ### Step 1: Get Your Google Analytics Tracking ID
 
 1. **Sign up for Google Analytics:**
+
    - Visit: https://analytics.google.com/
    - Sign in with your Google account
 
 2. **Create a new property:**
+
    - Click "Admin" (gear icon)
    - Under "Property", click "Create Property"
    - Enter property name (e.g., "eDemand Website")
@@ -70,6 +81,7 @@ Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
    - Click "Next"
 
 3. **Set up data stream:**
+
    - Select "Web" platform
    - Enter your website URL
    - Enter a stream name
@@ -83,6 +95,8 @@ Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
 ### Step 2: Add Google Analytics to Your Code
 
 1. **Open `src/pages/_document.js`**
+
+![Google Analytics Measurement ID preview](/img/web/google_analytics.png)
 
 2. **Find the Google Analytics section** (around line 80-87)
 
@@ -105,18 +119,22 @@ Replace `YOUR_TRACKING_ID` with your actual Google Analytics Measurement ID (e.g
 
 ## Google AdSense Setup
 
+
 ### Step 1: Get Your AdSense Publisher ID
 
 1. **Sign up for Google AdSense:**
+
    - Visit: https://www.google.com/adsense/
    - Sign in with your Google account
 
 2. **Add your website:**
+
    - Click "Add site"
    - Enter your website URL
    - Click "Continue"
 
 3. **Complete the setup:**
+
    - Choose your country
    - Enter payment information
    - Submit for review (approval can take 1-14 days)
@@ -129,18 +147,21 @@ Replace `YOUR_TRACKING_ID` with your actual Google Analytics Measurement ID (e.g
 ### Step 2: Add AdSense to Your Code
 
 1. **Open `src/pages/_document.js`**
+![Google AdSense setup preview](/img/web/adsense.png)
 
 2. **Find the Google AdSense section** (around line 73-78)
 
 3. **Replace the Publisher ID** with your own:
 
 ```jsx
-{/* Google AdSense */}
+{
+  /* Google AdSense */
+}
 <script
   async
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID"
   crossOrigin="anonymous"
-></script>
+></script>;
 ```
 
 Replace `YOUR_PUBLISHER_ID` with your actual AdSense Publisher ID (e.g., `ca-pub-5187122762138955`).
