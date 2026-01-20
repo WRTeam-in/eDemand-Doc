@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+import DocBanner from '../components/doc-banner/DocBanner';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -183,24 +184,6 @@ function SupportSection() {
   );
 }
 
-function BannerSection() {
-  return (
-    <section className={styles.bannerSection}>
-      <a
-        href="https://api.whatsapp.com/send?phone=918200323468&text=Hello%20Jignesh%2C%20I%20want%20to%20know%20more%20about%20the%20installation%20service%20for%20eDemand"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.bannerLink}
-      >
-        <img
-          src="/eDemand-Doc/img/installation.webp"
-          alt="Installation Service"
-          className={styles.bannerImage}
-        />
-      </a>
-    </section>
-  );
-}
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -209,8 +192,9 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        {/* Marketing banner / CTA section */}
         <SupportSection />
-        <BannerSection />
+        <DocBanner />
       </main>
     </Layout>
   );
