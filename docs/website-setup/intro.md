@@ -3,8 +3,10 @@ id: web-intro
 sidebar_position: 1
 ---
 
+import DocBanner from '@site/src/components/doc-banner/DocBanner';
+
 # Web Prerequisites
-[![env-file](../../static/img/installation.webp)](https://api.whatsapp.com/send?phone=918200323468&text=Hello%20Jignesh%2C%20I%20want%20to%20know%20more%20about%20the%20installation%20service%20for%20eDemand)
+<DocBanner />
 :::note
 
 We recommend deploying the web application on the main domain and the admin panel on a subdomain.

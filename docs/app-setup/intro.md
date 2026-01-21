@@ -3,8 +3,10 @@ id: app-intro
 sidebar_position: 1
 ---
 
+import DocBanner from '@site/src/components/doc-banner/DocBanner';
+
 # App Prerequisites
-[![env-file](../../static/img/installation.webp)](https://api.whatsapp.com/send?phone=918200323468&text=Hello%20Jignesh%2C%20I%20want%20to%20know%20more%20about%20the%20installation%20service%20for%20eDemand)
+<DocBanner />
 :::info
 Whenever you seek support for WRTeam products via Skype or WhatsApp, please share your **[Purchase Code](https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code)** and Codecanyon username. This information is required for verification in our system. Without it, we are unable to provide support in accordance with Codecanyon policy.
 
