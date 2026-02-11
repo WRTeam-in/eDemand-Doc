@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Set Notification Queue Cron Job | eDemand Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/notification-queue-setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Set Notification Queue Cron Job | eDemand Documentation"><meta data-rh="true" name="description" content="Why Use a Cron Job:"><meta data-rh="true" property="og:description" content="Why Use a Cron Job:"><link data-rh="true" rel="icon" href="/eDemand-Doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/notification-queue-setup"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/notification-queue-setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/notification-queue-setup" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Set Notification Queue Cron Job","item":"https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/notification-queue-setup"}]}</script><link rel="stylesheet" href="/eDemand-Doc/assets/css/styles.95eac76e.css">
-<script src="/eDemand-Doc/assets/js/runtime~main.474cb0fd.js" defer="defer"></script>
+<script src="/eDemand-Doc/assets/js/runtime~main.1447e50d.js" defer="defer"></script>
 <script src="/eDemand-Doc/assets/js/main.979b606e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,39 +15,26 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-use-a-cron-job">Why Use a Cron Job:<a href="#why-use-a-cron-job" class="hash-link" aria-label="Direct link to Why Use a Cron Job:" title="Direct link to Why Use a Cron Job:" translate="no">​</a></h2>
 <p>Sending notifications like email, and sms takes time. Also sending FCM notifications to a huge number of users takes time. So, to solve this issue queue has been used for ending the notifications.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-set-up-a-cron-job">How to Set Up a Cron Job:<a href="#how-to-set-up-a-cron-job" class="hash-link" aria-label="Direct link to How to Set Up a Cron Job:" title="Direct link to How to Set Up a Cron Job:" translate="no">​</a></h2>
-<ol>
-<li class="">
-<p><strong>Step 1: Log into cPanel:</strong>
-Open your web browser and enter your cPanel URL. Log in using your credentials.</p>
-</li>
-<li class="">
-<p><strong>Step 2: Navigate to Cron Jobs:</strong>
-Search for &quot;Cron Jobs&quot; in the cPanel search bar, or scroll down to the &quot;Advanced&quot; section and find &quot;Cron Jobs.&quot; Click on it.</p>
-</li>
-<li class="">
-<p><strong>Step 3: Choose Add New Cron Job:</strong>
-You&#x27;ll see a list of current cron jobs. Scroll down to the &quot;Add New Cron Job&quot; section.</p>
-</li>
-<li class="">
-<p><strong>Step 4: Set the Timing:</strong>
-Set the timing to run the queue every minute. You may need to set each time manually to &quot;*&quot; for hour, minute, day, month, etc.</p>
-</li>
-<li class="">
-<p><strong>Step 5: Add the Command:</strong>
-In the &quot;Command&quot; field, enter the full URL of the script or file you want to run as the cron job. This is the URL of the task you want to automate. <strong>(Ex: /usr/bin/php path_to_your_project/spark queue<!-- -->:work<!-- --> notifications -max-jobs 20 --stop-when-empty)</strong></p>
-</li>
-<li class="">
-<p><strong>Step 6: Save the Cron Job:</strong>
-Click the &quot;Add New Cron Job&quot; button to save your settings.</p>
-</li>
-<li class="">
-<p><strong>Step 7: Confirm Cron Job:</strong>
-You&#x27;ll see a confirmation message that your cron job has been added. Double-check the details to make sure everything is correct. Ensure the cron job is working as expected, you can test it. You might need to wait until the scheduled time for the test.</p>
-</li>
-<li class="">
-<p><strong>Step 9: Edit or Delete Cron Jobs:</strong>
-If you need to change or remove a cron job, you can do so from the same &quot;Cron Jobs&quot; section in cPanel.</p>
-</li>
-</ol></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/eDemand-Doc/docs/admin-setup/microsoft-clarity-configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Microsoft Clarity</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/eDemand-Doc/docs/admin-setup/setup-demo-database"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Demo Database Setup</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#why-use-a-cron-job" class="table-of-contents__link toc-highlight">Why Use a Cron Job:</a></li><li><a href="#how-to-set-up-a-cron-job" class="table-of-contents__link toc-highlight">How to Set Up a Cron Job:</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright 2026 eDemand.</div></div></div></footer></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1-log-into-cpanel">Step 1: Log into cPanel<a href="#step-1-log-into-cpanel" class="hash-link" aria-label="Direct link to Step 1: Log into cPanel" title="Direct link to Step 1: Log into cPanel" translate="no">​</a></h3>
+<p>Open your web browser and enter your cPanel URL. Log in using your credentials.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-navigate-to-cron-jobs">Step 2: Navigate to Cron Jobs<a href="#step-2-navigate-to-cron-jobs" class="hash-link" aria-label="Direct link to Step 2: Navigate to Cron Jobs" title="Direct link to Step 2: Navigate to Cron Jobs" translate="no">​</a></h3>
+<p>Search for &quot;Cron Jobs&quot; in the cPanel search bar, or scroll down to the &quot;Advanced&quot; section and find &quot;Cron Jobs.&quot; Click on it.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3-choose-add-new-cron-job">Step 3: Choose Add New Cron Job<a href="#step-3-choose-add-new-cron-job" class="hash-link" aria-label="Direct link to Step 3: Choose Add New Cron Job" title="Direct link to Step 3: Choose Add New Cron Job" translate="no">​</a></h3>
+<p>You&#x27;ll see a list of current cron jobs. Scroll down to the &quot;Add New Cron Job&quot; section.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4-set-the-timing">Step 4: Set the Timing<a href="#step-4-set-the-timing" class="hash-link" aria-label="Direct link to Step 4: Set the Timing" title="Direct link to Step 4: Set the Timing" translate="no">​</a></h3>
+<p>Set the timing to run the queue every minute. You may need to set each time manually to &quot;*&quot; for hour, minute, day, month, etc.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-5-add-the-command">Step 5: Add the Command<a href="#step-5-add-the-command" class="hash-link" aria-label="Direct link to Step 5: Add the Command" title="Direct link to Step 5: Add the Command" translate="no">​</a></h3>
+<p>In the &quot;Command&quot; field, enter the full script or path to the scriptfile you want to run as the cron job. Example of the exact format of the command is shown below:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">&lt;path-to-php&gt; &lt;path-to-your-project&gt;/spark queue:work notifications -max-jobs 20 --stop-when-empty</span><br></span></code></pre></div></div>
+<p>Replace <code>&lt;path-to-php&gt;</code> and <code>&lt;path-to-your-project&gt;</code> with the actual paths on your server.
+The paths differ from server to server.</p>
+<p>Example:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/usr/bin/php /home/user/domains/domain.com/public_html/edemand-test/spark queue:work notifications -max-jobs 20 --stop-when-empty</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-6-save-the-cron-job">Step 6: Save the Cron Job<a href="#step-6-save-the-cron-job" class="hash-link" aria-label="Direct link to Step 6: Save the Cron Job" title="Direct link to Step 6: Save the Cron Job" translate="no">​</a></h3>
+<p>Click the &quot;Add New Cron Job&quot; button to save your settings.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-7-confirm-cron-job">Step 7: Confirm Cron Job<a href="#step-7-confirm-cron-job" class="hash-link" aria-label="Direct link to Step 7: Confirm Cron Job" title="Direct link to Step 7: Confirm Cron Job" translate="no">​</a></h3>
+<p>You&#x27;ll see a confirmation message that your cron job has been added. Double-check the details to make sure everything is correct. Ensure the cron job is working as expected, you can test it. You might need to wait until the scheduled time for the test.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-8-edit-or-delete-cron-jobs">Step 8: Edit or Delete Cron Jobs<a href="#step-8-edit-or-delete-cron-jobs" class="hash-link" aria-label="Direct link to Step 8: Edit or Delete Cron Jobs" title="Direct link to Step 8: Edit or Delete Cron Jobs" translate="no">​</a></h3>
+<p>If you need to change or remove a cron job, you can do so from the same &quot;Cron Jobs&quot; section in cPanel.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/eDemand-Doc/docs/admin-setup/microsoft-clarity-configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Microsoft Clarity</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/eDemand-Doc/docs/admin-setup/setup-demo-database"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Demo Database Setup</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#why-use-a-cron-job" class="table-of-contents__link toc-highlight">Why Use a Cron Job:</a></li><li><a href="#how-to-set-up-a-cron-job" class="table-of-contents__link toc-highlight">How to Set Up a Cron Job:</a><ul><li><a href="#step-1-log-into-cpanel" class="table-of-contents__link toc-highlight">Step 1: Log into cPanel</a></li><li><a href="#step-2-navigate-to-cron-jobs" class="table-of-contents__link toc-highlight">Step 2: Navigate to Cron Jobs</a></li><li><a href="#step-3-choose-add-new-cron-job" class="table-of-contents__link toc-highlight">Step 3: Choose Add New Cron Job</a></li><li><a href="#step-4-set-the-timing" class="table-of-contents__link toc-highlight">Step 4: Set the Timing</a></li><li><a href="#step-5-add-the-command" class="table-of-contents__link toc-highlight">Step 5: Add the Command</a></li><li><a href="#step-6-save-the-cron-job" class="table-of-contents__link toc-highlight">Step 6: Save the Cron Job</a></li><li><a href="#step-7-confirm-cron-job" class="table-of-contents__link toc-highlight">Step 7: Confirm Cron Job</a></li><li><a href="#step-8-edit-or-delete-cron-jobs" class="table-of-contents__link toc-highlight">Step 8: Edit or Delete Cron Jobs</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright 2026 eDemand.</div></div></div></footer></div>
 </body>
 </html>
