@@ -28,8 +28,8 @@ If you need additional help, our dedicated support team is available through mul
 
 #### Admin Panel Support
 
-- **Contact**: Dimple Solanki
-- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEAG34Ajz8PoiX4-gE)
+- **Contact**: Ronik Halai
+- **Platform**: [Microsoft Teams](https://teams.live.com/l/invite/FEA8SOBaN6QYeQx6gE)
 - **Scope**: Admin panel setup, configuration, and management
 
 #### Web Application Support
