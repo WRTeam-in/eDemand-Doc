@@ -10,26 +10,21 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 4.6.0 (11 February, 2026)
 
-
-## Compatibility Table
-
-| Product Version | Flutter version | Gradle Wrapper | Android Gradle Plugin |
-| --------------- | --------------- | -------------- | --------------------- |
-| v4.5.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
-| v4.4.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
-| v4.3.0          | v3.35.5         | 8.9            | 8.7.0                 |
-| v4.2.0          | v3.32.x         | 8.9            | 8.7.0                 |
-| v4.1.0          | v3.32.x         | 8.7            | 8.6.0                 |
-| v4.0.0          | v3.29.1         | 8.7            | 8.5.0                 |
-| v3.1.0          | v3.27.x         | 8.7            | 8.5.0                 |
-| v3.0.0          | v3.24.5         | 8.7            | 8.5.0                 |
-| v2.9.0          | v3.24.3         | 7.6            | 7.3.0                 |
-| v2.8.0          | v3.24.1         | 7.6            | 7.3.0                 |
-| v2.7.0          | v3.22.2         | 7.6            | 7.3.0                 |
-| v2.6.0          | v3.22.2         | 7.6            | 7.3.0                 |
-| v2.5.0          | v3.19.6         | 7.6            | 7.3.0                 |
-| v2.4.0          | v3.19.5         | 7.6            | 7.3.0                 |
+- ***Added*** Email login support for Customers and Providers [Apps & Web & Provider Panel]
+- ***Added*** Login Settings to enable/disable Social, Mobile, and Email login methods [Apps & Web & Provider Panel]
+- ***Added*** Password login option for Customers with enable/disable option [Customer App & Web]
+- ***Improved*** Web Landing page Header UI [Web]
+- ***Added*** Enable/disable image and file sharing in chat [Apps & Web & Panels]
+- ***Added*** Tax display at checkout with enable/disable option [Customer App & Web]
+- ***Improved*** Withdraw request updated to select saved bank details [Provider App & Panel]
+- ***Added*** Clear Cart confirmation when adding services from a different provider type [Customer App & Web]
+- ***Added*** Scheduled maintenance message on home screen [Apps & Web]
+- ***Added*** User-specific notification storage and provider notification section [Provider App & Panel]
+- ***Improved*** Multi-level category hierarchy view [Apps & Web]
+- ***Improved*** Booking status actions updated with buttons in provider app [Provider App]
+- ***Improved*** Stripe payments moved to the server-side [Apps & Web]
 
 ---
 

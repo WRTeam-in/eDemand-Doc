@@ -43,6 +43,81 @@ PM2 is a production process manager for Node.js applications. Install it globall
 ```bash
 npm install pm2 -g
 ```
+
+## Automated Deployment Script (Recommended)
+
+:::tip Quick Deployment
+For faster and easier deployment, use the included `deploy_vps.sh` script which automates all the steps below.
+:::
+
+The project includes an automated deployment script that handles the entire deployment process:
+
+**Quick Start:**
+
+```bash
+# Navigate to your project directory
+cd /var/www/html/edemand
+
+# Make script executable
+chmod +x deploy_vps.sh
+
+# Run deployment
+./deploy_vps.sh
+```
+
+**What the script does:**
+- ✅ Verifies custom server setup
+- ⚙️ Configures PM2 with `ecosystem.config.cjs`
+- 🧹 Cleans old builds
+- 📦 Installs dependencies
+- 🗺️ Generates sitemap and service worker
+- 🏗️ Builds the application
+- 🔧 Generates `.htaccess` for Apache
+- 🚀 Starts/restarts PM2 process
+- 🔄 Reloads Apache
+
+**Port Configuration:**
+
+During deployment, you'll be prompted to configure the port:
+
+```
+Current Port: 8001
+➜ Enter Port (Press Enter to keep 8001):
+```
+
+The script automatically updates the `ecosystem.config.cjs` file with your chosen port.
+
+**PM2 Configuration (ecosystem.config.cjs):**
+
+The project uses `ecosystem.config.cjs` for PM2 process management:
+
+```javascript
+module.exports = {
+  apps: [{
+    name: 'edemand-web',
+    script: './server.js',
+    instances: 1,
+    exec_mode: 'cluster',
+    env: {
+      NODE_ENV: 'production',
+      NODE_PORT: 8001,  // Automatically updated by deploy script
+    }
+  }]
+}
+```
+
+To start with ecosystem config:
+
+```bash
+pm2 start ecosystem.config.cjs
+pm2 save
+```
+
+---
+
+## Manual Deployment
+
+If you prefer to deploy manually, follow these steps:
 <!-- 
 ## Configuring Apache Proxy
 
@@ -83,7 +158,20 @@ npm run build
 
 ## Running with PM2
 
-Start your application with PM2:
+**Option 1: Using ecosystem.config.cjs (Recommended)**
+
+Start your application using the ecosystem configuration file:
+
+```bash
+pm2 start ecosystem.config.cjs
+pm2 save
+```
+
+This method uses the pre-configured settings including app name, port, and environment variables.
+
+**Option 2: Manual PM2 Start**
+
+Alternatively, start with a manual command:
 
 ```bash
 pm2 start "npm start" -n "YOUR_PROJECT_NAME"

@@ -5,15 +5,16 @@
 
 .bannerContainer {
   --primary-color: var(--ifm-color-primary);
-  --text-gray: #808693;
-  --bg-white: #FFFFFF;
+  --text-gray: #6b7280;
+  --bg-white: #ffffff;
+  --border-color: var(--ifm-color-primary);
   --font-family: "DM Sans", sans-serif;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-white);
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--border-color);
   border-radius: 25px;
   max-width: 1050px;
   width: 100%;
@@ -21,6 +22,15 @@
   gap: 24px;
   margin: 4rem auto;
   box-sizing: border-box;
+}
+
+/* Dark mode support */
+[data-theme='dark'] .bannerContainer {
+  --text-gray: #9ca3af;
+  --bg-white: #1e293b;
+  --border-color: var(--ifm-color-primary);
+  background-color: var(--bg-white);
+  border-color: var(--border-color);
 }
 
 .bannerImageWrapper {
@@ -47,12 +57,20 @@
   font-family: var(--font-family);
 }
 
+[data-theme='dark'] .bannerTitle {
+  color: var(--ifm-color-primary-lightest);
+}
+
 .bannerDescription {
   color: var(--text-gray);
   font-size: 1rem;
   line-height: 1.5;
   font-family: var(--font-family);
   margin: 0px;
+}
+
+[data-theme='dark'] .bannerDescription {
+  color: var(--text-gray);
 }
 
 .bannerAction {
@@ -69,14 +87,26 @@
   font-weight: 700;
   padding: 18px;
   border-radius: 18px;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
   font-size: 1rem;
   font-family: var(--font-family);
 }
 
 .btnPrimary:hover {
-    color: white !important;
-    text-decoration: none !important;
+  color: white !important;
+  text-decoration: none !important;
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .btnPrimary {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+[data-theme='dark'] .btnPrimary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: #ffffff !important;
 }
 
 /* Responsive Design */
@@ -125,4 +155,3 @@
     padding: 12px;
   }
 }
-

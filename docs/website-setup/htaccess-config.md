@@ -6,6 +6,10 @@ sidebar_position: 12
 
 This guide explains how to configure your Apache web server for both static and dynamic (SEO-enabled) deployments of the eDemand web application using .htaccess rules.
 
+:::tip Automated Configuration
+If you're using the **automated deployment script** (`deploy_vps.sh`), the `.htaccess` file for **Option 2** is automatically generated with the correct port configuration. See [Next.js Deployment](./nextjs-deployment.md) for details.
+:::
+
 ## Apache Configuration (.htaccess)
 
 ### Option 1: Static File Hosting (Default Configuration)
