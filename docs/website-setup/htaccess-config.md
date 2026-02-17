@@ -7,7 +7,9 @@ sidebar_position: 12
 This guide explains how to configure your Apache web server for both static and dynamic (SEO-enabled) deployments of the eDemand web application using .htaccess rules.
 
 :::tip Automated Configuration
-If you're using the **automated deployment script** (`deploy_vps.sh`), the `.htaccess` file for **Option 2** is automatically generated with the correct port configuration. See [Next.js Deployment](./nextjs-deployment.md) for details.
+If you're using the **automated deployment script** (`deploy_vps.sh`) or the `npm run generate-htaccess` command, the `.htaccess` file is **automatically generated**.
+
+**Do not edit `.htaccess` directly.** Any manual changes will be overwritten during the next deployment. Instead, modify the `scripts/generate-htaccess.js` file if you need to change rewrite rules or caching logic.
 :::
 
 ## Apache Configuration (.htaccess)
@@ -77,14 +79,20 @@ If you're using the **automated deployment script** (`deploy_vps.sh`), the `.hta
     RewriteEngine On
     RewriteBase /
     
+    RewriteRule ^favicon\.ico$ - [L]
+    
     # Allow SSL certificate verification
     RewriteRule ^.well-known/acme-challenge/(.*) /.well-known/acme-challenge/$1 [L]
+
+    # Serve Next.js STATIC files directly from filesystem (JS/CSS bundles)
+    # IMPORTANT: Only match _next/static/, NOT all _next/ requests!
+    RewriteRule ^_next/static/(.*) /.next/static/$1 [L]
     
-    # Handle Next.js static files
-    RewriteRule ^_next/(.*) /.next/$1 [L]
+    # Proxy Next.js DATA requests to Node.js server (required for client-side navigation)
+    RewriteRule ^_next/data/(.*) http://127.0.0.1:8001/_next/data/$1 [P,L]
     
-    # Allow direct access to common static files
-    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico)$
+    # Serve public folder static files directly
+    RewriteCond %{REQUEST_URI} \.(js|css|svg|jpg|jpeg|png|gif|ico|woff|woff2|ttf|eot|webp|mp4|webm)$
     RewriteRule ^ - [L]
     
     # Forward all other requests to Node.js server
