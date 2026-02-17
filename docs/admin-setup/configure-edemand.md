@@ -123,3 +123,13 @@ You can manage languages for the system from admin panel for apps, web, and pane
 Note: code for the language must be two-letter code and all small letters. Ensure all files for each is uploaded to ensure it works in app, and web
 
     ![env-file](../../static/img/web/lang_add.png)
+
+## Login Settings
+
+You can manage login specific settings from admin panel for login in app and web. To do this go to Settings -> Login Settings
+
+You can manage allowing users to sign in using phone and password to bypass OTP verification the next time the user logs in.
+
+Note: The user shall still be required to verify themselves using OTP when registering or setting password for the first time. The user shall also require OTP verification for changing password.
+
+   ![env-file](../../static/img/adminPanel/login_settings.png)
