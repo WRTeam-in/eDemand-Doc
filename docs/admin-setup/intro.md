@@ -136,4 +136,4 @@ Before installing, confirm:
 - [ ] If you use a **VPS**, you have applied the [VPS Essentials](#vps-essentials) above.
 - [ ] If you use a **VPS**, you have added the [DNS A records](#3-dns-configuration-vps-only) for your domain and subdomain.
 
-When all items are done, you can continue to installation: **Shared hosting** → [Installation](./installation.md). **VPS** → [Visit the install URL](./installation.md#visit-httpyouredemandininstall) (direct link to the step where you open the install URL in your browser).
+When all items are done, you can continue to installation: **Shared hosting** → [Installation](./installation.md). **VPS** → [Visit the install URL](./installation.md#install-url-step) (direct link to the step where you open the install URL in your browser).
