@@ -87,7 +87,7 @@ sidebar: null
   </ul>
   <p><strong>Queue setup:</strong></p>
   <ul>
-    <li>Please ensure that queue cron is properly configured as per instructions <strong>[here](admin-setup/notification-queue-setup.md)</strong>.</li>
+  <li>Please ensure that the notification queue cron is properly configured as per the <strong>[PHP CLI Cron for the Notification Queue (spark)](admin-setup/cron_job#php-cli-cron-for-the-notification-queue-spark)</strong> section.</li>
   </ul>
   <p><strong>Notification Preferences:</strong></p>
   <ul>
