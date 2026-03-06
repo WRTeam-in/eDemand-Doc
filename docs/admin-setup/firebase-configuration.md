@@ -2,129 +2,139 @@
 sidebar_position: 3
 ---
 
-# Firebase Configuration
+# Firebase configuration
 
-## Create Firebase Project
+This page explains how to create a Firebase project and connect it to your eDemand admin panel.
 
-1. Goto >> Firebase console 
-2. Register a new account or try to log in with existing google accout.
+## Prerequisites
 
- ![env-file](../../static/img/adminPanel/fb-1.webp)
+- **Google account**: You must be able to log in to Firebase with a Google account.
+- **eDemand admin access**: You need access to the eDemand admin panel `Settings` → `Firebase Settings`.
 
- 3. Once logged in, you can see firebase console dashboard. Click on Add Project.Provide a project name, and then select country and then after that click on Create Project. For example, see the below image.
+## Step 1: Create your Firebase project
 
- ![env-file](../../static/img/adminPanel/fb-2.webp)
- ![env-file](../../static/img/adminPanel/fb-3.webp)
- ![env-file](../../static/img/adminPanel/fb-3-1.webp)
- ![env-file](../../static/img/adminPanel/fb-3-2.webp)
+### 1.1 Sign in to Firebase Console
 
-4. Once the project has been created, it will automatically redirect to Firebase dashboard screen.
+Go to the **Firebase Console** and sign in with your Google account.
 
- ![env-file](../../static/img/adminPanel/fb-4.webp)
+![env-file](../../static/img/adminPanel/fb-1.webp)
 
-5. Now you need to add web project/application to the firebase project. Follow the step given there
+### 1.2 Create a new project
 
- ![env-file](../../static/img/adminPanel/fb-5.webp)
+Click **Add project**. Provide a **Project name**, select your **Country/region**, and click **Create project**.
 
-6. Now go to Authentication menu located under build menu. Then click on "Get started" and open "Sign-in method" Tab. Then select phone and Google sign-in providers.
- ![env-file](../../static/img/adminPanel/fb-6.webp)
+![env-file](../../static/img/adminPanel/fb-2.webp)
+![env-file](../../static/img/adminPanel/fb-3.webp)
+![env-file](../../static/img/adminPanel/fb-3-1.webp)
+![env-file](../../static/img/adminPanel/fb-3-2.webp)
 
-7. Now go to Settings tab -> In "Authorized domains", add localhost, a Firebase domain, and web app are automatically added. -> Here you need to add your domain name without http:// and https://
+### 1.3 Access the project dashboard
 
- ![env-file](../../static/img/adminPanel/fb-7.webp)
+Once created, you will be redirected to the **Firebase project dashboard**.
 
+![env-file](../../static/img/adminPanel/fb-4.webp)
 
-8. Go to Project settings by clicking the gear icon near "Project overview" on the sidebar.
+### 1.4 Add a Web app
 
+Add a new **Web app** to this project (this connects to eDemand) and follow the steps shown in the Firebase UI.
 
- ![env-file](../../static/img/adminPanel/fb-8.webp)
+![env-file](../../static/img/adminPanel/fb-5.webp)
 
+## Step 2: Enable authentication providers
 
-9. On general tab scroll down and you will find created web App in the "Your apps" section. There you shall find the config options that will have firebase settings.
+### 2.1 Open Authentication
 
- ![env-file](../../static/img/adminPanel/fb-12.webp)
+In the left sidebar, go to **Build** → **Authentication** and click **Get started**.
 
-10. Go to the Web configuration tab and scroll down to Web Push certificates section, and click Generate Key Pair. The key pair shown in the table after generating is the Vapid key.
+### 2.2 Enable sign-in providers
+
+Open the **Sign-in method** tab and enable at least the **Phone** and **Google** sign-in providers.
+
+![env-file](../../static/img/adminPanel/fb-6.webp)
+
+## Step 3: Configure authorized domains
+
+### 3.1 Open Authentication Settings
+
+Still under **Authentication**, open the **Settings** tab.
+
+### 3.2 Add your domain
+
+In the **Authorized domains** section:
+- Confirm `localhost` and the Firebase default domain are listed.
+- Click **Add domain** and enter your own domain (without `http://` or `https://`).
+
+![env-file](../../static/img/adminPanel/fb-7.webp)
+
+## Step 4: Get your web app config
+
+### 4.1 Open Project Settings
+
+Click the **gear icon** next to **Project overview** and select **Project settings**.
+
+![env-file](../../static/img/adminPanel/fb-8.webp)
+
+### 4.2 Copy SDK configuration values
+
+On the **General** tab, scroll down to **Your apps**. Find your **Web app** and copy the **Firebase SDK configuration** values (API key, project ID, etc.).
+
+![env-file](../../static/img/adminPanel/fb-12.webp)
+
+## Step 5: Generate Web Push (VAPID) key
+
+### 5.1 Open Web Push certificates
+
+Open the **Cloud Messaging** tab and scroll to the **Web Push certificates** section.
+
+### 5.2 Generate key pair
+
+Click **Generate key pair**. The key shown in the table is your **VAPID key**.
 
 ![env-file](../../static/img/adminPanel/fb-13.webp)
 
-11. Go to the Service accounts tab and on the Firebase Admin SDK section, click on Generate new private key. This shall create and download the file that you shall need to upload in firebase settings of admin panel firebase settings.
+## Step 6: Generate service account key
+
+### 6.1 Open Service Accounts
+
+Open the **Service accounts** tab.
+
+### 6.2 Download the private key
+
+In the **Firebase Admin SDK** section, click **Generate new private key**. Save the downloaded JSON file — you will upload it in the eDemand admin panel.
 
 ![env-file](../../static/img/adminPanel/fb-14.webp)
 
-12. You need to set this details in eDemand admin panel -> Firebase Settings Page from Settings page
+## Step 7: Connect Firebase to eDemand
 
-:::note
-Upload json file In firebase configuration
-:::
+### 7.1 Open Firebase Settings
+
+In the eDemand admin panel, go to **Settings** → **Firebase Settings**.
+
+### 7.2 Fill in SDK configuration fields
+
+Enter the values copied in [Step 4](#step-4-get-your-web-app-config):
+
+- **API Key**
+- **Auth Domain**
+- **Project ID**
+- **Storage Bucket**
+- **Messaging Sender ID**
+- **App ID**
+
+### 7.3 Enter the VAPID key
+
+Paste the **VAPID Key** generated in [Step 5](#step-5-generate-web-push-vapid-key).
+
+### 7.4 Upload the service account JSON
+
+Upload the **service account JSON file** downloaded in [Step 6](#step-6-generate-service-account-key).
+
+::::note
+Make sure you upload the correct JSON file. Using the wrong file will prevent push notifications from working.
+::::
+
+### 7.5 Save the configuration
+
+Click **Save** to apply all settings.
 
 ![env-file](../../static/img/adminPanel/firebase_setting.webp)
-
-
-<!-- 11.  You need to set this details in firebase-messaging-sw.js file
-
-
-:::note
-
-If firebase-messaging-sw.js not exist inside your root folder then create a file with firebase-messaging-sw.js name inside your project folder.
-
-:::
-
-```javascript
-// Replace the following with your app's Firebase project configuration
-firebase.initializeApp
-({
-apiKey: "Your apiKey",
-authDomain: "Your authDomain",
-projectId: "Your projectId",
-storageBucket: "Your storageBucket",
-messagingSenderId: "Your messagingSenderId",
-appId: "Your appId",
-measurementId: "Your measurementId"
-});
-```
-
-View firebase-messaging-sw.js and put content in file as below
-```javascript
-importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase.js');
-importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js');
-
-
-
-
-// Initialize Firebase
-var config = {
-  apiKey:"Your apiKey" ,
-  authDomain:"Your authDomain" ,
-  projectId:"Your projectId" ,
-  storageBucket:"Your storageBucket" ,
-  messagingSenderId:"Your messagingSenderId" ,
-  appId:"Your appId",
-  measurementId:"Your measurementId" 
-};
-
-
-firebase.initializeApp(config);
-const fcm=firebase.messaging();
-fcm.getToken({
-    vapidKey:"your vapidey"
-}).then((token)=>{
-    // console.log('getToken');
-});
-
-
-
-fcm.onBackgroundMessage((data)=>{
-    // console.log('onBackgroundMessage - ',data);
-})
-
-```
-
-
-
-![env-file](../../static/img/adminPanel/generate-key.png)
-![env-file](../../static/img/adminPanel/Firebase-Settings-Admin-Panel-—-eDemand-On-Demand-Services.png)
-
-
- -->
