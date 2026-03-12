@@ -10,6 +10,19 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 4.7.0 (12 March, 2026)
+
+- ***Added*** CashFree payment gateway integration [Apps & Web & Panels]
+- ***Added*** Fast2SMS, 2Factor, and MSG91 SMS gateway support [Panels]
+- ***Added*** Dynamic password strength configuration for new passwords [Apps & Web & Panels]
+- ***Added*** Unread chat notification counts in chat [Apps & Web]
+- ***Improved*** Google login session clearing on logout for easier account switching [Customer App]
+- ***Improved*** Image aspect ratio handling for better responsive display [Apps]
+- ***Fixed*** Tax display issue in custom job bid checkout [Apps & Web]
+- ***Fixed*** Edge-to-edge display issue on Android 16+ devices showing content under bottom navigation bar [Apps]
+- ***Fixed*** Foreground order notification sound issue [Provider App]
+
+---
 ## Version 4.6.0 (11 February, 2026)
 
 - ***Added*** Email login support for Customers and Providers [Apps & Web & Provider Panel]

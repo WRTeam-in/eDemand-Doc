@@ -24,7 +24,7 @@ Follow the basic setup guide to configure your environment properly:
 ### 🧰 Required Software
 
 - **Android Studio Meerkat** – Version **2025.2.2**
-- **Flutter** – Version **3.38.5**
+- **Flutter** – Version **3.41.3**
 - **Java** – Version **17**, **18**, **19**, or **21**
 
 ---
@@ -44,6 +44,7 @@ Ensure all versions match the above list for smooth project setup and compatibil
 
 | Product Version | Flutter version | Gradle Wrapper | Android Gradle Plugin |
 | --------------- | --------------- | -------------- | --------------------- |
+| v4.7.0          | v3.41.3         | 8.11.1         | 8.9.1                 |
 | v4.6.0          | v3.38.5         | 8.11.1         | 8.9.1                 |
 | v4.5.0          | v3.38.3         | 8.11.1         | 8.9.1                 |
 | v4.4.0          | v3.38.3         | 8.11.1         | 8.9.1                 |

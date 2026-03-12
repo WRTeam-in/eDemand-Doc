@@ -51,7 +51,7 @@ Your server must meet these settings. You can change them in your **php.ini** fi
 
 ---
 
-## 2. Extra Requirements (VPS Only)
+## 2. Extra Requirements
 
 If your admin panel runs on a **VPS (Virtual Private Server)**, follow the extra steps in this section. If you use **shared hosting**, you can skip this part.
 
@@ -79,7 +79,7 @@ If you skip these VPS steps, the admin panel may not work correctly on your serv
 
 ---
 
-## 3. DNS Configuration (VPS Only)
+## 3. DNS Configuration
 
 On a VPS, your domain must point to your server’s IP address. Add the DNS records below at your domain registrar or DNS provider (e.g. Cloudflare, GoDaddy, Namecheap).
 

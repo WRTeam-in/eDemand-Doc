@@ -1,7 +1,8 @@
 ---
 sidebar_position: 2
 ---
-## Installation
+
+# Installation
 
 This guide shows how to install **eDemand** on a shared hosting server with **cPanel**.
 
