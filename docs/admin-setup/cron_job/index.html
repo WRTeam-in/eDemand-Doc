@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-admin-setup/cron_job" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Cron Jobs | eDemand Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/cron_job"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Cron Jobs | eDemand Documentation"><meta data-rh="true" name="description" content="Cron jobs are scheduled tasks that your server runs automatically."><meta data-rh="true" property="og:description" content="Cron jobs are scheduled tasks that your server runs automatically."><link data-rh="true" rel="icon" href="/eDemand-Doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/cron_job"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/cron_job" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/cron_job" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cron Jobs","item":"https://wrteam-in.github.io/eDemand-Doc/docs/admin-setup/cron_job"}]}</script><link rel="stylesheet" href="/eDemand-Doc/assets/css/styles.95eac76e.css">
+<script src="/eDemand-Doc/assets/js/runtime~main.bbf62aa2.js" defer="defer"></script>
+<script src="/eDemand-Doc/assets/js/main.32fa4309.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/eDemand-Doc/img/edemand.svg"><link rel="preload" as="image" href="/eDemand-Doc/img/edemand-white.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/eDemand-Doc/"><div class="navbar__logo"><img src="/eDemand-Doc/img/edemand.svg" alt="eDemand Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/eDemand-Doc/img/edemand-white.png" alt="eDemand Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/eDemand-Doc/docs/admin-setup/admin-intro">Admin</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/website-setup/web-intro">Website</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/app-setup/app-intro">App</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/features/elegant-home-page">Features</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/changelog">Changelog</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/support">Community Support</a><a class="navbar__item navbar__link" href="/eDemand-Doc/docs/faqs">FAQs</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/admin-intro"><span title="Admin Panel Prerequisites" class="linkLabel_WmDU">Admin Panel Prerequisites</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/installation"><span title="installation" class="linkLabel_WmDU">installation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/firebase-configuration"><span title="Firebase configuration" class="linkLabel_WmDU">Firebase configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/login_settings"><span title="Authentication Settings" class="linkLabel_WmDU">Authentication Settings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/api_key_settings"><span title="API Key Settings" class="linkLabel_WmDU">API Key Settings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/configure-edemand"><span title="Configure eDemand" class="linkLabel_WmDU">Configure eDemand</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/eDemand-Doc/docs/admin-setup/cron_job"><span title="Cron Jobs" class="linkLabel_WmDU">Cron Jobs</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/sms-gateway-settings"><span title="SMS Gateway Settings" class="linkLabel_WmDU">SMS Gateway Settings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/payment-gateway-settings"><span title="Payment Gateway Settings" class="linkLabel_WmDU">Payment Gateway Settings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/microsoft-clarity-configuration"><span title="Microsoft Clarity" class="linkLabel_WmDU">Microsoft Clarity</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/auto-update"><span title="Auto Update" class="linkLabel_WmDU">Auto Update</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/eDemand-Doc/docs/admin-setup/setup-demo-database"><span title="Demo Database Setup" class="linkLabel_WmDU">Demo Database Setup</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/eDemand-Doc/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Cron Jobs</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Cron Jobs</h1></header>
+<p>Cron jobs are scheduled tasks that your server runs automatically.
+They make sure important background work happens on time, without you having to log in and do it manually.</p>
+<p>In <strong>eDemand</strong> you typically need <strong>two cron jobs</strong>:</p>
+<ul>
+<li class=""><strong>Subscription status update cron</strong>: updates subscription statuses (for example, when a subscription expires at midnight).</li>
+<li class=""><strong>Notification queue cron</strong>: processes queued email, SMS, and FCM notifications so they are sent reliably without slowing down the app.</li>
+</ul>
+<p>If these cron jobs are not set:</p>
+<ul>
+<li class="">Subscription statuses may not update on time.</li>
+<li class="">Notifications may stay in the queue or be delayed.</li>
+</ul>
+<p>You can run cron jobs in two common ways:</p>
+<ol>
+<li class=""><strong>URL-based cron</strong> using <code>curl</code> or <code>wget</code>.</li>
+<li class=""><strong>PHP CLI cron</strong> using the <code>spark</code> command (recommended for the notification queue).</li>
+</ol>
+<p>Below you will find step‑by‑step instructions for both, including examples for <strong>cPanel</strong>.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-finding-your-cron-urls-in-the-admin-panel">1. Finding Your Cron URLs in the Admin Panel<a href="#1-finding-your-cron-urls-in-the-admin-panel" class="hash-link" aria-label="Direct link to 1. Finding Your Cron URLs in the Admin Panel" title="Direct link to 1. Finding Your Cron URLs in the Admin Panel" translate="no">​</a></h2>
+<p>For URL‑based cron, you first need the URLs that eDemand exposes.
+These are shown in the admin panel.</p>
+<ol>
+<li class="">Log in to your <strong>eDemand admin panel</strong>.</li>
+<li class="">Go to the section where cron URLs are listed.</li>
+<li class="">You will see URLs similar to your subscription cron route, for example:<!-- -->
+<ul>
+<li class=""><code>https://your-domain.com/update_subscription_status</code></li>
+<li class="">or <code>https://your-domain.com/admin/dashboard/update_subscription_status</code> (depending on how routes are defined in your project)</li>
+</ul>
+</li>
+</ol>
+<p>You may also see screens similar to:</p>
+<p><img decoding="async" loading="lazy" alt="Cron Job URL 1" src="/eDemand-Doc/assets/images/cron_jon1-7eace8b53f1629a933f06f96dec278a7.webp" width="1904" height="861" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Cron Job URL 2" src="/eDemand-Doc/assets/images/cron_job2-a5a56eefe2919afd13d9309a25766056.webp" width="1916" height="866" class="img_ev3q"></p>
+<p>Copy the URL you want to schedule – you will paste them into your cron commands.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-urlbased-cron-using-curl-or-wget">2. URL‑Based Cron (using <code>curl</code> or <code>wget</code>)<a href="#2-urlbased-cron-using-curl-or-wget" class="hash-link" aria-label="Direct link to 2-urlbased-cron-using-curl-or-wget" title="Direct link to 2-urlbased-cron-using-curl-or-wget" translate="no">​</a></h2>
+<p>URL‑based cron means your server simply calls a URL at a fixed interval.
+This is easy to set up and works well for tasks like <strong>subscription status updates</strong>.</p>
+<p>We will show:</p>
+<ul>
+<li class="">How to set it up in <strong>cPanel</strong>.</li>
+<li class="">The exact commands for <strong><code>curl</code></strong> and <strong><code>wget</code></strong>, with output discarded so no log files are created on server.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cpanel--add-a-urlbased-cron-job">cPanel – Add a URL‑Based Cron Job<a href="#cpanel--add-a-urlbased-cron-job" class="hash-link" aria-label="Direct link to cPanel – Add a URL‑Based Cron Job" title="Direct link to cPanel – Add a URL‑Based Cron Job" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Log in to cPanel</strong></p>
+<ul>
+<li class="">Open your hosting cPanel URL and sign in.</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Open the Cron Jobs screen</strong></p>
+<ul>
+<li class="">In the search bar, type <code>Cron Jobs</code>, or</li>
+<li class="">Scroll to the <strong>Advanced</strong> section and click <strong>Cron Jobs</strong>.</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Choose “Add New Cron Job”</strong></p>
+<ul>
+<li class="">Scroll down to the <strong>Add New Cron Job</strong> section.</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Set the schedule</strong></p>
+<ul>
+<li class="">For a <strong>daily subscription status update</strong> at midnight:<!-- -->
+<ul>
+<li class="">Use the “Common Settings” dropdown (e.g. <code>Once Per Day</code>) and adjust the time to <strong>00:00</strong> if available.</li>
+<li class="">Or manually set:<!-- -->
+<ul>
+<li class="">Minute: <code>0</code></li>
+<li class="">Hour: <code>0</code></li>
+<li class="">Day: <code>*</code></li>
+<li class="">Month: <code>*</code></li>
+<li class="">Weekday: <code>*</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Add the command using <code>curl</code></strong></p>
+<p>Replace <code>&lt;CRON_URL&gt;</code> with your actual cron URL.</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">curl -s -o /dev/null -m 60 &quot;&lt;CRON_URL&gt;&quot; &gt;/dev/null 2&gt;&amp;1</span><br></span></code></pre></div></div>
+<ul>
+<li class=""><code>-s</code>: silent mode (no progress output).</li>
+<li class=""><code>-o /dev/null</code>: discard the body.</li>
+<li class=""><code>-m 60</code>: timeout after 60 seconds.</li>
+<li class=""><code>&gt;/dev/null 2&gt;&amp;1</code>: send all remaining output and errors to the void.</li>
+</ul>
+<p>Example:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">curl -s -o /dev/null -m 60 &quot;https://your-domain.com/admin/dashboard/update_subscription_status&quot; &gt;/dev/null 2&gt;&amp;1</span><br></span></code></pre></div></div>
+<blockquote>
+<p>Most shared hosting servers allow you to call <code>curl</code> directly as above.
+If your host requires a full path, you can prepend it, for example: <code>/usr/bin/curl</code>.</p>
+</blockquote>
+</li>
+<li class="">
+<p><strong>Alternative: command using <code>wget</code></strong></p>
+<p>If your server uses <code>wget</code>, you can use:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">wget -q -O /dev/null &quot;https://your-domain.com/admin/dashboard/update_subscription_status&quot; &gt;/dev/null 2&gt;&amp;1</span><br></span></code></pre></div></div>
+<ul>
+<li class="">
+<p><code>-q</code>: quiet mode.</p>
+</li>
+<li class="">
+<p><code>-O /dev/null</code>: discard the downloaded content.</p>
+</li>
+</ul>
+<blockquote>
+<p>As with <code>curl</code>, most servers let you use <code>wget</code> directly.
+If needed, you can prepend the full path your host provides (for example <code>/usr/bin/wget</code>).</p>
+</blockquote>
+</li>
+<li class="">
+<p><strong>Save</strong></p>
+<ul>
+<li class="">Click <strong>Add New Cron Job</strong>.</li>
+<li class="">Confirm that the new cron job appears in the list.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="php-cli-cron-for-the-notification-queue-spark">3. PHP CLI Cron for the Notification Queue (spark)<a href="#php-cli-cron-for-the-notification-queue-spark" class="hash-link" aria-label="Direct link to 3. PHP CLI Cron for the Notification Queue (spark)" title="Direct link to 3. PHP CLI Cron for the Notification Queue (spark)" translate="no">​</a></h2>
+<p>Sending email, SMS, or FCM notifications to many users can be slow if you try to do it during the web request itself.
+To solve this, eDemand uses a <strong>queue</strong>.
+The <strong>notification queue cron</strong> regularly runs a <code>spark</code> command that processes a fixed number of jobs and then exits.</p>
+<p>The command looks like this:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">&lt;path-to-php&gt; &lt;path-to-your-project&gt;/spark queue:work notifications -max-jobs 20 --stop-when-empty</span><br></span></code></pre></div></div>
+<ul>
+<li class=""><code>&lt;path-to-php&gt;</code>: full path to the PHP binary.</li>
+<li class=""><code>&lt;path-to-your-project&gt;</code>: full path to the project root where the <code>spark</code> file is located.</li>
+</ul>
+<p>You need to find both paths on your server.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-how-to-find-path-to-php">3.1. How to Find <code>&lt;path-to-php&gt;</code><a href="#31-how-to-find-path-to-php" class="hash-link" aria-label="Direct link to 31-how-to-find-path-to-php" title="Direct link to 31-how-to-find-path-to-php" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-on-a-normal-linux-server-ssh">a) On a normal Linux server (SSH)<a href="#a-on-a-normal-linux-server-ssh" class="hash-link" aria-label="Direct link to a) On a normal Linux server (SSH)" title="Direct link to a) On a normal Linux server (SSH)" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Connect via SSH.</p>
+</li>
+<li class="">
+<p>Run:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">which php</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>The output is usually something like:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/usr/bin/php</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<p>This is your <code>&lt;path-to-php&gt;</code>.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="b-in-cpanel">b) In cPanel<a href="#b-in-cpanel" class="hash-link" aria-label="Direct link to b) In cPanel" title="Direct link to b) In cPanel" translate="no">​</a></h4>
+<p>There are a few common ways:</p>
+<ul>
+<li class="">
+<p><strong>Terminal feature</strong> (if enabled):</p>
+<ol>
+<li class="">
+<p>In cPanel, search for <strong>Terminal</strong> and open it.</p>
+</li>
+<li class="">
+<p>Run:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">which php</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>Use the resulting path (for example <code>/usr/bin/php</code> or <code>/usr/local/bin/php</code>).</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p><strong>Select PHP Version / MultiPHP</strong>:</p>
+<ul>
+<li class="">Some hosts show the PHP path on the <strong>PHP Selector / MultiPHP Manager</strong> page.</li>
+<li class="">Look for text like “PHP executable path” or similar in your host’s documentation.</li>
+</ul>
+</li>
+</ul>
+<p>If you cannot find it, your hosting provider’s documentation or support can usually tell you the correct PHP path for cron jobs.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-how-to-find-path-to-your-project">3.2. How to Find <code>&lt;path-to-your-project&gt;</code><a href="#32-how-to-find-path-to-your-project" class="hash-link" aria-label="Direct link to 32-how-to-find-path-to-your-project" title="Direct link to 32-how-to-find-path-to-your-project" translate="no">​</a></h3>
+<p>You need the absolute path to the folder where the <code>spark</code> file lives.</p>
+<p>Common patterns on shared hosting:</p>
+<ul>
+<li class=""><code>/home/&lt;cpanel-username&gt;/public_html</code></li>
+<li class=""><code>/home/&lt;cpanel-username&gt;/domains/&lt;your-domain&gt;/public_html</code></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-using-cpanel-file-manager">a) Using cPanel File Manager<a href="#a-using-cpanel-file-manager" class="hash-link" aria-label="Direct link to a) Using cPanel File Manager" title="Direct link to a) Using cPanel File Manager" translate="no">​</a></h4>
+<ol>
+<li class="">In cPanel, open <strong>File Manager</strong>.</li>
+<li class="">Navigate to your <strong>document root</strong> for the domain where eDemand runs.<!-- -->
+<ul>
+<li class="">For the main domain, this is often <code>public_html</code>.</li>
+<li class="">For addon domains or subdomains, use <strong>Domains</strong> in cPanel to see the <strong>Document Root</strong>.</li>
+</ul>
+</li>
+<li class="">Find the folder where eDemand is installed (the folder that contains the <code>spark</code> file).</li>
+<li class="">Look at the <strong>full path</strong> displayed at the top of File Manager, or right‑click the folder and check “Copy path” if your host provides that.</li>
+</ol>
+<p>Example full path:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/home/user/domains/domain.com/public_html/edemand</span><br></span></code></pre></div></div>
+<p>This becomes your <code>&lt;path-to-your-project&gt;</code>.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="b-using-ssh">b) Using SSH<a href="#b-using-ssh" class="hash-link" aria-label="Direct link to b) Using SSH" title="Direct link to b) Using SSH" translate="no">​</a></h4>
+<ol>
+<li class="">
+<p>Go to your project folder:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">cd /path/to/your/project</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>Run:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">pwd</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>The output is your <code>&lt;path-to-your-project&gt;</code>.</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-example-full-spark-command">3.3. Example Full spark Command<a href="#33-example-full-spark-command" class="hash-link" aria-label="Direct link to 3.3. Example Full spark Command" title="Direct link to 3.3. Example Full spark Command" translate="no">​</a></h3>
+<p>Putting it together:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark queue:work notifications -max-jobs 20 --stop-when-empty</span><br></span></code></pre></div></div>
+<p>You can adjust:</p>
+<ul>
+<li class=""><code>notifications</code> queue name if your setup uses a different one.</li>
+<li class=""><code>-max-jobs 20</code> to process more or fewer jobs per run.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-cpanel--add-the-notification-queue-cron">3.4. cPanel – Add the Notification Queue Cron<a href="#34-cpanel--add-the-notification-queue-cron" class="hash-link" aria-label="Direct link to 3.4. cPanel – Add the Notification Queue Cron" title="Direct link to 3.4. cPanel – Add the Notification Queue Cron" translate="no">​</a></h3>
+<p>Now that you have the PHP path and project path:</p>
+<ol>
+<li class="">
+<p>Log in to <strong>cPanel</strong>.</p>
+</li>
+<li class="">
+<p>Open <strong>Cron Jobs</strong>.</p>
+</li>
+<li class="">
+<p>In <strong>Add New Cron Job</strong>:</p>
+<ul>
+<li class="">Set the schedule to run <strong>every minute</strong> (recommended for queues):<!-- -->
+<ul>
+<li class="">Minute: <code>*</code></li>
+<li class="">Hour: <code>*</code></li>
+<li class="">Day: <code>*</code></li>
+<li class="">Month: <code>*</code></li>
+<li class="">Weekday: <code>*</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p>In the <strong>Command</strong> field, enter:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">&lt;path-to-php&gt; &lt;path-to-your-project&gt;/spark queue:work notifications -max-jobs 20 --stop-when-empty &gt;/dev/null 2&gt;&amp;1</span><br></span></code></pre></div></div>
+<p>Example:</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">/usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark queue:work notifications -max-jobs 20 --stop-when-empty &gt;/dev/null 2&gt;&amp;1</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p>Click <strong>Add New Cron Job</strong>.</p>
+</li>
+<li class="">
+<p>Confirm that the cron job appears in the list.</p>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-verifying-and-maintaining-your-cron-jobs">4. Verifying and Maintaining Your Cron Jobs<a href="#4-verifying-and-maintaining-your-cron-jobs" class="hash-link" aria-label="Direct link to 4. Verifying and Maintaining Your Cron Jobs" title="Direct link to 4. Verifying and Maintaining Your Cron Jobs" translate="no">​</a></h2>
+<p>After setting up your cron jobs:</p>
+<ul>
+<li class=""><strong>Check logs or application behavior</strong>:<!-- -->
+<ul>
+<li class="">Confirm that subscription statuses are updated as expected (for example, after midnight).</li>
+<li class="">Check that queued notifications are being sent and the queue is not growing indefinitely.</li>
+</ul>
+</li>
+<li class=""><strong>Adjust schedules if needed</strong>:<!-- -->
+<ul>
+<li class="">For heavy notification volume, you may keep the queue cron at <strong>every minute</strong>.</li>
+<li class="">For lighter workloads, you can reduce the frequency.</li>
+</ul>
+</li>
+<li class=""><strong>Edit or remove cron jobs</strong>:<!-- -->
+<ul>
+<li class="">In cPanel, use the same <strong>Cron Jobs</strong> screen to modify or delete.</li>
+</ul>
+</li>
+</ul>
+<p>Keeping these cron jobs configured and running is essential for correct and timely background processing in eDemand.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/eDemand-Doc/docs/admin-setup/configure-edemand"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configure eDemand</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/eDemand-Doc/docs/admin-setup/sms-gateway-settings"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">SMS Gateway Settings</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-finding-your-cron-urls-in-the-admin-panel" class="table-of-contents__link toc-highlight">1. Finding Your Cron URLs in the Admin Panel</a></li><li><a href="#2-urlbased-cron-using-curl-or-wget" class="table-of-contents__link toc-highlight">2. URL‑Based Cron (using <code>curl</code> or <code>wget</code>)</a><ul><li><a href="#cpanel--add-a-urlbased-cron-job" class="table-of-contents__link toc-highlight">cPanel – Add a URL‑Based Cron Job</a></li></ul></li><li><a href="#php-cli-cron-for-the-notification-queue-spark" class="table-of-contents__link toc-highlight">3. PHP CLI Cron for the Notification Queue (spark)</a><ul><li><a href="#31-how-to-find-path-to-php" class="table-of-contents__link toc-highlight">3.1. How to Find <code>&lt;path-to-php&gt;</code></a></li><li><a href="#32-how-to-find-path-to-your-project" class="table-of-contents__link toc-highlight">3.2. How to Find <code>&lt;path-to-your-project&gt;</code></a></li><li><a href="#33-example-full-spark-command" class="table-of-contents__link toc-highlight">3.3. Example Full spark Command</a></li><li><a href="#34-cpanel--add-the-notification-queue-cron" class="table-of-contents__link toc-highlight">3.4. cPanel – Add the Notification Queue Cron</a></li></ul></li><li><a href="#4-verifying-and-maintaining-your-cron-jobs" class="table-of-contents__link toc-highlight">4. Verifying and Maintaining Your Cron Jobs</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright 2026 eDemand.</div></div></div></footer></div>
+</body>
+</html>
