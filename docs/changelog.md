@@ -10,6 +10,22 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 4.7.1 (18 March, 2026)
+
+- ***Fixed*** Incorrect error messages on login and other screens [Apps]
+- ***Fixed*** Location selection issue in map places search [Apps]
+- ***Fixed*** Incorrect subscription pricing on payment gateways [Provider App]
+- ***Fixed*** UI inconsistencies and translation issue in change password screen [Apps]
+- ***Fixed*** Language change not working [Provider App]
+- ***Fixed*** Chat list not refreshing when user changes account [Customer App]
+- ***Fixed*** Delete chat not working [Provider App]
+- ***Fixed*** Incorrect amount displayed during checkout [Web]
+- ***Fixed*** Incorrect transaction time in payment history [Web]
+- ***Improved*** Added validation message when submitting review without rating [Customer App & Web]
+- ***Improved*** Chat with users and providers [Panels]
+- ***Improved*** System Updater Page UX [Admin Panel]
+
+---
 ## Version 4.7.0 (12 March, 2026)
 
 - ***Added*** CashFree payment gateway integration [Apps & Web & Panels]
