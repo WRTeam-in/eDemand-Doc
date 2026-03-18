@@ -21,6 +21,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 - ***Fixed*** Delete chat not working [Provider App]
 - ***Fixed*** Incorrect amount displayed during checkout [Web]
 - ***Fixed*** Incorrect transaction time in payment history [Web]
+- ***Fixed*** Canonical URL issue for slug pages to improve SEO indexing [Web]
 - ***Improved*** Added validation message when submitting review without rating [Customer App & Web]
 - ***Improved*** Chat with users and providers [Panels]
 - ***Improved*** System Updater Page UX [Admin Panel]
