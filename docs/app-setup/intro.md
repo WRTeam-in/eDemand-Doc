@@ -44,6 +44,7 @@ Ensure all versions match the above list for smooth project setup and compatibil
 
 | Product Version | Flutter version | Gradle Wrapper | Android Gradle Plugin |
 | --------------- | --------------- | -------------- | --------------------- |
+| v4.8.0          | v3.41.3         | 8.11.1         | 8.9.1                 |
 | v4.7.1          | v3.41.3         | 8.11.1         | 8.9.1                 |
 | v4.7.0          | v3.41.3         | 8.11.1         | 8.9.1                 |
 | v4.6.0          | v3.38.5         | 8.11.1         | 8.9.1                 |
@@ -59,7 +60,6 @@ Ensure all versions match the above list for smooth project setup and compatibil
 | v2.8.0          | v3.24.1         | 7.6            | 7.3.0                 |
 | v2.7.0          | v3.22.2         | 7.6            | 7.3.0                 |
 | v2.6.0          | v3.22.2         | 7.6            | 7.3.0                 |
-| v2.5.0          | v3.19.6         | 7.6            | 7.3.0                 |
 
 ---
 

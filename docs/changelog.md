@@ -10,6 +10,20 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 4.8.0 (14 March, 2026)
+
+- ***Added*** Custom fields for provider registration documents & bank details, and customer address [Apps, Web & Panels]  
+- ***Added*** Dynamic pages with SEO support using HTML content from admin panel [Apps, Web & Panels]  
+- ***Added*** Dynamic theme color configuration option for web [Web & Panels]  
+- ***Added*** Demo data seeder with clean/keep existing data options (images not included) [Admin Panel]  
+- ***Improved*** Pre-chat questions can now be dynamically managed with multi-language support [Apps, Web & Panels]  
+- ***Improved*** Provider registration form converted into stepper form in admin panel [Panels]  
+- ***Fixed*** Removed lat-long validation from “Become a Provider” page [Web]  
+- ***Improved*** Landing page loading performance [Web]  
+- ***Improved*** App performance, stability, and overall UX [Apps]  
+- ***Improved*** UI/UX enhancements and general bug fixes [Apps, Web & Panels]
+
+---
 ## Version 4.7.1 (18 March, 2026)
 
 - ***Fixed*** Incorrect error messages on login and other screens [Apps]
