@@ -102,7 +102,7 @@ Alternatively, you can [view the raw .htaccess content here](/files/htaccess-exa
 
 3.  **Save the file** on your server.
 
-:::tip Note
+:::note
 This `.htaccess` configuration is typically provided with the eDemand web code. If you already have this file from the source code, you can upload that one directly instead of creating a new one.
 :::
 

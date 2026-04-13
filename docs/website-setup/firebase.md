@@ -16,7 +16,7 @@ If you already created firebase project at that time then you can skip below fir
 
    ![firebase-console](../../static/img/firebase/firebase-console.png)
 
-2. Register a new account or try to log in with existing google accout.
+2. Register a new account or log in with an existing Google account.
 
    ![console-page](../../static/img/firebase/console-page.png)
 

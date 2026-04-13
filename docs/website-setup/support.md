@@ -4,7 +4,7 @@ sidebar_position: 14
 
 # Support
 
-Its our pleasure to serve our service and support. please contact our support team.
+It's our pleasure to serve and support you. Please contact our support team.
 
 Customer Support : Yash Rajput
 

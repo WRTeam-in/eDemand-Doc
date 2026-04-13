@@ -16,7 +16,7 @@ Follow these steps to update to a new version of the web app. Choose deployment 
    Locate and open the .env file in your code editor. Add the admin URL as specified in the documentation.
 
 4. **Configure Firebase**:
-   Open the Firebase Console. Follow the steps outlined in the Firebase documentation. Add the Firebase details to the .env file of your web project.
+   Open the Firebase Console. Follow the steps outlined in the [Firebase Setup documentation](./firebase.md). Add the Firebase details to the .env file of your web project.
 
 5. **Install Dependencies**:
    Run the following command to install the necessary dependencies:

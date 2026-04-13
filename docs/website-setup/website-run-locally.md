@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Install Packages and Dependencies
 
-Install Packages and Dependencies Hit the below command to install all the required dependencies and packages:
+Install Packages and Dependencies. Run the command below to install all the required dependencies and packages:
 
    ```bash
    npm i
@@ -27,4 +27,4 @@ Hit the below command to start the app and to check local server browser:
 ## Open the browser
 Open the browser and navigate to [http://localhost:3000/](http://localhost:3000/)
 
-Check everything in local browser like (Google Chrome) and after go to deploy step to server once everything is properly work
+Check everything in a local browser (e.g., Google Chrome). Once everything works correctly, proceed to the deployment step.

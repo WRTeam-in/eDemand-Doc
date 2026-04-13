@@ -38,7 +38,7 @@ This guide explains how to set up Microsoft Clarity, Google Analytics, and Googl
 
 ![Microsoft Clarity project ID preview](/img/web/microsoft_clarity_id.png)
 
-2. **Find the Microsoft Clarity section** (around line 89-99)
+2. **Find the Microsoft Clarity section** and locate the script block
 
 3. **Replace the Project ID** with your own:
 
@@ -98,7 +98,7 @@ Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
 
 ![Google Analytics Measurement ID preview](/img/web/google_analytics.png)
 
-2. **Find the Google Analytics section** (around line 80-87)
+2. **Find the Google Analytics section** and locate the gtag script block
 
 3. **Replace the Tracking ID** with your own:
 
@@ -149,7 +149,7 @@ Replace `YOUR_TRACKING_ID` with your actual Google Analytics Measurement ID (e.g
 1. **Open `src/pages/_document.js`**
 ![Google AdSense setup preview](/img/web/adsense.png)
 
-2. **Find the Google AdSense section** (around line 73-78)
+2. **Find the Google AdSense section** and locate the pagead script block
 
 3. **Replace the Publisher ID** with your own:
 

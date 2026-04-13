@@ -73,11 +73,31 @@ When updating translations, **only change the text on the right side (the value)
 
 ---
 
-## Change theme color
+## Change Theme Color
 
-- Go to: **src -> styles -> globals.css**
+Theme colors can now be configured directly from the **Admin Panel** — no code changes required.
 
-   ![theme-file](../../static/img/web/theme_color.png)
+### Steps to Update Theme Colors
+
+1. Log in to the **Admin Panel**
+2. Navigate to **Settings > Web Settings**
+3. Scroll down to find the **Theme Color** cards
+4. You will see separate sections for **Light Theme Colors** and **Dark Theme Colors**, each containing:
+   - **Primary Color**
+   - **Secondary Color**
+   - **Light Background Color**
+   - **Text Color**
+   - **Card Background Color**
+   - **Description Text Color**
+5. Click on any color swatch to pick a new color
+6. Use the **Reset to Default** button to restore the original theme colors
+7. Save your changes
+
+![web_dynamic_color](../../static/img/web/web_dynamic_color.png)
+
+:::tip
+Both **Light** and **Dark** theme colors can be customized independently. After saving, **reload the website** to see the updated theme colors applied.
+:::
 
 ## Change Font style
 

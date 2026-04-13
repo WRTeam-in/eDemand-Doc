@@ -32,6 +32,6 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 
 ## Setup Essentials
 
-1. Kindly suggest using **npm version 9.7.1** and [Node.js](https://nodejs.org/en/download/) version 18.0 or above.
+1. We recommend using **npm version 9.7.1** and [Node.js](https://nodejs.org/en/download/) version 18.0 or above.
 
 2. Install a code editor like: [VSCode](https://code.visualstudio.com/download).
