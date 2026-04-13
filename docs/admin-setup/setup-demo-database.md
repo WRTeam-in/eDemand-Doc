@@ -2,11 +2,10 @@
 sidebar_position: 12
 ---
 
-
 # Demo Database Setup
 
 :::note
-This step is **optional**. Only follow these instructions if you want to set up a demo database with sample data for testing or exploration.
+This step is **optional**. Only follow these instructions if you want to set up a demo database with sample data for testing or exploration.  
 If you do **not** want demo data, you can skip this section.
 :::
 
@@ -16,15 +15,18 @@ Follow these main steps to set up the eDemand demo database:
 
 1. **Take a Backup of Your Current Database**
    - Before making any changes, back up your existing database to prevent data loss.
-2. **Empty Your Database**
-   - Remove all existing tables and data from your target database.
-3. **Import the Demo SQL File**
-   - Download: [demo-database-v-4.5.0.sql](../../static/demo-database-v-4.5.0.sql)
-   - Import this file into your empty database using phpMyAdmin.
-4. **Default Admin Credentials**
-   - **Mobile:** `9876543210`
-   - **Password:** `12345678`
 
-> **Note:** The demo data and credentials are for testing and learning purposes only. Do not use them in production environments.
+2. **Import Demo Data from System Settings**
+   - Navigate to: **System Settings → System Updater Settings**
+   - Use the demo data import option available there.
+
+   ![System Updater Settings](../../static/img/adminPanel/demo_data_import.png)
+
+   > **Note:**
+   > You will see two options while importing demo data:
+   > - **Clean Seed** → This will remove all existing data and replace it with demo data.
+   > - **Keep Existing Data** → This will retain your current data and only add demo data on top of it.
+   >
+   > Choose carefully based on your use case.
 
 ---

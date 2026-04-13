@@ -94,3 +94,8 @@ sidebar: null
     <li>Ensure that the appropriate notification settings have been configured in admin panel. You can find these in "System settings -> Notification Settings".</li>
   </ul>
 </details>
+<details>
+  <summary><strong>Why default custom fields are not displaying in version 4.8.0?</strong></summary>
+  <p>If the custom fields tables are showing <strong>"No records found"</strong>, then migrations have not successfully run.</p>
+  <p>Please check the <strong>System Settings → System Updater</strong> page to manually run the migrations.</p>
+</details>
