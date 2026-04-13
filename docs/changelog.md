@@ -10,7 +10,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
-## Version 4.8.0 (14 March, 2026)
+## Version 4.8.0 (14 April, 2026)
 
 - ***Added*** Custom fields for provider registration documents & bank details, and customer address [Apps, Web & Panels]  
 - ***Added*** Dynamic pages with SEO support using HTML content from admin panel [Apps, Web & Panels]  
