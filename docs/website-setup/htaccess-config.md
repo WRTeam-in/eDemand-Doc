@@ -46,6 +46,9 @@ If you're using the **automated deployment script** (`deploy_vps.sh`) or the `np
       # Test rule for provider-details
       RewriteRule ^provider-details/(.*)/?$ provider-details/[...slug].html [L]
 
+      # Test rule for custom-page
+      RewriteRule ^custom-page/([^/]+)/?$ custom-page/[slug].html [L]
+
       # Test rule for my-service-request-details
       RewriteRule ^my-service-request-details/(.*)/?$ my-service-request-details/[...slug].html [L]
 
