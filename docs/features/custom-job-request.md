@@ -19,7 +19,8 @@ Custom Job Request allows customers to post specific job requirements and receiv
 - Selecting their service categories (e.g., plumbing, cleaning, painting)
 
 ![Manage Category Preference Panel](../../static/img/adminPanel/manage_category_preference_panel.png)
-![Manage Category Preference App](../../static/img/adminPanel/manage_category_preference_app.jpg)
+
+![Manage Category Preference App](../../static/img/adminPanel/manage_category_preference_app.png)
 
 ### 3. Customer request the Job
 
@@ -29,7 +30,7 @@ Custom Job Request allows customers to post specific job requirements and receiv
 - Specify when they need the job done
 - Add any special instructions
 
-![Make Custom Job Request](../../static/img/adminPanel/make_custom_job_request.jpg)
+![Make Custom Job Request](../../static/img/adminPanel/make_custom_job_request.png)
 
 ### 4. Provider will receive the Job Requests
 
@@ -38,7 +39,9 @@ Provider gets notifications only for jobs that:
 - Are in their service area
 
 ![Received Custom Job Provider Panel](../../static/img/adminPanel/received_custom_job_provider_panel.png)
+
 ![Received Custom Job Request App](../../static/img/adminPanel/received_custom_job_request_app.jpg)
+
 ![New Custom Job Notification](../../static/img/adminPanel/new_custom_job_notification.jpg)
 
 ### 5. Provider can bid on the Job
@@ -50,7 +53,8 @@ When providers see a job they're interested in, they can:
   - When they can do the job
   
   ![Submit Bid Provider Panel](../../static/img/adminPanel/submit_bid_provider_panel.png)
-  ![Submit Bit Provider App](../../static/img/adminPanel/submit_bit_provider_app.jpg)
+  
+  ![Submit Bit Provider App](../../static/img/adminPanel/submit_bit_provider_app.png)
   
 - Wait for customer's response
 - If selected, receive booking confirmation and customer details
@@ -61,7 +65,7 @@ When providers see a job they're interested in, they can:
 - Customer receives notifications as providers start bidding
 - Customer can view all incoming bids in their app
 
-![Custom Job With Bidder](../../static/img/adminPanel/custom_job_with_bidder.jpg)
+![Custom Job With Bidder](../../static/img/adminPanel/custom_job_with_bidder.png)
 
 ### 7. Finalizing the Job
 
