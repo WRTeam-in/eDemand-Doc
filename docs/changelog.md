@@ -10,6 +10,23 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 4.9.0 (11 June, 2026)
+
+- ***Added*** File uploads for custom job requests [App, Web and Panels]
+- ***Added*** Settings in admin panel for management of custom job requests file uploads [Admin Panel]
+- ***Added*** Shifts, leaves, and slot configurations for providers [App, Web and Panels]
+- ***Added*** Calendar view orders list [Panel, and App]
+- ***Added*** Tree view to category list [Admin panel]
+- ***Added*** Cancellation reasons for booking [App, Web and Panels]
+- ***Added*** Search functionality from provider details [App, and Web]
+- ***Added*** Checkbox for accepting terms and conditions in contact us form [App, and Web]
+- ***Improved*** Converted service form to stepper form [Panel]
+- ***Improved*** Added coming soon instead of 0 providers [App, Web]
+- ***Improved*** Slot generation mechanism in backend [Panel]
+- ***Update*** Flutter version 4.41.9 compatibility [App]
+- ***Improved*** UI/UX enhancements and bugs fixes [App, Web and Panels]
+
+---
 ## Version 4.8.0 (14 April, 2026)
 
 - ***Added*** Custom fields for provider registration documents & bank details, and customer address [Apps, Web & Panels]  
