@@ -106,10 +106,10 @@ Google may require both **IPv4** and **IPv6** addresses in IP restrictions. Alwa
 
 After you finish configuring and saving these keys:
 
-1. Copy the **browser key** and **server key** values.
-2. Paste them into the corresponding fields in your eDemand configuration (see **Installation** and **Configure eDemand** guides).
+1. Copy the **browser key** and **newly created places API key** values.
+2. Paste them into the corresponding fields in your eDemand configuration in admin panel.
 3. Save the configuration and test:
-   - Open the web and admin panel map pages.
+   - Open the admin panel map pages.
    - Try searching for an address and placing a pin on the map.
 
 If maps or autocomplete do not work, re-check:

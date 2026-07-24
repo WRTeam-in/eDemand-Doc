@@ -20,6 +20,7 @@ Welcome to the App Setup Overview documentation. This section provides detailed 
 - [Change the Default Language](./change-default-language.md)
 - [Change App Font](./change-app-font.md)
 - [Change Server URL](./change-server-url.md)
+- [Separate Provider and Handyman App](./separate-provider-handyman-app.md)
 
 Each guide provides step-by-step instructions with visual examples to help you customize your application according to your requirements.
 

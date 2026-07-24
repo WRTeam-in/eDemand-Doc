@@ -10,6 +10,22 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 5.0.0 (23 July, 2026)
+
+- ***Added*** Handyman Panel and App [Handyman Panel & App]
+- ***Added*** Handyman management from Provider App and Panel [Provider App & Panel]
+- ***Added*** Booking management and user chat with multi-handyman support [Handyman Panel & App]
+- ***Added*** Handyman assignment and unassignment to bookings [Admin Panel, Provider Panel & App]
+- ***Added*** Handyman reviews from customer [Customer App & Web]
+- ***Added*** Live tracking of handyman/provider for at-doorstep bookings [Apps, Web & Panels]
+- ***Added*** Open Street Map integration [Apps, Web & Panels]
+- ***Added*** Provider-wise distance filtering [Customer App & Web]
+- ***Added*** Rebuilt cookie consent with granular categories (Essential/Functional/Analytics/Marketing), tracking scripts (GA4, Clarity, AdSense, Maps) now load only after consent, no dark-pattern banner, footer "Cookie Settings" for withdrawal, login cookies decoupled from consent, GPS/analytics/push-token gated on consent, no re-prompt for 6 months after decline, browser "Do Not Track" (GPC) auto-respected [Web]
+- ***Update*** Flutter version 4.44.6 compatibility [Apps]
+- ***Update*** CodeIgniter framework version 4.7.4 [Panels]
+- ***Improved*** UI/UX enhancements and bug fixes [Apps, Web & Panels]
+
+---
 ## Version 4.9.0 (11 June, 2026)
 
 - ***Added*** File uploads for custom job requests [App, Web and Panels]
