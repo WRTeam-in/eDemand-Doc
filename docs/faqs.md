@@ -99,3 +99,9 @@ sidebar: null
   <p>If the custom fields tables are showing <strong>"No records found"</strong>, then migrations have not successfully run.</p>
   <p>Please check the <strong>System Settings → System Updater</strong> page to manually run the migrations.</p>
 </details>
+
+<details>
+  <summary><strong>Does Handyman login through separate app or Provider app?</strong></summary>
+  <p>By default, Handyman uses the same codebase/app as the Provider app. Handyman logs in from the same Provider app using the credentials created by the Provider, no separate app required.</p>
+  <p>If you want Handyman as an independent app (own package name, app name, icon, separate store listing), refer to <strong>[How to Separate Provider and Handyman App](app-setup/app_setup_overview/separate-provider-handyman-app)</strong>.</p>
+</details>
