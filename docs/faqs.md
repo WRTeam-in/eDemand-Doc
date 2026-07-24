@@ -105,3 +105,13 @@ sidebar: null
   <p>By default, Handyman uses the same codebase/app as the Provider app. Handyman logs in from the same Provider app using the credentials created by the Provider, no separate app required.</p>
   <p>If you want Handyman as an independent app (own package name, app name, icon, separate store listing), refer to <strong>[How to Separate Provider and Handyman App](app-setup/app_setup_overview/separate-provider-handyman-app)</strong>.</p>
 </details>
+
+<details>
+  <summary><strong>Why do I get "Undefined property: Config\App::$permittedURIChars" error after update?</strong></summary>
+  <p>This error occurs when your <strong>app/Config/App.php</strong> file is old and missing the <code>$permittedURIChars</code> property that newer core files expect.</p>
+  <p>To fix this, open <strong>app/Config/App.php</strong> and add the following property:</p>
+  <pre>
+public string $permittedURIChars = 'a-z 0-9~%.:_\-';
+  </pre>
+  <p>Save the file and reload the app/website, the error will be resolved.</p>
+</details>
