@@ -9,7 +9,7 @@ Changing your app’s package name (also known as application ID or bundle ident
 ---
 
 ### 📘 Guide to Change Package Name  
-**[View Package Name Change Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/packagename)**
+**[View Package Name Change Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/packagename)**
 
 ---
 

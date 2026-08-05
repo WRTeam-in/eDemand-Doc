@@ -7,7 +7,7 @@ sidebar_position: 8
 To monetize your app using Google AdMob, follow the official setup instructions carefully. This will enable you to display banner, interstitial, and rewarded ads within your app.
 
 ### 📘 AdMob Setup Guide  
-**[Click here to view the AdMob Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/advertisement/google-admob)**
+**[Click here to view the AdMob Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/advertisement/google-admob)**
 
 ---
 

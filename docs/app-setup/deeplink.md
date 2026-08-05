@@ -8,7 +8,7 @@ sidebar_position: 7
 Deep linking allows users to navigate directly to specific content within your app from external URLs, improving user experience and engagement.
 
 ### 📘 Deep Link Setup Guide  
-**[Click here to view the Deep Link Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deeplink)**
+**[Click here to view the Deep Link Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/deeplink)**
 
 ---
 

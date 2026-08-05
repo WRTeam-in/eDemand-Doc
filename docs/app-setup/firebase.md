@@ -8,7 +8,7 @@ To set up Firebase for your project, please follow the step-by-step instructions
 
 ### 📘 Firebase Setup Guide
 
- - ***[Click here to view the Firebase Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/firebase)***
+ - ***[Click here to view the Firebase Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase)***
 
 :::note
 Please read through the guide carefully to ensure a successful setup.

@@ -7,7 +7,7 @@ sidebar_position: 9
 Once your app is fully developed and tested, follow the steps below to deploy it to the Play Store and App Store.
 
 ### 📘 Deployment Guide  
-**[Click here to view the Deployment Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/deployment)**
+**[Click here to view the Deployment Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/deployment)**
 
 ---
 

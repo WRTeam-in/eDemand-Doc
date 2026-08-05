@@ -10,7 +10,7 @@ To enable and configure push notifications in your project, please follow the de
 
 ### 📘 Notification Setup Guide
 
- - ***[Click here to view the Notification Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/notifications)***
+ - ***[Click here to view the Notification Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/notifications)***
 
 
 

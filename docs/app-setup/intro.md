@@ -17,7 +17,7 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 Follow the basic setup guide to configure your environment properly:
 
 ### 📘 Flutter Setup Guide  
-**[Click here to view the Flutter Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/basicsetup)**
+**[Click here to view the Flutter Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/basicsetup)**
 
 ---
 

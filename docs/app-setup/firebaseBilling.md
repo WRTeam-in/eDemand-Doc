@@ -8,7 +8,7 @@ sidebar_position: 5
 To enable certain Firebase services (like Cloud Functions, Cloud Messaging, or Firestore beyond the free tier), you must set up billing in your Firebase project.
 
 ### 📘 Firebase Billing Setup Guide  
-**[Click here to view the Firebase Billing Setup Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/firebase-billing)**
+**[Click here to view the Firebase Billing Setup Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/firebase-billing)**
 
 ---
 

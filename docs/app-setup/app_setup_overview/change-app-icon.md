@@ -7,7 +7,7 @@ sidebar_position: 3
 Give your app a fresh, branded look by updating the application icon on both Android and iOS.
 
 ### 📘 Guide to Change App Icon  
-**[View App Icon Change Guide](https://wrteam-in.github.io/common_app_doc/GeneralSettings/appicon)**
+**[View App Icon Change Guide](https://www.marketplace.wrteam.in/docs/flutter-common-doc/GeneralSettings/appicon)**
 
 ---
 
