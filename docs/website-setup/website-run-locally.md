@@ -25,6 +25,6 @@ Hit the below command to start the app and to check local server browser:
    ![Starting the web app](../../static/img/web/npm_dev.png)
 
 ## Open the browser
-Open the browser and navigate to http://localhost:3000
+Open browser, navigate to localhost:3000
 
 Check everything in a local browser (e.g., Google Chrome). Once everything works correctly, proceed to the deployment step.
