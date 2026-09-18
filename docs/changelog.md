@@ -13,6 +13,7 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ## Version 5.1.0 (18 September, 2026)
 
+- ***Added*** New UI [Customer App & Web]
 - ***Added*** Area coverage requests feature [Apps, Web & Panels]
 - ***Added*** Multi cart support [Customer App & Web & Panels]   
 - ***Added*** Provider Verification Badges [Provider App, Provider Panel & Admin Panel]
@@ -25,8 +26,13 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 - ***Added*** Abandoned cart notifications [Customer App & Web, & Provider Panel]
 - ***Added*** Upcoming bookings notifications [Apps & Web, & Provider Panel]
 - ***Added*** One time subscriptions [Provider App & Panel]
-- ***Improved*** KYC flow [Provider App & Panel]
+- ***Added*** Dynamic durations for services in minutes, hours, and days [Panels, Apps & Web]
+- ***Improved*** KYC flow: profile re-approval required on edit, removed unnecessary logout after signup, and providers informed that admin approval is needed before adding services [Provider App & Panel]
 - ***Improved*** General improvements and bug fixes [Apps, Web & Panels]
+
+:::important Cron Job Change
+Multiple cron jobs replaced with single **Tasks cron** powered by CodeIgniter Tasks. Old subscription, notification queue, and other cron entries no longer needed — merge them into one. Migration is required: from the next update, the old cron jobs will stop working. See **[Cron Jobs setup guide](./admin-setup/cron_job.md)** for setup steps.
+:::
 
 ---
 

@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# Cron Jobs
+# Cron Job
 
 Cron jobs are scheduled tasks that your server runs automatically.
 They make sure important background work happens on time, without you having to log in and do it manually.
