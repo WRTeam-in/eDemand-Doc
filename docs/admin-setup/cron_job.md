@@ -7,130 +7,32 @@ sidebar_position: 7
 Cron jobs are scheduled tasks that your server runs automatically.
 They make sure important background work happens on time, without you having to log in and do it manually.
 
-In **eDemand** you typically need **two cron jobs**:
+In **eDemand** you only need **one cron job**:
 
-- **Subscription status update cron**: updates subscription statuses (for example, when a subscription expires at midnight).
-- **Notification queue cron**: processes queued email, SMS, and FCM notifications so they are sent reliably without slowing down the app.
+- **Tasks cron**: runs CodeIgniter Tasks, which handles subscription status updates, notification queue processing (email, SMS, FCM), and other scheduled jobs — all under a single cron.
 
-If these cron jobs are not set:
+> **Note:** Previously, eDemand required separate cron jobs for subscription status updates, the notification queue, and other background jobs. These have now been merged into a single **Tasks cron** powered by CodeIgniter Tasks. You no longer need to configure multiple cron entries.
+
+If this cron job is not set:
 
 - Subscription statuses may not update on time.
 - Notifications may stay in the queue or be delayed.
+- Other scheduled tasks may not run.
 
-You can run cron jobs in two common ways:
+You run this cron using the **PHP CLI** via the `spark` command (recommended).
 
-1. **URL-based cron** using `curl` or `wget`.
-2. **PHP CLI cron** using the `spark` command (recommended for the notification queue).
-
-Below you will find step‑by‑step instructions for both, including examples for **cPanel**.
+Below you will find step‑by‑step instructions, including examples for **cPanel**.
 
 ---
 
-## 1. Finding Your Cron URLs in the Admin Panel
+## 1. PHP CLI Cron for Tasks (spark) {#php-cli-cron-for-tasks-spark}
 
-For URL‑based cron, you first need the URLs that eDemand exposes.
-These are shown in the admin panel.
-
-1. Log in to your **eDemand admin panel**.
-2. Go to the section where cron URLs are listed.
-3. You will see URLs similar to your subscription cron route, for example:
-   - `https://your-domain.com/update_subscription_status`
-   - or `https://your-domain.com/admin/dashboard/update_subscription_status` (depending on how routes are defined in your project)
-
-You may also see screens similar to:
-
-![Cron Job URL 1](../../static/img/adminPanel/cron_jon1.webp)
-
-![Cron Job URL 2](../../static/img/adminPanel/cron_job2.webp)
-
-Copy the URL you want to schedule – you will paste them into your cron commands.
-
----
-
-## 2. URL‑Based Cron (using `curl` or `wget`)
-
-URL‑based cron means your server simply calls a URL at a fixed interval.
-This is easy to set up and works well for tasks like **subscription status updates**.
-
-We will show:
-
-- How to set it up in **cPanel**.
-- The exact commands for **`curl`** and **`wget`**, with output discarded so no log files are created on server.
-
-### cPanel – Add a URL‑Based Cron Job 
-
-1. **Log in to cPanel**
-   - Open your hosting cPanel URL and sign in.
-
-2. **Open the Cron Jobs screen**
-   - In the search bar, type `Cron Jobs`, or
-   - Scroll to the **Advanced** section and click **Cron Jobs**.
-
-3. **Choose “Add New Cron Job”**
-   - Scroll down to the **Add New Cron Job** section.
-
-4. **Set the schedule**
-   - For a **daily subscription status update** at midnight:
-     - Use the “Common Settings” dropdown (e.g. `Once Per Day`) and adjust the time to **00:00** if available.
-     - Or manually set:  
-       - Minute: `0`  
-       - Hour: `0`  
-       - Day: `*`  
-       - Month: `*`  
-       - Weekday: `*`
-
-5. **Add the command using `curl`**
-
-   Replace `<CRON_URL>` with your actual cron URL.
-
-   ```shell
-   curl -s -o /dev/null -m 60 "<CRON_URL>" >/dev/null 2>&1
-   ```
-
-   - `-s`: silent mode (no progress output).
-   - `-o /dev/null`: discard the body.
-   - `-m 60`: timeout after 60 seconds.
-   - `>/dev/null 2>&1`: send all remaining output and errors to the void.
-
-   Example:
-
-   ```shell
-   curl -s -o /dev/null -m 60 "https://your-domain.com/admin/dashboard/update_subscription_status" >/dev/null 2>&1
-   ```
-
-   > Most shared hosting servers allow you to call `curl` directly as above.
-   > If your host requires a full path, you can prepend it, for example: `/usr/bin/curl`.
-
-6. **Alternative: command using `wget`**
-
-   If your server uses `wget`, you can use:
-
-   ```shell
-   wget -q -O /dev/null "https://your-domain.com/admin/dashboard/update_subscription_status" >/dev/null 2>&1
-   ```
-
-   - `-q`: quiet mode.
-   - `-O /dev/null`: discard the downloaded content.
-
-   > As with `curl`, most servers let you use `wget` directly.
-   > If needed, you can prepend the full path your host provides (for example `/usr/bin/wget`).
-
-7. **Save**
-   - Click **Add New Cron Job**.
-   - Confirm that the new cron job appears in the list.
-
----
-
-## 3. PHP CLI Cron for the Notification Queue (spark) {#php-cli-cron-for-the-notification-queue-spark}
-
-Sending email, SMS, or FCM notifications to many users can be slow if you try to do it during the web request itself.
-To solve this, eDemand uses a **queue**.
-The **notification queue cron** regularly runs a `spark` command that processes a fixed number of jobs and then exits.
+The **Tasks cron** regularly runs a `spark` command that executes all due CodeIgniter Tasks and then exits.
 
 The command looks like this:
 
 ```shell
-<path-to-php> <path-to-your-project>/spark queue:work notifications -max-jobs 20 --stop-when-empty
+<path-to-php> <path-to-your-project>/spark tasks:run
 ```
 
 - `<path-to-php>`: full path to the PHP binary.
@@ -138,7 +40,7 @@ The command looks like this:
 
 You need to find both paths on your server.
 
-### 3.1. How to Find `<path-to-php>`
+### 1.1. How to Find `<path-to-php>`
 
 #### a) On a normal Linux server (SSH)
 
@@ -177,7 +79,7 @@ There are a few common ways:
 
 If you cannot find it, your hosting provider’s documentation or support can usually tell you the correct PHP path for cron jobs.
 
-### 3.2. How to Find `<path-to-your-project>`
+### 1.2. How to Find `<path-to-your-project>`
 
 You need the absolute path to the folder where the `spark` file lives.
 
@@ -219,27 +121,22 @@ This becomes your `<path-to-your-project>`.
 
 3. The output is your `<path-to-your-project>`.
 
-### 3.3. Example Full spark Command
+### 1.3. Example Full spark Command
 
 Putting it together:
 
 ```shell
-/usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark queue:work notifications -max-jobs 20 --stop-when-empty
+/usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark tasks:run
 ```
 
-You can adjust:
-
-- `notifications` queue name if your setup uses a different one.
-- `-max-jobs 20` to process more or fewer jobs per run.
-
-### 3.4. cPanel – Add the Notification Queue Cron
+### 1.4. cPanel – Add the Tasks Cron
 
 Now that you have the PHP path and project path:
 
 1. Log in to **cPanel**.
 2. Open **Cron Jobs**.
 3. In **Add New Cron Job**:
-   - Set the schedule to run **every minute** (recommended for queues):
+   - Set the schedule to run **every minute**:
      - Minute: `*`
      - Hour: `*`
      - Day: `*`
@@ -248,13 +145,13 @@ Now that you have the PHP path and project path:
 4. In the **Command** field, enter:
 
    ```shell
-   <path-to-php> <path-to-your-project>/spark queue:work notifications -max-jobs 20 --stop-when-empty >/dev/null 2>&1
+   <path-to-php> <path-to-your-project>/spark tasks:run >/dev/null 2>&1
    ```
 
    Example:
 
    ```shell
-   /usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark queue:work notifications -max-jobs 20 --stop-when-empty >/dev/null 2>&1
+   /usr/bin/php /home/user/domains/domain.com/public_html/edemand/spark tasks:run >/dev/null 2>&1
    ```
 
 5. Click **Add New Cron Job**.
@@ -262,18 +159,15 @@ Now that you have the PHP path and project path:
 
 ---
 
-## 4. Verifying and Maintaining Your Cron Jobs
+## 2. Verifying and Maintaining Your Cron Job
 
-After setting up your cron jobs:
+After setting up the cron job:
 
 - **Check logs or application behavior**:
   - Confirm that subscription statuses are updated as expected (for example, after midnight).
   - Check that queued notifications are being sent and the queue is not growing indefinitely.
-- **Adjust schedules if needed**:
-  - For heavy notification volume, you may keep the queue cron at **every minute**.
-  - For lighter workloads, you can reduce the frequency.
-- **Edit or remove cron jobs**:
+  - Confirm any other scheduled tasks are running as expected.
+- **Edit or remove the cron job**:
   - In cPanel, use the same **Cron Jobs** screen to modify or delete.
 
-Keeping these cron jobs configured and running is essential for correct and timely background processing in eDemand.
-
+Keeping this cron job configured and running is essential for correct and timely background processing in eDemand.

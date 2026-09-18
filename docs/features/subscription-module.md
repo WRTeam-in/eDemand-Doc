@@ -12,6 +12,7 @@ sidebar_position: 36
 
 - **Publish:** If it is activated, then the provider will be able to show the subscriptions, and if it is deactivated, then only the administrator can show it and assign it to the provider
 - **Duration:** if the admin wants to create it for limited days, he can choose the limited option; otherwise, unlimited days will be shown
+- **One Time Subscription:** admin can also create a one time subscription plan, purchased just once by the provider with no recurring renewal
 - **Order:** if the admin wants to create a subscription to allow only 100 orders, then the admin can make this subscription like this, and if the order limit has been accessed, then the subscription will be expired and the provider has to buy the subscription again
 - **Commission:** if the admin also wants commission on subscriptions, he can set percentages as well
   - **Threshold:** this will be applicable to the pay-on-delivery amount commission if the threshold is set at $500, and if the pay-on-delivery commission exceeds that value, the pay-on-delivery option will be discontinued for the provider while booking the service, and the customer will only be able to book as prepaid service
@@ -28,5 +29,3 @@ sidebar_position: 36
 - Admins can also assign subscriptions to new providers or subscriptions that the Provider has not purchased
 
 ![Assign Subscription](../../static/img/adminPanel/assign_subscription.webp)
-
-**NOTE:** The Provider panel currently features an integrated Stripe payment gateway for subscription payments. We will be implementing additional payment gateways in the upcoming update. Additionally, the Provider application includes integration with Stripe, Razorpay, and Paystack for subscription payments. 
