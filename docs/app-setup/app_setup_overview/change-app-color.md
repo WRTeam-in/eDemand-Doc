@@ -4,11 +4,26 @@ sidebar_position: 4
 
 # How to Change App Color
 
-Customizing your app's colors enhances branding and improves the user experience. Follow these steps to update your app's theme colors in Flutter.  
+Customizing your app's colors enhances branding and improves the user experience. Steps differ by app.
 
 ---
 
-## 🌈 Updating App Colors in Flutter  
+## 🎨 Customer App — Theme Setting (Admin Panel)
+
+Customer app color change via **Admin Panel → Settings → Theme Setting**. No code change need.
+
+  1. Login Admin Panel.
+  2. Go to **Settings → Theme Setting**.
+  3. Update color values as need.
+  4. Save. Customer app pick new theme color.
+
+  ![Dynamic Theme Colors](../../../static/img/adminPanel/dynamic_theme_colors.png)
+
+---
+
+## 🌈 Provider App — Update Colors in Flutter
+
+Provider app color change use current Flutter method (edit code directly).
 
   1. Navigate to the following directory in your Flutter project:  
 
