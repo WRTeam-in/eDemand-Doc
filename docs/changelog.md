@@ -10,6 +10,26 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 [@Facebook](https://www.facebook.com/wrteam.in) / [@Instagram](https://www.instagram.com/wrteam.in) / [@Dribbble](https://dribbble.com/Divy_WRTeam/shots) / [@YouTube](https://www.youtube.com/channel/UCLt9XRUuiWsqKng4681_6cQ)
 
 ---
+## Version 5.1.0 (21 September, 2026)
+
+- ***Added*** New UI [Customer App & Web]
+- ***Added*** Area coverage requests feature [Apps, Web & Panels]
+- ***Added*** Multi cart support [Customer App & Web & Panels]
+- ***Added*** Provider Verification Badges [Provider App, Provider Panel & Admin Panel]
+- ***Added*** Dynamic fees [Panels, Apps & Web]
+- ***Added*** Dynamic theme colors managed from admin panel [Admin Panel]
+- ***Added*** Category and subcategory reorder from admin panel [Admin Panel]
+- ***Added*** Option to view customer details in admin panel [Admin Panel]
+- ***Added*** Admin user specific notification preferences with pop-up options for new bookings and new chat messages [Admin Panel]
+- ***Added*** Option for admins to set whether services or providers are displayed when viewing category details [Admin Panel]
+- ***Added*** Abandoned cart notifications [Customer App & Web, & Provider Panel]
+- ***Added*** Upcoming bookings notifications [Apps & Web, & Provider Panel]
+- ***Added*** One time subscriptions [Provider App & Panel]
+- ***Added*** Dynamic durations for services in minutes, hours, and days [Panels, Apps & Web]
+- ***Improved*** KYC flow: profile re-approval required on edit, removed unnecessary logout after signup, and providers informed that admin approval is needed before adding services [Provider App & Panel]
+- ***Improved*** General improvements and bug fixes [Apps, Web & Panels]
+
+---
 ## Version 5.0.0 (23 July, 2026)
 
 - ***Added*** Handyman Panel and App [Handyman Panel & App]
