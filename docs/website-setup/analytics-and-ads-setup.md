@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Analytics and Advertising Setup
 
-This guide explains how to set up Microsoft Clarity, Google Analytics, and Google AdSense for your eDemand web application.
+This guide explains how to set up Microsoft Clarity and Google Analytics for your eDemand web application.
 
 ---
 
@@ -32,33 +32,17 @@ This guide explains how to set up Microsoft Clarity, Google Analytics, and Googl
    - Example: `u5frguc1k8` (from `https://www.clarity.ms/tag/u5frguc1k8`)
      ![Microsoft Clarity project ID preview](/img/adminPanel/microsoft-clarity-project-id.png)
 
-### Step 2: Add Clarity to Your Code
+### Step 2: Set Your Project ID
 
-1. **Open `src/pages/_document.js`**
+No code editing needed — just set the env var. Open `.env.local` (copy from `.env.example` if you haven't) and set:
 
-![Microsoft Clarity project ID preview](/img/web/microsoft_clarity_id.png)
-
-2. **Find the Microsoft Clarity section** and locate the script block
-
-3. **Replace the Project ID** with your own:
-
-```jsx
-{
-  /* Microsoft Clarity */
-}
-<script
-  type="text/javascript"
-  dangerouslySetInnerHTML={{
-    __html: `(function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "YOUR_PROJECT_ID_HERE");`,
-  }}
-/>;
+```env
+NEXT_PUBLIC_CLARITY_PROJECT_ID=u5frguc1k8
 ```
 
-Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
+:::note
+The Clarity script only loads **after the visitor grants analytics consent** on the cookie banner — see `src/components/layout/consent-scripts.tsx`. It won't fire on page load even with a valid ID set.
+:::
 
 ---
 
@@ -92,33 +76,26 @@ Replace `YOUR_PROJECT_ID_HERE` with your actual Clarity Project ID.
    - Format: `G-XXXXXXXXXX` (e.g., `G-J4RWHNVBG0`)
    - Copy this ID
 
-### Step 2: Add Google Analytics to Your Code
+### Step 2: Set Your Measurement ID
 
-1. **Open `src/pages/_document.js`**
+No code editing needed — just set the env var. Open `.env.local` and set:
 
-![Google Analytics Measurement ID preview](/img/web/google_analytics.png)
-
-2. **Find the Google Analytics section** and locate the gtag script block
-
-3. **Replace the Tracking ID** with your own:
-
-```jsx
-{/* Google Analytics */}
-<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-<script>
-  {`window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'YOUR_TRACKING_ID');`}
-</script>
+```env
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-J4RWHNVBG0
 ```
 
-Replace `YOUR_TRACKING_ID` with your actual Google Analytics Measurement ID (e.g., `G-J4RWHNVBG0`).
+:::note
+Same as Clarity above — the GA script only loads after the visitor grants analytics consent (`src/components/layout/consent-scripts.tsx`). A Consent Mode v2 denied-default stub (`pages/_document.tsx`) also runs before this, so Google collects nothing until consent is actually granted.
+:::
 
+<!--
 ---
 
 ## Google AdSense Setup
 
+:::caution Not currently implemented
+The current web codebase has **no AdSense integration at all** — no script, no publisher-ID hook, nothing in `pages/_document.tsx` or anywhere else. The steps below describe getting a Publisher ID from Google; adding it to the site would require new code (confirm with the dev team before promising this to a client).
+:::
 
 ### Step 1: Get Your AdSense Publisher ID
 
@@ -144,27 +121,9 @@ Replace `YOUR_TRACKING_ID` with your actual Google Analytics Measurement ID (e.g
    - Your Publisher ID format: `ca-pub-XXXXXXXXXX`
    - Example: `ca-pub-5187122762138955`
 
-### Step 2: Add AdSense to Your Code
+### Step 2: Add AdSense to the Code
 
-1. **Open `src/pages/_document.js`**
-![Google AdSense setup preview](/img/web/adsense.png)
-
-2. **Find the Google AdSense section** and locate the pagead script block
-
-3. **Replace the Publisher ID** with your own:
-
-```jsx
-{
-  /* Google AdSense */
-}
-<script
-  async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID"
-  crossOrigin="anonymous"
-></script>;
-```
-
-Replace `YOUR_PUBLISHER_ID` with your actual AdSense Publisher ID (e.g., `ca-pub-5187122762138955`).
+Since there's no existing integration, this needs an actual code change, not a config edit — likely following the same pattern as GA/Clarity above (an env var read in `src/lib/site-config.ts`, loaded conditionally in `src/components/layout/consent-scripts.tsx`). Flag this to the dev team as a feature request rather than following manually.
 
 ### Step 3: Enable Auto Ads (Optional)
 
@@ -174,3 +133,4 @@ After adding the AdSense script, you can enable Auto Ads:
 2. Click "Ads" → "Overview"
 3. Enable "Auto ads"
 4. Google will automatically place ads on your site
+-->

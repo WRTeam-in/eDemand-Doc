@@ -13,13 +13,13 @@ A sitemap helps search engines discover and index all the pages on your website.
 2. Add your website URL:
 
 ```env
-NEXT_PUBLIC_WEB_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 ```
 
 3. (Optional) If you're using VPS hosting with Node.js, enable SEO mode:
 
 ```env
-NEXT_PUBLIC_ENABLE_SEO=true
+NEXT_PUBLIC_SEO=true
 ```
 
 If you're using shared hosting or static export, leave this unset or set to `false`.
@@ -30,10 +30,10 @@ The sitemap is automatically generated when you build or run your project. Choos
 
 ### Option 1: Shared Hosting (Static Export)
 
-Build your site for static hosting:
+Build your site for static hosting (the static export is produced automatically by `npm run build` when `NEXT_PUBLIC_SEO` is unset or `false`):
 
 ```bash
-npm run export
+npm run build
 ```
 
 This creates the sitemap file at `public/sitemap.xml` which you can deploy with your site.
@@ -53,7 +53,7 @@ The sitemap will be generated automatically and served at `/sitemap.xml` when yo
 If you only need to generate the sitemap without building:
 
 ```bash
-npm run generate-sitemap
+npm run generate:sitemap
 ```
 
 This creates `public/sitemap.xml` file.
@@ -62,12 +62,12 @@ This creates `public/sitemap.xml` file.
 
 The sitemap system works in two ways depending on your configuration:
 
-**When SEO is enabled** (`NEXT_PUBLIC_ENABLE_SEO="true"`):
+**When SEO is enabled** (`NEXT_PUBLIC_SEO="true"`):
 - Sitemap is generated dynamically on each request
 - Always includes the latest content from your API
 - Best for VPS hosting with Node.js
 
-**When SEO is disabled** (default or `NEXT_PUBLIC_ENABLE_SEO="false"`):
+**When SEO is disabled** (default or `NEXT_PUBLIC_SEO="false"`):
 - Sitemap is generated as a static XML file
 - Saved to `public/sitemap.xml`
 - Best for shared hosting or static exports

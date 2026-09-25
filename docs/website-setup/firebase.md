@@ -54,8 +54,6 @@ If you already created firebase project at that time then you can skip below fir
 
     ![admin-web-firebase](../../static/img/firebase/admin-web-firebase.png)
 
-12. Also update firebase config value in web **.env** file.
+12. Also update the Firebase config values in the web app's **`.env.local`** file (copy `.env.example` to `.env.local` if you haven't already) — only replace the value after each `=`, keep the variable name as-is:
 
     ![firebase-web](../../static/img/web/firebase_config.png)
-
-    <!-- ![firebase-env](../../static/img/web/firebase_messaging.png) -->

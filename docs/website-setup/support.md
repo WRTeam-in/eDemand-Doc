@@ -4,12 +4,21 @@ sidebar_position: 14
 
 # Support
 
-It's our pleasure to serve and support you. Please contact our support team.
+It's our pleasure to serve and support you — reach out anytime you need help with the eDemand web app.
 
-Customer Support : Yash Rajput
+## Contact
 
-Teams : [Yash Rajput](https://teams.live.com/l/invite/FEArTaTzDWK4rEmhAE)
+| | |
+|---|---|
+| **Customer Support** | Yash Rajput |
+| **Email** | [yashwrteam89@gmail.com](mailto:yashwrteam89@gmail.com) |
+| **Teams** | [Chat on Microsoft Teams](https://teams.live.com/l/invite/FEArTaTzDWK4rEmhAE) |
 
-To help our customers, we constantly be in touch with every customer if they need any assistance regarding our product. We offer our customers a support from **Mon – Fri 9.00am to 6.00pm IST (GMT +5.30)** – We are a Team located in India – Asia.
+## Availability
 
-Typically we reply our customers for all the questions and queries within 24 hours of time via comments, support forum or emails.
+:::tip Support Hours
+**Mon – Fri, 9:00 AM – 6:00 PM IST (GMT +5:30)**
+We're a team based in India (Asia) — please account for the timezone when reaching out.
+:::
+
+We stay in touch with every customer who needs assistance with our product. Typically, we reply to all questions and queries **within 48 hours**, via comments, the support forum, or email.
