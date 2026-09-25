@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Sitemap Setup | eDemand Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/sitemap-setup"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Sitemap Setup | eDemand Documentation"><meta data-rh="true" name="description" content="A sitemap helps search engines discover and index all the pages on your website. This guide explains how to set up a sitemap for your eDemand web application."><meta data-rh="true" property="og:description" content="A sitemap helps search engines discover and index all the pages on your website. This guide explains how to set up a sitemap for your eDemand web application."><link data-rh="true" rel="icon" href="/eDemand-Doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/sitemap-setup"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/sitemap-setup" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/sitemap-setup" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Sitemap Setup","item":"https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/sitemap-setup"}]}</script><link rel="stylesheet" href="/eDemand-Doc/assets/css/styles.95eac76e.css">
-<script src="/eDemand-Doc/assets/js/runtime~main.6f730ce0.js" defer="defer"></script>
+<script src="/eDemand-Doc/assets/js/runtime~main.c56b8991.js" defer="defer"></script>
 <script src="/eDemand-Doc/assets/js/main.d92ee3c3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -22,17 +22,17 @@
 <p>Add your website URL:</p>
 </li>
 </ol>
-<div class="language-env codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-env codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">NEXT_PUBLIC_WEB_URL=https://yourdomain.com</span><br></span></code></pre></div></div>
+<div class="language-env codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-env codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">NEXT_PUBLIC_SITE_URL=https://yourdomain.com</span><br></span></code></pre></div></div>
 <ol start="3">
 <li class="">(Optional) If you&#x27;re using VPS hosting with Node.js, enable SEO mode:</li>
 </ol>
-<div class="language-env codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-env codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">NEXT_PUBLIC_ENABLE_SEO=true</span><br></span></code></pre></div></div>
+<div class="language-env codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-env codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">NEXT_PUBLIC_SEO=true</span><br></span></code></pre></div></div>
 <p>If you&#x27;re using shared hosting or static export, leave this unset or set to <code>false</code>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-generate-the-sitemap">Step 2: Generate the Sitemap<a href="#step-2-generate-the-sitemap" class="hash-link" aria-label="Direct link to Step 2: Generate the Sitemap" title="Direct link to Step 2: Generate the Sitemap" translate="no">​</a></h2>
 <p>The sitemap is automatically generated when you build or run your project. Choose the method that matches your hosting:</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-1-shared-hosting-static-export">Option 1: Shared Hosting (Static Export)<a href="#option-1-shared-hosting-static-export" class="hash-link" aria-label="Direct link to Option 1: Shared Hosting (Static Export)" title="Direct link to Option 1: Shared Hosting (Static Export)" translate="no">​</a></h3>
-<p>Build your site for static hosting:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run export</span><br></span></code></pre></div></div>
+<p>Build your site for static hosting (the static export is produced automatically by <code>npm run build</code> when <code>NEXT_PUBLIC_SEO</code> is unset or <code>false</code>):</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run build</span><br></span></code></pre></div></div>
 <p>This creates the sitemap file at <code>public/sitemap.xml</code> which you can deploy with your site.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-2-vps-hosting-server-side">Option 2: VPS Hosting (Server-Side)<a href="#option-2-vps-hosting-server-side" class="hash-link" aria-label="Direct link to Option 2: VPS Hosting (Server-Side)" title="Direct link to Option 2: VPS Hosting (Server-Side)" translate="no">​</a></h3>
 <p>Build your project on your VPS:</p>
@@ -40,17 +40,17 @@
 <p>The sitemap will be generated automatically and served at <code>/sitemap.xml</code> when your site is running.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-3-manual-generation">Option 3: Manual Generation<a href="#option-3-manual-generation" class="hash-link" aria-label="Direct link to Option 3: Manual Generation" title="Direct link to Option 3: Manual Generation" translate="no">​</a></h3>
 <p>If you only need to generate the sitemap without building:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run generate-sitemap</span><br></span></code></pre></div></div>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run generate:sitemap</span><br></span></code></pre></div></div>
 <p>This creates <code>public/sitemap.xml</code> file.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works">How It Works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How It Works" title="Direct link to How It Works" translate="no">​</a></h2>
 <p>The sitemap system works in two ways depending on your configuration:</p>
-<p><strong>When SEO is enabled</strong> (<code>NEXT_PUBLIC_ENABLE_SEO=&quot;true&quot;</code>):</p>
+<p><strong>When SEO is enabled</strong> (<code>NEXT_PUBLIC_SEO=&quot;true&quot;</code>):</p>
 <ul>
 <li class="">Sitemap is generated dynamically on each request</li>
 <li class="">Always includes the latest content from your API</li>
 <li class="">Best for VPS hosting with Node.js</li>
 </ul>
-<p><strong>When SEO is disabled</strong> (default or <code>NEXT_PUBLIC_ENABLE_SEO=&quot;false&quot;</code>):</p>
+<p><strong>When SEO is disabled</strong> (default or <code>NEXT_PUBLIC_SEO=&quot;false&quot;</code>):</p>
 <ul>
 <li class="">Sitemap is generated as a static XML file</li>
 <li class="">Saved to <code>public/sitemap.xml</code></li>

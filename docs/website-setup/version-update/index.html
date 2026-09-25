@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">New Version Update | eDemand Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" name="twitter:image" content="https://wrteam-in.github.io/eDemand-Doc/img/edemand.svg"><meta data-rh="true" property="og:url" content="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/version-update"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="New Version Update | eDemand Documentation"><meta data-rh="true" name="description" content="Follow these steps to update to a new version of the web app. Choose deployment based on whether your site is configured with SEO or without SEO."><meta data-rh="true" property="og:description" content="Follow these steps to update to a new version of the web app. Choose deployment based on whether your site is configured with SEO or without SEO."><link data-rh="true" rel="icon" href="/eDemand-Doc/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/version-update"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/version-update" hreflang="en"><link data-rh="true" rel="alternate" href="https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/version-update" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"New Version Update","item":"https://wrteam-in.github.io/eDemand-Doc/docs/website-setup/version-update"}]}</script><link rel="stylesheet" href="/eDemand-Doc/assets/css/styles.95eac76e.css">
-<script src="/eDemand-Doc/assets/js/runtime~main.6f730ce0.js" defer="defer"></script>
+<script src="/eDemand-Doc/assets/js/runtime~main.c56b8991.js" defer="defer"></script>
 <script src="/eDemand-Doc/assets/js/main.d92ee3c3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -23,12 +23,12 @@ Extract the ZIP file containing the web code that you received from Codecanyon.<
 Open the extracted web code in Visual Studio Code (VS Code).</p>
 </li>
 <li class="">
-<p><strong>Edit the .env File</strong>:
-Locate and open the .env file in your code editor. Add the admin URL as specified in the documentation.</p>
+<p><strong>Edit the <code>.env.local</code> File</strong>:
+Copy <code>.env.example</code> to <code>.env.local</code> (if you haven&#x27;t already) and set <code>NEXT_PUBLIC_API_URL</code> to your admin API URL. See <a class="" href="/eDemand-Doc/docs/website-setup/">Website Setup Locally</a> for the full list of variables and where each one comes from.</p>
 </li>
 <li class="">
 <p><strong>Configure Firebase</strong>:
-Open the Firebase Console. Follow the steps outlined in the <a class="" href="/eDemand-Doc/docs/website-setup/firebase">Firebase Setup documentation</a>. Add the Firebase details to the .env file of your web project.</p>
+Open the Firebase Console. Follow the steps outlined in the <a class="" href="/eDemand-Doc/docs/website-setup/firebase">Firebase Setup documentation</a>. Add the Firebase details to the <code>.env.local</code> file of your web project.</p>
 </li>
 <li class="">
 <p><strong>Install Dependencies</strong>:
@@ -40,11 +40,11 @@ Run the following command to install the necessary dependencies:</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-a-without-seo-static-export">Option A: Without SEO (static export)<a href="#option-a-without-seo-static-export" class="hash-link" aria-label="Direct link to Option A: Without SEO (static export)" title="Direct link to Option A: Without SEO (static export)" translate="no">​</a></h3>
 <ul>
 <li class="">
-<p>Build the project locally (generates <code>out</code> folder):</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run export</span><br></span></code></pre></div></div>
+<p>Make sure <code>.env.local</code> does <strong>not</strong> set <code>NEXT_PUBLIC_SEO=true</code> (unset, or <code>false</code>), then build the project locally (generates the <code>out</code> folder — <code>next.config.ts</code> switches to static export automatically when SEO is off):</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run build</span><br></span></code></pre></div></div>
 </li>
 <li class="">
-<p>Upload the contents of the <code>out</code> folder to your domain&#x27;s public directory (e.g., <code>public_html</code>).</p>
+<p>Upload the contents of the <code>out</code> folder to your domain&#x27;s public directory (e.g., <code>public_html</code>). The <code>.htaccess</code> for this mode is generated automatically as part of the build — no manual step needed.</p>
 </li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-b-with-seo-build-on-server">Option B: With SEO (build on server)<a href="#option-b-with-seo-build-on-server" class="hash-link" aria-label="Direct link to Option B: With SEO (build on server)" title="Direct link to Option B: With SEO (build on server)" translate="no">​</a></h3>
@@ -53,8 +53,8 @@ Run the following command to install the necessary dependencies:</p>
 <p>Upload your updated source code to the server.</p>
 </li>
 <li class="">
-<p>On your VPS, install dependencies and build on the server (this keeps SEO behavior intact):</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run build</span><br></span></code></pre></div></div>
+<p>On your VPS, install dependencies and build on the server with <code>NEXT_PUBLIC_SEO=true</code> set (in <code>.env.local</code> or your shell) — this keeps SEO/standalone behavior intact:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">export NEXT_PUBLIC_SEO=&quot;true&quot;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">npm run build</span><br></span></code></pre></div></div>
 </li>
 <li class="">
 <p>If you&#x27;re already using PM2, you do not need to create a new PM2 app. Simply restart the existing PM2 process after the build so the update takes effect:</p>
