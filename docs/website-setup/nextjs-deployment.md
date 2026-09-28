@@ -50,26 +50,11 @@ PM2 is a production process manager for Node.js applications. Install it globall
 npm install pm2 -g
 ```
 
-## Automated Deployment (Recommended)
-
-We have implemented a robust, automated deployment workflow designed for Custom Server (VPS) environments. This new system ensures consistent builds, optimized server configurations, and seamless updates.
-
-To deploy the application on the VPS using the automated script:
-
-1.  **SSH into the server** and navigate to the project directory.
-2.  **Run the deployment script**:
-    ```bash
-    ./deploy_vps.sh
-    ```
-3.  **Follow the prompts**:
-    *   Enter the desired PORT (default: `8001`).
-    *   The script will automatically detect conflicting processes and ask to restart or replace them.
-
-**Outcome**: The app will be running under PM2 (name: `edemand-web`), serving locally on the specified port, with Apache handling the public-facing traffic and caching.
+:::caution Doc under revision
+The codebase moved to Next.js 16 (Pages Router) and this page is being updated to match. The `deploy_vps.sh` automated script and `ecosystem.config.cjs` PM2 file referenced in the previous version of this guide are **not present in the current repo** — confirm with the dev team whether an automated script still exists before relying on this section. The manual steps below reflect what's actually in the repo today.
+:::
 
 ## Manual Deployment
-
-If you prefer to deploy manually or need to troubleshoot, follow these steps to replicate the automated process:
 
 #### 1. Configuration & Dependencies
 
@@ -80,70 +65,45 @@ Ensure your `.env` file is correctly configured (see [System Configuration](./sy
 npm install
 
 # (Optional) Clean old build artifacts
-rm -rf .next out dist
+npm run clean
 ```
 
-#### 2. Generate Assets
+#### 2. Build Application
 
-Run the helper scripts to generate the sitemap and service worker:
-
-```bash
-# Generate Sitemap
-node scripts/setup-sitemap.js
-
-# Generate Service Worker
-node scripts/generate-sw.js
-```
-
-#### 3. Build Application
-
-Build the application in standalone mode. If you require SEO features, set the environment variable.
+Sitemap and `.htaccess` generation now run automatically as part of the build (via the `prebuild` npm hook) — no separate asset-generation step needed. Set `NEXT_PUBLIC_SEO=true` (in `.env` or your shell) if you require SEO/VPS mode, which also switches the build to Next's `standalone` output:
 
 ```bash
 # Build with SEO enabled
-export NEXT_PUBLIC_ENABLE_SEO="true"
+export NEXT_PUBLIC_SEO="true"
 npm run build
 ```
 
-#### 4. Configure Port
+#### 3. Configure Apache Proxy Port
 
-Manually update the port in your `ecosystem.config.cjs` file if you are not using the default `8001`.
+The `.htaccess` proxy port is set when it's generated (part of `prebuild`, see below), not in a separate PM2 config file. Default is `8001`.
 
-```javascript
-// ecosystem.config.cjs
-module.exports = {
-  apps: [{
-    // ...
-    env: {
-      NODE_ENV: 'production',
-      PORT: 8001, // Update this value
-    }
-  }]
-}
-```
+#### 4. Generate Apache Configuration (if regenerating outside a build)
 
-#### 5. Generate Apache Configuration
-Use the included script to generate the correct .htaccess file for your port.
-Ensure `NEXT_PUBLIC_ENABLE_SEO="true"` is set in your environment or `.env` file to enable performance caching.
 ```bash
 # Replace 8001 with your chosen port
-npm run generate-htaccess -- 8001
-
+npm run generate:htaccess -- 8001
 ```
 
-#### 6. Start with PM2
-
-Start or reload the application using PM2.
+#### 5. Start with PM2
 
 ```bash
 # Start the application
-pm2 start ecosystem.config.cjs
+pm2 start npm --name edemand-web -- start
 
 # Save the process list to resurrect on reboot
 pm2 save
 ```
 
-#### 7. Finalize Apache
+:::note
+Confirm with the dev team whether an `ecosystem.config.cjs` file should be reintroduced for this project — it is not currently part of the repo.
+:::
+
+#### 6. Finalize Apache
 
 Reload Apache to apply the new `.htaccess` rules (ensure `mod_rewrite` and `mod_headers` are valid).
 
@@ -155,28 +115,24 @@ sudo systemctl reload apache2
 
 ### Key Features
 
-*   **Standalone Build Mode**: The application is now forced to build in Next.js standalone mode. This produces a lightweight, production-ready Node.js server (`server.js`) that minimizes memory usage and removes the need for the entire `node_modules` directory in production.
-*   **Automated Deployment Script**: A single script (`deploy_vps.sh`) handles the end-to-end deployment lifecycle:
-    *   **Safety Checks**: Verifies ports and detects conflicting PM2 processes (e.g., auto-resolving conflicts between `edemand-web` and test instances).
-    *   **Clean Build**: Removes stale artifacts (`.next`, `out`) to prevent cache inconsistencies.
-    *   **Asset Generation**: Automatically runs scripts to generate the `sitemap.xml`, `robots.txt`, and `firebase-messaging-sw.js` before building.
-    *   **Dynamic Configuration**: Updates `ecosystem.config.cjs` with the selected port at runtime.
-    *   **Smart Apache Configuration**: Introduces a dynamic `.htaccess` generator (`scripts/generate-htaccess.js`) that:
-        *   Configures Reverse Proxy rules to route traffic to the Node.js server.
-        *   Serves static assets (`/_next/static`, public images) directly via Apache for maximum speed.
-    *   **SEO Mode**: When enabled, injects high-performance caching headers (Cache-Control, Expires) to improve Google PageSpeed Insights scores.
+*   **Config-Driven Output Mode**: `next.config.ts` picks the build's `output` mode automatically — `standalone` when `NEXT_PUBLIC_SEO=true` and not on Vercel, `export` when SEO is disabled, and left unset on Vercel (Vercel's own build pipeline expects the default output).
+*   **Automatic Asset Generation**: `scripts/setup-sitemap.mjs` and `scripts/generate-htaccess.mjs` both run automatically via the `prebuild` npm hook (see `package.json`) — no manual script calls needed for a normal `npm run build`.
+*   **Smart Apache Configuration**: `scripts/generate-htaccess.mjs` generates the correct `.htaccess` for the active mode:
+    *   `NEXT_PUBLIC_SEO=true` → reverse-proxy rules routing traffic to the Node.js server.
+    *   `NEXT_PUBLIC_SEO=false` (or unset) → static-file rewrite rules for the exported `out/` build.
 
-### New Scripts & Files
+### Scripts & Files
 
 | Script/File | Description |
 | :--- | :--- |
-| `deploy_vps.sh` | Main deployment entry point. Run this on the VPS to deploy. prompts for a PORT and handles the rest. |
-| `scripts/generate-htaccess.js` | Generates the Apache `.htaccess` file programmatically based on the active PORT and `NEXT_PUBLIC_ENABLE_SEO` flag. |
-| `package.json` | Added "generate-htaccess" command. Updated "build" to use --webpack (disabling Turbopack for compatibility). |
-| `next.config.mjs` | Configuration reduced to force output: 'standalone' regardless of environment, ensuring reliability. |
+| `scripts/generate-htaccess.mjs` | Generates the Apache `.htaccess` file based on the active port and `NEXT_PUBLIC_SEO` flag. Run via `npm run generate:htaccess`. |
+| `scripts/setup-sitemap.mjs` | Generates the sitemap. Run via `npm run generate:sitemap`. |
+| `scripts/generate-pwa-assets.mjs` | Generates PWA icon assets. Run via `npm run pwa:assets`. |
+| `scripts/clean-build.mjs` | Removes stale build artifacts. Run via `npm run clean`. |
+| `next.config.ts` | TypeScript config; picks `output` mode per build phase and `NEXT_PUBLIC_SEO`/Vercel detection (see above). |
 
 ### Integration Notes for Developers
 
 :::caution Important
-If you need to change the caching logic or rewrite rules, **do not edit `.htaccess` directly**. Instead, modify `scripts/generate-htaccess.js`. The `.htaccess` file is regenerated every time `npm run generate-htaccess` or `./deploy_vps.sh` is run, so manual changes will be lost.
+If you need to change the caching logic or rewrite rules, **do not edit `.htaccess` directly**. Instead, modify `scripts/generate-htaccess.mjs`. The `.htaccess` file is regenerated every time `npm run generate:htaccess` or `npm run build` is run, so manual changes will be lost.
 :::

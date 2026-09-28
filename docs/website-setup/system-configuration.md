@@ -40,6 +40,10 @@ Upload the translation files for each platform:
 You can download sample files first to understand the format, then create your own translation files.
 :::
 
+:::note
+The web app's own default/fallback translation file lives in the codebase at `src/dictionaries/en.json` — useful as a reference for every key the site expects when preparing your **Web** translation file for upload.
+:::
+
 #### Step 4: Submit
 Click the **Submit** button to add the new language.
 
@@ -69,38 +73,66 @@ When updating translations, **only change the text on the right side (the value)
 
 :::
 
-![get-language-codes](../../static/img/web/add_lang.png)
-
 ---
 
 ## Change Theme Color
 
-Theme colors can now be configured directly from the **Admin Panel** — no code changes required.
+Theme colors are configured directly from the **Admin Panel** — no code changes required. This applies to both the web app and the panel itself.
 
 ### Steps to Update Theme Colors
 
 1. Log in to the **Admin Panel**
-2. Navigate to **Settings > Web Settings**
-3. Scroll down to find the **Theme Color** cards
-4. You will see separate sections for **Light Theme Colors** and **Dark Theme Colors**, each containing:
-   - **Primary Color**
-   - **Secondary Color**
-   - **Light Background Color**
-   - **Text Color**
-   - **Card Background Color**
-   - **Description Text Color**
-5. Click on any color swatch to pick a new color
-6. Use the **Reset to Default** button to restore the original theme colors
-7. Save your changes
+2. Navigate to **System Settings > Theme Settings**
+3. You'll see two cards:
+   - **Primary Color** and **Neutral Color** — brand color and text/background/border neutral, each shown with a full auto-generated shade scale
+   - **Status Colors** — four separate cards: **Success**, **Error**, **Warning**, **Info**
+4. Click a color swatch (or type a hex value directly) to pick a new color
+5. Use each card's own **Reset to Default** button to revert just that color
+6. Click **Save** on a card to apply its changes
 
-![web_dynamic_color](../../static/img/web/web_dynamic_color.png)
+![theme-settings-admin](../../static/img/web/theme_settings_admin.png)
 
 :::tip
-Both **Light** and **Dark** theme colors can be customized independently. After saving, **reload the website** to see the updated theme colors applied.
+Each card saves independently — updating Primary/Neutral color doesn't require re-saving the Status Colors, and vice versa. Reload the website to see the updated theme colors applied.
 :::
 
 ## Change Font style
 
-- Go to: **src -> pages -> app.js**
+The web app still uses the **Pages Router** — font setup lives across two files, not one. It's loaded as a plain Google Fonts `<link>` (not `next/font`) so the font variable is visible at true `:root` scope, reaching both the normal page tree and Radix's portal-rendered components (Dialog, DropdownMenu, etc.).
 
-   ![font-file](../../static/img/web/update_font.png)
+### Step 1: Swap the Google Fonts link
+
+Open **`pages/_document.tsx`** and find the font `<link>` in `<Head>`:
+
+```tsx
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+/>
+```
+
+Replace `Lexend` with your chosen [Google Font](https://fonts.google.com/) family name, keeping the weights you need (e.g. `family=Inter:wght@400;500;600;700`). The two `preconnect` links above it (`fonts.googleapis.com`, `fonts.gstatic.com`) don't need to change unless you're using a non-Google font provider.
+
+### Step 2: Update the CSS variable
+
+Open **`src/styles/globals.css`** and find the `:root` block near the top:
+
+```css
+:root {
+  --font-lexend: "Lexend", sans-serif;
+}
+```
+
+Update the font name to match (rename the variable too if you want, but then also update its two references just below in the `@theme inline` block):
+
+```css
+@theme inline {
+  --font-sans: var(--font-lexend);
+  --font-heading: var(--font-lexend);
+  ...
+}
+```
+
+:::caution
+Don't try to switch this to `next/font` — it can't run inside `pages/_document.tsx` (a Pages Router restriction), which is why this app uses a static Google Fonts `<link>` instead.
+:::

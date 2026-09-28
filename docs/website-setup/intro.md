@@ -32,6 +32,6 @@ Whenever you seek support for WRTeam products via Skype or WhatsApp, please shar
 
 ## Setup Essentials
 
-1. We recommend using **npm version 9.7.1** and [Node.js](https://nodejs.org/en/download/) version 18.0 or above.
+1. **[Node.js](https://nodejs.org/en/download/) version 20.9.0 or above is required** — Next.js 16 (used in this codebase) won't run on Node 18. npm ships with Node, no separate install needed.
 
 2. Install a code editor like: [VSCode](https://code.visualstudio.com/download).

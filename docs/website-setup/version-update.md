@@ -12,11 +12,11 @@ Follow these steps to update to a new version of the web app. Choose deployment 
 2. **Open the Code in VS Code**:
    Open the extracted web code in Visual Studio Code (VS Code).
 
-3. **Edit the .env File**:
-   Locate and open the .env file in your code editor. Add the admin URL as specified in the documentation.
+3. **Edit the `.env.local` File**:
+   Copy `.env.example` to `.env.local` (if you haven't already) and set `NEXT_PUBLIC_API_URL` to your admin API URL. See [Website Setup Locally](./website-setup.md) for the full list of variables and where each one comes from.
 
 4. **Configure Firebase**:
-   Open the Firebase Console. Follow the steps outlined in the [Firebase Setup documentation](./firebase.md). Add the Firebase details to the .env file of your web project.
+   Open the Firebase Console. Follow the steps outlined in the [Firebase Setup documentation](./firebase.md). Add the Firebase details to the `.env.local` file of your web project.
 
 5. **Install Dependencies**:
    Run the following command to install the necessary dependencies:
@@ -28,19 +28,20 @@ Follow these steps to update to a new version of the web app. Choose deployment 
 6. **Choose your deployment option**:
 
    ### Option A: Without SEO (static export)
-   - Build the project locally (generates `out` folder):
+   - Make sure `.env.local` does **not** set `NEXT_PUBLIC_SEO=true` (unset, or `false`), then build the project locally (generates the `out` folder — `next.config.ts` switches to static export automatically when SEO is off):
 
      ```bash
-     npm run export
+     npm run build
      ```
 
-   - Upload the contents of the `out` folder to your domain's public directory (e.g., `public_html`).
+   - Upload the contents of the `out` folder to your domain's public directory (e.g., `public_html`). The `.htaccess` for this mode is generated automatically as part of the build — no manual step needed.
 
    ### Option B: With SEO (build on server)
    - Upload your updated source code to the server.
-   - On your VPS, install dependencies and build on the server (this keeps SEO behavior intact):
+   - On your VPS, install dependencies and build on the server with `NEXT_PUBLIC_SEO=true` set (in `.env.local` or your shell) — this keeps SEO/standalone behavior intact:
 
      ```bash
+     export NEXT_PUBLIC_SEO="true"
      npm run build
      ```
 

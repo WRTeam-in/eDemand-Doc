@@ -11,13 +11,13 @@ If you don't require SEO functionality, you can deploy your eDemand web applicat
 After making all necessary changes to your web application:
 
 1. Open VS Code terminal by pressing `CTRL+J` in Windows/Linux or `CMD+J` in macOS
-2. Run the following command to build your application:
+2. Make sure `.env` does **not** set `NEXT_PUBLIC_SEO=true` (unset, or `false`), then run the build:
 
 ```bash
-npm run export
+npm run build
 ```
 
-This command will take a few seconds to build the live and optimized version of your web application.
+With SEO disabled, `next.config.ts` automatically sets `output: "export"`, so this single command produces the static export.
 
 ## Output Files
 
@@ -38,73 +38,11 @@ You can use any FTP client (like FileZilla) or your hosting control panel to upl
 
 ## Adding the .htaccess File (Important for URL Rewriting)
 
-After uploading the contents of the `out` folder, you also need to add a `.htaccess` file to the **same directory** (e.g., `public_html`). This file handles URL rewriting to make sure your application's routing works correctly on Apache servers.
+You no longer need to write this file by hand — it's generated automatically.
 
-1.  **Create a new file** named `.htaccess` (note the dot at the beginning) in the root of your deployment directory (the same place you uploaded the `out` folder contents).
-2.  **Copy and paste** the following code into the `.htaccess` file:
+`npm run build` runs `generate:htaccess` as part of its `prebuild` step (via `scripts/generate-htaccess.mjs`), which writes `public/.htaccess` for you based on your `NEXT_PUBLIC_SEO` setting. Since `public/` is copied into `out/` during export, the correct `.htaccess` is already included when you upload the `out` folder — no manual step needed.
 
-    ```apache
-    <IfModule mod_rewrite.c>
-      RewriteEngine On
-      RewriteBase /
-
-      # Enable symlinks
-      Options +FollowSymLinks
-
-      # If the request is for a file that exists, serve it directly
-      RewriteCond %{REQUEST_FILENAME} -f [OR]
-      RewriteCond %{REQUEST_FILENAME} -d
-      RewriteRule ^ - [L]
-
-      # Handle Next.js static files and assets
-      RewriteRule ^_next/(.*)$ _next/$1 [L]
-      RewriteRule ^static/(.*)$ static/$1 [L]
-      RewriteRule ^manifest\.json$ manifest.json [L]
-
-      # Test rule for search - redirect to actual file
-      RewriteRule ^search/([^/]+)/?$ search/[slug].html [L]
-
-      # Test rule for service
-      RewriteRule ^service/(.*)/?$ service/[...slug].html [L]
-
-      # Test rule for booking
-      RewriteRule ^booking/(.*)/?$ booking/[...slug].html [L]
-
-      # Test rule for provider-details
-      RewriteRule ^provider-details/(.*)/?$ provider-details/[...slug].html [L]
-
-      # Test rule for my-service-request-details
-      RewriteRule ^my-service-request-details/(.*)/?$ my-service-request-details/[...slug].html [L]
-
-      # Test rule for blog-details
-      RewriteRule ^blog-details/([^/]+)/?$ blog-details/[slug].html [L]
-
-      # Handle static HTML files
-      RewriteCond %{REQUEST_FILENAME} !-f
-      RewriteCond %{REQUEST_FILENAME} !-d
-      RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-      RewriteRule ^([^/]+)/?$ $1.html [L]
-
-      # Handle directory index files
-      RewriteCond %{REQUEST_FILENAME} !-f
-      RewriteCond %{REQUEST_FILENAME} !-d
-      RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-      RewriteRule ^([^/]+)/?$ $1/index.html [L]
-
-      # Final fallback to 404 page
-      RewriteCond %{REQUEST_FILENAME} !-f
-      RewriteCond %{REQUEST_FILENAME} !-d
-      RewriteRule ^ 404.html [L]
-    </IfModule>
-    ```
-
-Alternatively, you can [view the raw .htaccess content here](/files/htaccess-example.txt) (opens in a new tab) to copy or save it.
-
-3.  **Save the file** on your server.
-
-:::note
-This `.htaccess` configuration is typically provided with the eDemand web code. If you already have this file from the source code, you can upload that one directly instead of creating a new one.
-:::
+See [.htaccess Configuration](./htaccess-config.md) for the exact rules it generates and how to customize them.
 
 ## Configuring Your Domain
 
