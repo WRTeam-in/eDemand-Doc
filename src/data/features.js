@@ -84,8 +84,8 @@ export const features = [
       "Geolocation-based Service or Provider/Partner searching functionality.",
   },
   {
-    title: "Multi-Cities",
-    details: "To Run your business in Multiple Cities flawlessly.",
+    title: "Multi-Countries",
+    details: "To Run your business in Multiple Countries flawlessly.",
   },
   {
     title: "Fully Customizable",

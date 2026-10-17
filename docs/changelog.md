@@ -11,6 +11,20 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 
 ---
 
+
+## Version 5.2.0 (16 October, 2026)
+
+- ***Added*** Country and region import and CRUD support [Admin Panel]
+- ***Added*** Country-wise currency, decimal, date-time format, timezone configuration [Admin Panel]
+- ***Added*** Country-wise payment gateway settings and privacy policies and terms and conditions [Admin Panel]
+- ***Added*** Country-wise serviceable distance settings [Admin Panel]
+- ***Added*** Dynamic tax system with tax categories, tax rules, and tax components [Admin Panel]
+- ***Added*** Billing address support [Web and Customer App]
+- ***Update*** Flutter version 3.47.4 compatibility [Apps]
+- ***Improved*** General improvements and bug fixes [Apps, Web & Panels]
+
+---
+
 ## Version 5.1.0 (18 September, 2026)
 
 - ***Added*** New UI [Customer App & Web]
