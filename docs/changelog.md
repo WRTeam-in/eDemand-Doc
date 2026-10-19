@@ -23,6 +23,10 @@ See what's new added, changed, fixed, improved, or updated in the latest version
 - ***Update*** Flutter version 3.47.4 compatibility [Apps]
 - ***Improved*** General improvements and bug fixes [Apps, Web & Panels]
 
+:::important 
+Before updating, please take a backup of your current code and database as there may be breaking changes in the current system. Also ensure your database collations for all the tables are `utf8mb4_unicode_ci`. Incase not please change the collations of all the tables and table columns to this before updating.
+:::
+
 ---
 
 ## Version 5.1.0 (18 September, 2026)
