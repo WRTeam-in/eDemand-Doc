@@ -16,8 +16,6 @@ Welcome to the App Setup Overview documentation. This section provides detailed 
 - [Change Package Name](./change-package-name.md)
 - [Change Images in the App](./change-app-images.md)
 - [Change Language String Values](./change-language-strings.md)
-- [Add/Remove a Language](./add-remove-language.md)
-- [Change the Default Language](./change-default-language.md)
 - [Change App Font](./change-app-font.md)
 - [Change Server URL](./change-server-url.md)
 - [Separate Provider and Handyman App](./separate-provider-handyman-app.md)
